@@ -1,11 +1,19 @@
-# UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback
+# UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback (NeurIPS 2025)
 
-Pengwei Liu<sup>1,2</sup>, Hangjie Yuan<sup>1,2,3</sup><sup>†</sup>, Bo Dong<sup>2,3</sup>, Jiazheng Xing<sup>1,4</sup>, Jinwang Wang<sup>2,3</sup>, Rui Zhao<sup>4</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup> <br>
+[Pengwei Liu](https://github.com/pengwei07)<sup>1,2,\*</sup>, 
+[Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, 
+Bo Dong<sup>2,3</sup>, 
+[Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, 
+Jinwang Wang<sup>2,3,1</sup>, 
+[Rui Zhao](https://ruizhaocv.github.io/)<sup>4</sup>, 
+Weihua Chen<sup>2,3</sup><sup>†</sup>, 
+Fan Wang<sup>2</sup> <br>
 <sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore <br>
-<sup>†</sup>Corresponding Author
+<sup>\*</sup>Equal contributions, <sup>†</sup>Corresponding Author <br>
+\{yuanhangjie.yhj, kugang.cwh\}@alibaba-inc.com
 
 [![arXiv](https://img.shields.io/badge/arXiv-xxxxxx-b31b1b.svg)](xxxxxx)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-red)](xxxxxx)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-red)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
 
 To bridge the gap between generative flexibility and physical correctness, we propose **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone.
 
@@ -22,7 +30,7 @@ Extensive experiments demonstrate that UniLumos achieves state-of-the-art religh
 
 ## 📜 News
 
-**[2025/x/xx]** Code is available now!
+**[2025/10/29]** Code is available now!
 
 **[2025/x/xx]** The paper is released!
 
@@ -44,7 +52,7 @@ To evaluate the fine-grained controllability of lighting generation, we introduc
 ### Setup repository and conda environment
 
 ```bash
-git clone https://github.com/xxxx
+git clone https://github.com/alibaba-damo-academy/Lumos-Custom.git
 cd unilumos
 
 conda create -n unilumos python=3.10
