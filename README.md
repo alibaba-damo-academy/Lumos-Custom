@@ -1,6 +1,6 @@
 # UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback (NeurIPS 2025)
 
-[Pengwei Liu](https://github.com/pengwei07)<sup>1,2,\*</sup>, 
+Ropeway Liu<sup>1,2,\*</sup>, 
 [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, 
 Bo Dong<sup>2,3</sup>, 
 [Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, 
@@ -10,7 +10,6 @@ Weihua Chen<sup>2,3</sup><sup>†</sup>,
 Fan Wang<sup>2</sup> <br>
 <sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore <br>
 <sup>\*</sup>Equal contributions, <sup>†</sup>Corresponding Author <br>
-\{yuanhangjie.yhj, kugang.cwh\}@alibaba-inc.com
 
 [![arXiv](https://img.shields.io/badge/arXiv-xxxxxx-b31b1b.svg)](xxxxxx)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
