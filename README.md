@@ -1,38 +1,43 @@
-# UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback (NeurIPS 2025)
+# UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback  
 
-Ropeway Liu<sup>1,2,\*</sup>, 
-[Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, 
-Bo Dong<sup>2,3</sup>, 
-[Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, 
-Jinwang Wang<sup>2,3,1</sup>, 
-[Rui Zhao](https://ruizhaocv.github.io/)<sup>4</sup>, 
-Weihua Chen<sup>2,3</sup><sup>†</sup>, 
-Fan Wang<sup>2</sup> <br>
-<sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore <br>
-<sup>\*</sup>Equal contributions, <sup>†</sup>Corresponding Author <br>
+> To bridge the gap between generative flexibility and physical correctness, we propose **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone.
 
 [![arXiv](https://img.shields.io/badge/arXiv-xxxxxx-b31b1b.svg)](xxxxxx)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
 
-To bridge the gap between generative flexibility and physical correctness, we propose **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone.
-
-<details><summary>Click for the abstract of UniLumos</summary>
-> Relighting is a crucial task with both practical demand and artistic value, and recent diffusion models have shown strong potential by enabling rich and controllable lighting effects. 
-However, as they are typically optimized in semantic latent space, where proximity does not guarantee physical correctness in visual space, they often produce unrealistic results—such as overexposed highlights, misaligned shadows, and incorrect occlusions. 
-We address this with UniLumos, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone. 
-By supervising the model with depth and normal maps extracted from its outputs, we explicitly align lighting effects with the scene structure, enhancing physical plausibility.
-Nevertheless, this feedback requires high-quality outputs for supervision in visual space, making standard multi-step denoising computationally expensive. To mitigate this, we employ path consistency learning, allowing supervision to remain effective even under few-step training regimes. 
-To enable fine-grained relighting control and supervision, we design a structured six-dimensional annotation protocol capturing core illumination attributes.  
-Building upon this, we propose LumosBench, a disentangled attribute-level benchmark that evaluates lighting controllability via large vision-language models, enabling automatic and interpretable assessment of relighting precision across individual dimensions.
-Extensive experiments demonstrate that UniLumos achieves state-of-the-art relighting quality with significantly improved physical consistency, while delivering a 20x speedup for both image and video relighting.
-</details>
-
 ## 📜 News
+
+**[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)) !
 
 **[2025/10/29]** Code is available now!
 
-**[2025/x/xx]** The paper is released!
+---
 
+### 🧑‍💻 Authors
+<div align="center" style="font-size: 15px; line-height: 1.6;">
+
+[Ropeway Liu](https://jacobyuan7.github.io/)<sup>1,2,\*</sup>, [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, Bo Dong<sup>2,3</sup>, [Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, Jinwang Wang<sup>2,3,1</sup>, [Rui Zhao](https://ruizhaocv.github.io/)<sup>4</sup>, Yan Xing<sup>2,3</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup>
+
+<sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore
+
+<sup>\*</sup>Equal contributions  <sup>†</sup>Corresponding Author
+
+</div>
+
+<details>
+  <summary><strong>📘 Click to view Abstract</strong></summary>
+
+> Relighting is a crucial task with both practical demand and artistic value, and recent diffusion models have shown strong potential by enabling rich and controllable lighting effects. However, as they are typically optimized in semantic latent space, where proximity does not guarantee physical correctness in visual space, they often produce unrealistic results—such as overexposed highlights, misaligned shadows, and incorrect occlusions.
+
+> We address this with **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone. By supervising the model with depth and normal maps extracted from its outputs, we explicitly align lighting effects with the scene structure, enhancing physical plausibility. Nevertheless, this feedback requires high-quality outputs for supervision in visual space, making standard multi-step denoising computationally expensive. To mitigate this, we employ path consistency learning, allowing supervision to remain effective even under few-step training regimes.
+
+> To enable fine-grained relighting control and supervision, we design a structured six-dimensional annotation protocol capturing core illumination attributes. Building upon this, we propose LumosBench, a disentangled attribute-level benchmark that evaluates lighting controllability via large vision-language models, enabling automatic and interpretable assessment of relighting precision across individual dimensions.
+
+> Extensive experiments demonstrate that UniLumos achieves state-of-the-art relighting quality with significantly improved physical consistency, while delivering a 20x speedup for both image and video relighting.
+
+</details>
+
+---
 ## 🚀 Method Overview
 
 ### Pipeline
