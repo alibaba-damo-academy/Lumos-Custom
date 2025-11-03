@@ -4,12 +4,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-xxxxxx-b31b1b.svg)](xxxxxx)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
-
-## 📜 News
-
-**[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)) !
-
-**[2025/10/29]** Code is available now!
+[![Github](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
 
 ---
 
@@ -36,6 +31,12 @@
 > Extensive experiments demonstrate that UniLumos achieves state-of-the-art relighting quality with significantly improved physical consistency, while delivering a 20x speedup for both image and video relighting.
 
 </details>
+
+## 📜 News
+
+**[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)) !
+
+**[2025/10/29]** Code is available now!
 
 ---
 ## 🚀 Method Overview
