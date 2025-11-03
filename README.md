@@ -13,7 +13,7 @@ Fan Wang<sup>2</sup> <br>
 \{yuanhangjie.yhj, kugang.cwh\}@alibaba-inc.com
 
 [![arXiv](https://img.shields.io/badge/arXiv-xxxxxx-b31b1b.svg)](xxxxxx)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-red)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
 
 To bridge the gap between generative flexibility and physical correctness, we propose **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone.
 
