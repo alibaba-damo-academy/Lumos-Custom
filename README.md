@@ -2,7 +2,7 @@
 
 > To bridge the gap between generative flexibility and physical correctness, we propose **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone.
 
-[![arXiv](https://img.shields.io/badge/arXiv-xxxxxx-b31b1b.svg)](https://arxiv.org/abs/2511.01678)
+[![arXiv](https://img.shields.io/badge/arXiv-2511.01678-b31b1b.svg)](https://arxiv.org/abs/2511.01678)
 [![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
 [![Github](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
 
