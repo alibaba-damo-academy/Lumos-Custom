@@ -142,7 +142,12 @@ Qualitative comparison of baseline methods. Each method takes a subject video an
 
 If you find our work helpful for your research, please consider giving a star ⭐ and citation 📝 
 ```bibtex
-
+@article{liu2025uniLumos,
+  title={UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback},
+  author={Liu, Ropeway and Yuan, Hangjie and Dong, Bo and Xing, Jiazheng and Wang, Jinwang and Zhao, Rui and Xing, Yan and Chen, Weihua and Wang, Fan}, 
+  journal={arXiv preprint arXiv:2511.01678},
+  year={2025}
+}
 ```
 
 ## 📣 Disclaimer
