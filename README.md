@@ -11,7 +11,7 @@
 ### 🧑‍💻 Authors
 <div align="center" style="font-size: 15px; line-height: 1.6;">
 
-[Ropeway Liu](https://jacobyuan7.github.io/)<sup>1,2,\*</sup>, [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, Bo Dong<sup>2,3</sup>, [Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, Jinwang Wang<sup>2,3,1</sup>, [Rui Zhao](https://ruizhaocv.github.io/)<sup>4</sup>, Yan Xing<sup>2,3</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup>
+[Ropeway Liu](https://github.com/pengwei07)<sup>1,2,\*</sup>, [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, Bo Dong<sup>2,3</sup>, [Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, Jinwang Wang<sup>2,3,1</sup>, [Rui Zhao](https://ruizhaocv.github.io/)<sup>4</sup>, Yan Xing<sup>2,3</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup>
 
 <sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore
 
