@@ -38,7 +38,7 @@
 
 **[2025/10/29]** Code is available now!
 
-**[2025/11/15]** UniLumos is in [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) now! We thank the community's efforts.
+**[2025/11/15]** UniLumos is available in [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) now! We thank the community's efforts.
 
 ---
 ## 🚀 Method Overview
