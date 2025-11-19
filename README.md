@@ -33,26 +33,11 @@
 </details>
 
 ## 💡 Demo
-<table>
-  <tr>
-    <td>
-      <video src="UniLumos/assets/UniLumos_Girl_1.mp4" width="300" controls></video>
-    </td>
-    <td>
-      <video src="UniLumos/assets/UniLumos_Girl_2.mp4" width="300" controls></video>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <video src="UniLumos/assets/UniLumos_Robot_3.mp4" width="300" controls></video>
-    </td>
-    <td>
-      <video src="UniLumos/assets/UniLumos_Robot_4.mp4" width="300" controls></video>
-    </td>
-  </tr>
-</table>
+| ![](UniLumos/assets/UniLumos_Girl_1.gif) | ![](UniLumos/assets/UniLumos_Girl_2.gif) |
+| ----------------------------------------- | ----------------------------------------- |
+| ![](UniLumos/assets/UniLumos_Robot_3.gif) | ![](UniLumos/assets/UniLumos_Robot_4.gif) |
 
-
+> These demos are [**real user-generated content**](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1630). And they are shown only to demonstrate the model’s capabilities. If any content infringes your rights, please contact us and we will remove it promptly.
 
 ## 📜 News
 
