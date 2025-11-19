@@ -32,6 +32,28 @@
 
 </details>
 
+## 💡 Demo
+<table>
+  <tr>
+    <td>
+      <video src="UniLumos/assets/UniLumos_Girl_1.mp4" width="300" controls></video>
+    </td>
+    <td>
+      <video src="UniLumos/assets/UniLumos_Girl_2.mp4" width="300" controls></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <video src="UniLumos/assets/UniLumos_Robot_3.mp4" width="300" controls></video>
+    </td>
+    <td>
+      <video src="UniLumos/assets/UniLumos_Robot_4.mp4" width="300" controls></video>
+    </td>
+  </tr>
+</table>
+
+
+
 ## 📜 News
 
 **[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)) !
