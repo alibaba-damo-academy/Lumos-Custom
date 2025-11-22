@@ -61,6 +61,12 @@ The overall pipeline of UniLumos. The left is LumosData, our proposed data const
 
 To evaluate the fine-grained controllability of lighting generation, we introduce **LumosBench**, a structured benchmark that targets six core illumination attributes defined in our annotation protocol. Our benchmark evaluates the performance of video relighting models from two key perspectives: qualitative alignment with user prompts and quantitative measurement of physical lighting properties. More details can be found in [LumosBench](UniLumos/LumosBench/readme.md).
 
+## 🚀 Poster
+<div align="center">
+    <img src='UniLumos/assets/UniLumos_poster_0.png'/>
+</div>
+
+---
 ## 🔧 Installations
 
 ### Setup repository and conda environment
