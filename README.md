@@ -40,6 +40,7 @@
 > These demos are [**real user-generated content**](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1630). And they are shown only to demonstrate the model’s capabilities. If any content infringes your rights, please contact us and we will remove it promptly.
 
 ## 📜 News
+**If you are interested in our foundational video generation research, please refer to [Lumos Project](https://github.com/alibaba-damo-academy/Lumos).**
 
 **[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)) !
 
