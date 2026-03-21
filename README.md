@@ -1,10 +1,10 @@
 # ✦ Lumos-Custom ✦
 
-<p align="center">
-  <sub>◇ ─── ◈ ─── ◇</sub><br/>
-  <b style="font-size: 2em;">Lumos-Custom Project: research for customized video generation in the Lumos Project.</b><br/>
-  <span style="font-size: 1.05em;">✧ · ꕤ · ✧</span>
-</p>
+<p align="center">◇ ─── ◈ ─── ◇</p>
+
+<h3 align="center">Lumos-Custom Project: research for customized video generation in the Lumos Project.</h3>
+
+<p align="center">✧ · ꕤ · ✧</p>
 
 This repository collects open-source research from **DAMO Academy, Alibaba Group** and academic partners in **personalized video generation** and **physically plausible relighting**. Code is organized into self-contained subprojects for separate setup and reproduction.
 
