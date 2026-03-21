@@ -156,6 +156,13 @@ cd ../UniLumos
 ## ✶ Citation ✶
 
 If you use either project, please cite the corresponding paper. BibTeX entries are in the **Citation** section of each subproject `README.md`.
+```bibtex
+@inproceedings{UniLumos,
+  title={UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback},
+  author={Liu, Pengwei and Yuan, Hangjie and Dong, Bo and Xing, Jiazheng and Wang, Jinwang and Zhao, Rui and Chen, Weihua and Wang, Fan},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
+}
+```
 
 ---
 
