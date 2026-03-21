@@ -2,8 +2,8 @@
 
 <p align="center">
   <sub>◇ ─── ◈ ─── ◇</sub><br/>
-  <b>Personalized video · Physically plausible relighting · Open research code</b><br/>
-  <sub>✧ · ꕤ · ✧</sub>
+  <b style="font-size: 1.35em;">Lumos-Custom Project: research for customized video generation in the Lumos Project.</b><br/>
+  <span style="font-size: 1.05em;">✧ · ꕤ · ✧</span>
 </p>
 
 This repository collects open-source research from **DAMO Academy, Alibaba Group** and academic partners in **personalized video generation** and **physically plausible relighting**. Code is organized into self-contained subprojects for separate setup and reproduction.
@@ -37,7 +37,7 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ## ◆ LumosX ◆
 
-<p align="center"><sub>✦ ICLR 2026 ✦</sub></p>
+<p align="center"><span style="font-size: 1.2em;">✦ ICLR 2026 ✦</span></p>
 
 **LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation**
 
@@ -45,18 +45,39 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 <p align="center"><i>Identity-consistent · Subject-consistent personalized generation</i></p>
 
-<table>
+<p align="center"><b style="font-size: 1.15em;">✧ Identity consistency</b></p>
+
+<table width="100%">
   <tr>
-    <td align="center" width="50%"><b>✧ Identity consistency</b></td>
-    <td align="center" width="50%"><b>✧ Subject consistency</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="LumosX/asserts/videos/Identity-Consistent%20Video%20Generation/LumosX/video_person2_101_1_sp1_480x832.gif" alt="LumosX identity-consistent demo" width="95%"/></td>
-    <td align="center"><img src="LumosX/asserts/videos/Subject-Consistent%20Video%20Generation/LumosX/video_person2_001_sp1_480x832.gif" alt="LumosX subject-consistent demo" width="95%"/></td>
+    <td align="center" valign="middle" width="70%">
+      <b>Reference</b><br/>
+      <img src="LumosX/asserts/images/Identity-Consistent%20Video%20Generation/video_person2_101_1.png" alt="LumosX identity reference" width="100%" style="max-width: 560px;"/>
+    </td>
+    <td align="center" valign="middle" width="30%">
+      <b>Result</b><br/>
+      <img src="LumosX/asserts/videos/Identity-Consistent%20Video%20Generation/LumosX/video_person2_101_1_sp1_480x832.gif" alt="LumosX identity-consistent demo" width="100%" style="max-width: 210px;"/>
+    </td>
   </tr>
 </table>
 
-<sub>➜ Representative results from <code>LumosX/asserts/videos/</code> · more demos in <a href="LumosX/README.md">LumosX/README.md</a></sub>
+---
+
+<p align="center"><b style="font-size: 1.15em;">✧ Subject consistency</b></p>
+
+<table width="100%">
+  <tr>
+    <td align="center" valign="middle" width="70%">
+      <b>Reference</b><br/>
+      <img src="LumosX/asserts/images/Subject-Consistent%20Video%20Generation/video_person2_001.png" alt="LumosX subject reference" width="100%" style="max-width: 560px;"/>
+    </td>
+    <td align="center" valign="middle" width="30%">
+      <b>Result</b><br/>
+      <img src="LumosX/asserts/videos/Subject-Consistent%20Video%20Generation/LumosX/video_person2_001_sp1_480x832.gif" alt="LumosX subject-consistent demo" width="100%" style="max-width: 210px;"/>
+    </td>
+  </tr>
+</table>
+
+<sub>➜ Reference: <code>LumosX/asserts/images/</code> · Result GIFs: <code>LumosX/asserts/videos/</code> · more in <a href="LumosX/README.md">LumosX/README.md</a></sub>
 
 - **Venue:** **ICLR 2026**
 - **Summary:** We propose **LumosX**, a framework that advances both data and model design for personalized video generation. The data pipeline builds relational structure from captions and MLLM-derived priors; the model uses Relational Self-Attention and Relational Cross-Attention to encode subject–attribute dependencies. Companion evaluation resources live under **`LumosX/benchmark/`**.
@@ -70,7 +91,7 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ## ◆ UniLumos ◆
 
-<p align="center"><sub>✦ NeurIPS 2025 ✦</sub></p>
+<p align="center"><span style="font-size: 1.2em;">✦ NeurIPS 2025 ✦</span></p>
 
 **UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback**
 
@@ -140,4 +161,4 @@ If you use either project, please cite the corresponding paper. BibTeX entries a
 
 ## ◈ Related work ◈
 
-- Foundational video generation: **[Lumos](https://github.com/alibaba-damo-academy/Lumos)** (also referenced from the UniLumos documentation).
+- Foundational video generation: **[Lumos](https://github.com/alibaba-damo-academy/Lumos)**.
