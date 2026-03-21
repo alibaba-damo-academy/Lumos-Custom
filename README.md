@@ -10,8 +10,6 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ## 🔗 📜 News
 
-**If you are interested in our foundational video generation research, please refer to the [Lumos](https://github.com/alibaba-damo-academy/Lumos) project.**
-
 ### UniLumos
 
 **[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB) !
@@ -23,6 +21,8 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 **[2026/1/26]** Accepted by [ICLR 2026](https://openreview.net/forum?id=r5o6PWgzav) !
 
 **[2026/3/21]** Code is available now!
+
+**If you are interested in our foundational video generation research, please refer to the [Lumos](https://github.com/alibaba-damo-academy/Lumos) project.**
 
 ---
 
