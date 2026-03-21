@@ -1,0 +1,9 @@
+============================================================
+Global Evaluation Results for: subject_consistency_16k6_20k
+============================================================
+Video Directory: /mnt/workspace/workgroup/jiazheng/workspace/LumosX/samples/lumosx_test/subject_consistency_16k6_20k
+Reference Image Directory: /mnt/workspace/workgroup/jiazheng/workspace/LumosX/data/test_video_data_new
+VideoCLIP Model Path: ./VideoCLIP_XL/VideoCLIP-XL-v2.bin
+Total Processes: 1
+============================================================
+

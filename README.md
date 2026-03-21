@@ -1,184 +1,143 @@
-# UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback  
+# ✦ Lumos-Custom ✦
 
-> To bridge the gap between generative flexibility and physical correctness, we propose **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone.
+<p align="center">
+  <sub>◇ ─── ◈ ─── ◇</sub><br/>
+  <b>Personalized video · Physically plausible relighting · Open research code</b><br/>
+  <sub>✧ · ꕤ · ✧</sub>
+</p>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2511.01678-b31b1b.svg)](https://arxiv.org/abs/2511.01678)
-[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
-[![Github](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
+This repository collects open-source research from **DAMO Academy, Alibaba Group** and academic partners in **personalized video generation** and **physically plausible relighting**. Code is organized into self-contained subprojects for separate setup and reproduction.
 
----
+## 🔗 📜 News
 
-### 🧑‍💻 Authors
-<div align="center" style="font-size: 15px; line-height: 1.6;">
+**If you are interested in our foundational video generation research, please refer to the [Lumos](https://github.com/alibaba-damo-academy/Lumos) project.**
 
-[Ropeway Liu](https://github.com/pengwei07)<sup>1,2,\*</sup>, [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup><sup>†</sup>, Bo Dong<sup>2,3</sup>, [Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,2,4</sup>, Jinwang Wang<sup>2,3,1</sup>, [Rui Zhao](https://ruizhaocv.github.io/)<sup>4</sup>, Yan Xing<sup>2,3</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup>
+### UniLumos
 
-<sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore
-
-<sup>\*</sup>Equal contributions  <sup>†</sup>Corresponding Author
-
-</div>
-
-<details>
-  <summary><strong>📘 Click to view Abstract</strong></summary>
-
-> Relighting is a crucial task with both practical demand and artistic value, and recent diffusion models have shown strong potential by enabling rich and controllable lighting effects. However, as they are typically optimized in semantic latent space, where proximity does not guarantee physical correctness in visual space, they often produce unrealistic results—such as overexposed highlights, misaligned shadows, and incorrect occlusions.
-
-> We address this with **UniLumos**, a unified relighting framework for both images and videos that brings RGB-space geometry feedback into a flow-matching backbone. By supervising the model with depth and normal maps extracted from its outputs, we explicitly align lighting effects with the scene structure, enhancing physical plausibility. Nevertheless, this feedback requires high-quality outputs for supervision in visual space, making standard multi-step denoising computationally expensive. To mitigate this, we employ path consistency learning, allowing supervision to remain effective even under few-step training regimes.
-
-> To enable fine-grained relighting control and supervision, we design a structured six-dimensional annotation protocol capturing core illumination attributes. Building upon this, we propose LumosBench, a disentangled attribute-level benchmark that evaluates lighting controllability via large vision-language models, enabling automatic and interpretable assessment of relighting precision across individual dimensions.
-
-> Extensive experiments demonstrate that UniLumos achieves state-of-the-art relighting quality with significantly improved physical consistency, while delivering a 20x speedup for both image and video relighting.
-
-</details>
-
-## 💡 Demo
-| ![](UniLumos/assets/UniLumos_Girl_1.gif) | ![](UniLumos/assets/UniLumos_Girl_2.gif) |
-| ----------------------------------------- | ----------------------------------------- |
-| ![](UniLumos/assets/UniLumos_Robot_3.gif) | ![](UniLumos/assets/UniLumos_Robot_4.gif) |
-
-> These demos are [**real user-generated content**](https://github.com/kijai/ComfyUI-WanVideoWrapper/issues/1630). And they are shown only to demonstrate the model’s capabilities. If any content infringes your rights, please contact us and we will remove it promptly.
-
-## 📜 News
-**If you are interested in our foundational video generation research, please refer to [Lumos Project](https://github.com/alibaba-damo-academy/Lumos).**
-
-**[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)) !
+**[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB) !
 
 **[2025/10/29]** Code is available now!
 
-**[2025/11/15]** UniLumos is available in [ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) now! The tutorial is detailed in [UniLumos In ComfyUI - New Relighting AI That Makes Your Character Blend Into Any Background](https://www.youtube.com/watch?v=5ik6tPs6Yq8). We thank the community's efforts. 
+### LumosX
+
+**[2026/1/26]** Accepted by [ICLR 2026](https://iclr.cc/Conferences/2026) !
+
+**[2026/3/21]** Code is available now!
 
 ---
-## 🚀 Method Overview
 
-### Pipeline
-<div align="center">
-    <img src='UniLumos/assets/pipline.jpg'/>
-</div>
+## Overview
 
-The overall pipeline of UniLumos. The left is LumosData, our proposed data construction pipeline, which consists of four stages for generating diverse relighting pairs from real-world sources. The right shows the architecture of UniLumos, a unified framework for image and video relighting, designed to achieve physically plausible illumination control.
-
-### LumosBench
-
-To evaluate the fine-grained controllability of lighting generation, we introduce **LumosBench**, a structured benchmark that targets six core illumination attributes defined in our annotation protocol. Our benchmark evaluates the performance of video relighting models from two key perspectives: qualitative alignment with user prompts and quantitative measurement of physical lighting properties. More details can be found in [LumosBench](UniLumos/LumosBench/readme.md).
-
-## 🚀 Poster
-<div align="center">
-    <img src='UniLumos/assets/UniLumos_poster_0.png'/>
-</div>
+| Project | Venue | In one sentence | Code & docs |
+|--------|-------|-----------------|-------------|
+| **LumosX** | **ICLR 2026** | **LumosX** advances personalized multi-subject video generation through relational data design and relational attention modeling. | [`LumosX/`](LumosX/) · [README](LumosX/README.md) |
+| **UniLumos** | **NeurIPS 2025** | **UniLumos** advances unified image and video relighting through RGB-space geometry feedback on a flow-matching backbone. | [`UniLumos/`](UniLumos/) · [README](UniLumos/README.md) |
 
 ---
-## 🔧 Installations
 
-### Setup repository and conda environment
+## ◆ LumosX ◆
+
+<p align="center"><sub>✦ ICLR 2026 ✦</sub></p>
+
+**LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation**
+
+### Showcase ✧ animated
+
+<p align="center"><i>Identity-consistent · Subject-consistent personalized generation</i></p>
+
+<table>
+  <tr>
+    <td align="center" width="50%"><b>✧ Identity consistency</b></td>
+    <td align="center" width="50%"><b>✧ Subject consistency</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="LumosX/asserts/videos/Identity-Consistent%20Video%20Generation/LumosX/video_person2_101_1_sp1_480x832.gif" alt="LumosX identity-consistent demo" width="95%"/></td>
+    <td align="center"><img src="LumosX/asserts/videos/Subject-Consistent%20Video%20Generation/LumosX/video_person2_001_sp1_480x832.gif" alt="LumosX subject-consistent demo" width="95%"/></td>
+  </tr>
+</table>
+
+<sub>➜ Representative results from <code>LumosX/asserts/videos/</code> · more demos in <a href="LumosX/README.md">LumosX/README.md</a></sub>
+
+- **Venue:** **ICLR 2026**
+- **Summary:** We propose **LumosX**, a framework that advances both data and model design for personalized video generation. The data pipeline builds relational structure from captions and MLLM-derived priors; the model uses Relational Self-Attention and Relational Cross-Attention to encode subject–attribute dependencies. Companion evaluation resources live under **`LumosX/benchmark/`**.
+
+**Quick links**
+
+- **Model weights:** [Hugging Face · LumosX](https://huggingface.co/Alibaba-DAMO-Academy/LumosX)
+- **Documentation:** [LumosX/README.md](LumosX/README.md) — installation, checkpoints, inference, and benchmark evaluation
+
+---
+
+## ◆ UniLumos ◆
+
+<p align="center"><sub>✦ NeurIPS 2025 ✦</sub></p>
+
+**UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback**
+
+### Showcase ✧ animated
+
+<p align="center"><i>Unified image &amp; video relighting · physics-plausible feedback</i></p>
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="UniLumos/assets/UniLumos_Girl_1.gif" alt="UniLumos relighting demo 1" width="95%"/></td>
+    <td align="center" width="50%"><img src="UniLumos/assets/UniLumos_Girl_2.gif" alt="UniLumos relighting demo 2" width="95%"/></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="UniLumos/assets/UniLumos_Robot_3.gif" alt="UniLumos relighting demo 3" width="95%"/></td>
+    <td align="center" width="50%"><img src="UniLumos/assets/UniLumos_Robot_4.gif" alt="UniLumos relighting demo 4" width="95%"/></td>
+  </tr>
+</table>
+
+<sub>➜ Assets live under <code>UniLumos/assets/</code> (same as <a href="UniLumos/README.md">UniLumos/README.md</a>) · add the GIFs locally if the folder is empty</sub>
+
+- **Venue:** **NeurIPS 2025**
+- **Summary:** We propose **UniLumos**, a unified relighting framework for images and videos. Supervision uses depth and normal maps from model outputs to align lighting with scene geometry; path consistency learning keeps this effective under few-step training. Companion evaluation is provided by **LumosBench** (see **`UniLumos/LumosBench/`**).
+
+**Quick links**
+
+- **Model weights:** [Hugging Face · UniLumos](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
+- **Documentation:** [UniLumos/README.md](UniLumos/README.md) — installation, checkpoints, inference, and LumosBench evaluation
+
+---
+
+## ✧ Repository layout ✧
+
+```
+Lumos-Custom/
+├── README.md                 # This file: umbrella overview
+├── LumosX/                   # ICLR 2026 · personalized multi-subject video generation
+│   └── README.md
+└── UniLumos/                 # NeurIPS 2025 · unified relighting + LumosBench/
+    ├── README.md
+    └── LumosBench/
+```
+
+---
+
+## ➤ Clone and enter a subproject
 
 ```bash
 git clone https://github.com/alibaba-damo-academy/Lumos-Custom.git
-cd unilumos
+cd Lumos-Custom
 
-conda create -n unilumos python=3.10
-conda activate unilumos
+# LumosX
+cd LumosX
+# Follow LumosX/README.md
 
-pip install -r requirements.txt
-pip install flash-attn 
-# recommend using flash-attn to accelerate the training and inference of UniLumos
-# https://github.com/Dao-AILab/flash-attention/releases (especially for v2.8.1)
+# or UniLumos
+cd ../UniLumos
+# Follow UniLumos/README.md
 ```
 
-## 🔑 Pretrained Model Preparations
+---
 
-```bash
-# Model downloading is automatic.
-# see UniLumos/UniLumos/weights/readme.txt for more details
-```
+## ✶ Citation ✶
 
-## 🎈 Quick Start
+If you use either project, please cite the corresponding paper. BibTeX entries are in the **Citation** section of each subproject `README.md`.
 
-### Perform foreground sequences relighting with background generation
+---
 
-Below is a 4x5 grid of generated videos, combining **4 foreground videos** (rows) and **5 background videos** (columns).
+## ◈ Related work ◈
 
-| Foreground ↓ \\ Background → | ![](UniLumos/UniLumos/examples/bgs/bg_video_1.gif)|![](UniLumos/UniLumos/examples/bgs/bg_video_2.gif)|![](UniLumos/UniLumos/examples/bgs/bg_video_3.gif)|![](UniLumos/UniLumos/examples/bgs/bg_video_4.gif)|![](UniLumos/UniLumos/examples/bgs/bg_video_5.gif)|
-|------------------------------|:---:|:---:|:---:|:---:|:---:|
-| ![](UniLumos/UniLumos/examples/example_0/example_0.gif) | ![](UniLumos/UniLumos/examples/results/example_0_bg_video_1_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_0_bg_video_2_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_0_bg_video_3_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_0_bg_video_4_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_0_bg_video_5_gen.gif) |
-| ![](UniLumos/UniLumos/examples/example_1/example_1.gif) | ![](UniLumos/UniLumos/examples/results/example_1_bg_video_1_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_1_bg_video_2_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_1_bg_video_3_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_1_bg_video_4_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_1_bg_video_5_gen.gif) |
-| ![](UniLumos/UniLumos/examples/example_2/example_2.gif) | ![](UniLumos/UniLumos/examples/results/example_2_bg_video_1_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_2_bg_video_2_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_2_bg_video_3_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_2_bg_video_4_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_2_bg_video_5_gen.gif) |
-| ![](UniLumos/UniLumos/examples/example_3/example_3.gif) | ![](UniLumos/UniLumos/examples/results/example_3_bg_video_1_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_3_bg_video_2_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_3_bg_video_3_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_3_bg_video_4_gen.gif) | ![](UniLumos/UniLumos/examples/results/example_3_bg_video_5_gen.gif) |
-
-> Relighting with captions, foreground videos, and background videos
-```bash
-# relighting with captions, foreground videos, and background videos
-python unilumos_infer_abc.py
-```
-> Relighting with captions and foreground videos
-```bash
-# relighting with captions and foreground videos
-python unilumos_infer_ab.py
-```
-
-> Relighting with captions and background videos
-```bash
-# relighting with captions and foreground videos
-python unilumos_infer_ac.py
-```
-
-> Relighting only with captions
-```bash
-# relighting with captions and foreground videos
-python unilumos_infer_a.py
-```
-
-- see in UniLumos/UniLumos/run_infer.sh for more details.
-- you can change the number of sample_steps and sample_shift to control the quality and speed of the generated video.
-
-### Perform image relighting
-
-```bash
-# here --image_size is (768, 512), --num_frames is 1
-python unilumos_infer_image.py
-```
-
-### Perform LumosBench evaluation
-
-See in LumosBench/readme.md for more details.
-```bash
-# there are many steps to run the evaluation, you can see in LumosBench/readme.md.
-python main.py
-```
-
-### Baseline Video Relighting
-
-<div align="center">
-    <img src='UniLumos/assets/baseline.jpg'/>
-</div>
-
-Qualitative comparison of baseline methods. Each method takes a subject video and a textual illumination description as input, generating the related subject with the corresponding background under the specified lighting condition.
-
-## 📎 Citation 
-
-If you find our work helpful for your research, please consider giving a star ⭐ and citation 📝 
-```bibtex
-@article{liu2025uniLumos,
-  title={UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback},
-  author={Liu, Ropeway and Yuan, Hangjie and Dong, Bo and Xing, Jiazheng and Wang, Jinwang and Zhao, Rui and Xing, Yan and Chen, Weihua and Wang, Fan}, 
-  journal={arXiv preprint arXiv:2511.01678},
-  year={2025}
-}
-```
-
-## 📣 Disclaimer
-
-This is official code of UniLumos.
-All the copyrights of the demo images and audio are from community users. 
-Feel free to contact us if you would like remove them.
-
-## 💞 Acknowledgements
-The code is built upon the below repositories, we thank all the contributors for open-sourcing. It is greatly appreciated that the community has contributed various extensions to UniLumos.
-
-* [Wan2.1](https://github.com/Wan-Video/Wan2.1)
-* [Qwen2.5-VL](https://github.com/lllyasviel/IC-Light)
-* [LTX-Video](https://github.com/Lightricks/LTX-Video)
-* [CogVideoX](https://github.com/THUDM/CogVideo)
-* [HunyuanVideo](https://github.com/Tencent-Hunyuan/HunyuanVideo)
-* [IC-Light](https://github.com/lllyasviel/IC-Light)
-* [Light-A-Video](https://github.com/bcmi/Light-A-Video)
+- Foundational video generation: **[Lumos](https://github.com/alibaba-damo-academy/Lumos)** (also referenced from the UniLumos documentation).
