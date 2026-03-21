@@ -20,7 +20,7 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ### LumosX
 
-**[2026/1/26]** Accepted by [ICLR 2026](https://iclr.cc/Conferences/2026) !
+**[2026/1/26]** Accepted by [ICLR 2026](https://openreview.net/forum?id=r5o6PWgzav) !
 
 **[2026/3/21]** Code is available now!
 
