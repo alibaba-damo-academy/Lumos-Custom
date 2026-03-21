@@ -12,7 +12,7 @@
 ### 🧑‍💻 Authors
 <div align="center" style="font-size: 15px; line-height: 1.6;">
 
-[Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,4,2,\*</sup>, Fei Du<sup>2,3,\*</sup>, [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1</sup>, Pengwei Liu<sup>1,2</sup>, Hongbin Xu<sup>4</sup>, Hai Ci<sup>4</sup>, Ruigang Niu<sup>2,3</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup>, Yong Liu<sup>1</sup><sup>†</sup>
+[Jiazheng Xing](https://jiazheng-xing.github.io/)<sup>1,4,2,\*</sup>, Fei Du<sup>2,3,\*</sup>, [Hangjie Yuan](https://jacobyuan7.github.io/)<sup>2,3,1,\*</sup>, Pengwei Liu<sup>1,2</sup>, Hongbin Xu<sup>4</sup>, Hai Ci<sup>4</sup>, Ruigang Niu<sup>2,3</sup>, Weihua Chen<sup>2,3</sup><sup>†</sup>, Fan Wang<sup>2</sup>, Yong Liu<sup>1</sup><sup>†</sup>
 
 <sup>1</sup>Zhejiang University, <sup>2</sup>DAMO Academy, Alibaba Group, <sup>3</sup>Hupan Lab, <sup>4</sup>National University of Singapore
 
