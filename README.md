@@ -6,7 +6,7 @@
 
 <p align="center">✧ · ꕤ · ✧</p>
 
-This repository collects open-source research from **DAMO Academy, Alibaba Group** in customized video generation, currently including works on  **personalized video generation** and **physically plausible relighting**. Code is organized into self-contained subprojects for separate setup and reproduction.
+This repository collects open-source research from **DAMO Academy, Alibaba Group** in customized video generation, currently including works to customize identities/attributes and lighting for videos. Code is organized into self-contained subprojects for separate setup and reproduction.
 
 ## 🔗 📜 News
 
