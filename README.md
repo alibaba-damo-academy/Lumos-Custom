@@ -100,6 +100,10 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 **UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2511.01678-b31b1b.svg)](https://arxiv.org/abs/2511.01678)
+[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Alibaba-DAMO-Academy/UniLumos)
+[![Github](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
+
 ### Showcase ✧ animated
 
 <p align="center"><i>Unified image &amp; video relighting · physics-plausible feedback</i></p>
