@@ -41,6 +41,11 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 **LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2603.20192-b31b1b.svg)](https://arxiv.org/abs/2603.20192)
+[![GitHub](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
+[![Project Page](https://img.shields.io/badge/Project-Page-purple)](https://jiazheng-xing.github.io/lumosx-home/)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-blue)](https://huggingface.co/Alibaba-DAMO-Academy/LumosX)
+
 ### Showcase ✧ animated
 
 <p align="center"><i>Identity-consistent · Subject-consistent personalized generation</i></p>
