@@ -2,7 +2,7 @@
 
 > Recent advances in diffusion models have significantly improved text-to-video generation, enabling personalized content creation with fine-grained control over both foreground and background elements. However, precise face-attribute alignment across subjects remains challenging, as existing methods lack explicit mechanisms to ensure intra-group consistency. We propose **LumosX**, a framework that advances both data and model design to achieve state-of-the-art performance in fine-grained, identity-consistent, and semantically aligned personalized multi-subject video generation.
 
-[![arXiv](https://img.shields.io/badge/arXiv-46f333f179-b31b1b.svg)](https://openreview.net/forum?id=r5o6PWgzav)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.20192-b31b1b.svg)](https://arxiv.org/abs/2603.20192)
 [![GitHub](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
 [![Project Page](https://img.shields.io/badge/Project-Page-purple)](https://jiazheng-xing.github.io/lumosx-home/)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Weights-blue)](https://huggingface.co/Alibaba-DAMO-Academy/LumosX)
