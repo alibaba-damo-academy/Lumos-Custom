@@ -12,13 +12,13 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ### UniLumos
 
-**[2025/9/19]** Accepted by [NeurIPS 2025](https://openreview.net/forum?id=e9B2NPQanB) !
+**[2025/9/19]** Accepted by [NeurIPS 2025](https://arxiv.org/abs/2511.01678) !
 
 **[2025/10/29]** Code is available now!
 
 ### LumosX
 
-**[2026/1/26]** Accepted by [ICLR 2026](https://openreview.net/forum?id=r5o6PWgzav) !
+**[2026/1/26]** Accepted by [ICLR 2026](https://arxiv.org/abs/2603.20192) !
 
 **[2026/3/21]** Code is available now!
 
