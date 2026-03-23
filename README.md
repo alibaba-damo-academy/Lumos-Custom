@@ -162,6 +162,12 @@ If you use either project, please cite the corresponding paper. BibTeX entries a
   author={Liu, Pengwei and Yuan, Hangjie and Dong, Bo and Xing, Jiazheng and Wang, Jinwang and Zhao, Rui and Chen, Weihua and Wang, Fan},
   booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems}
 }
+
+@inproceedings{LumosX,
+  title={LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation},
+  author={Xing, Jiazheng and Du, Fei and Yuan, Hangjie and Liu, Pengwei and Xu, Hongbin and Ci, Hai and Niu, Ruigang and Chen, Weihua and Wang, Fan and Liu, Yong},
+  booktitle={The Fourteenth International Conference on Learning Representations}
+}
 ```
 
 ---
