@@ -1,7 +1,7 @@
 <h1>Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models</h1>
 
 <blockquote>
-  <p><strong>Lumos-Nexus</strong> trains a lightweight generator aligned with the understanding block for reasoning-driven control, uses <strong>UPFB</strong> at inference to progressively hand off to a high-capacity pretrained generator in a <strong>shared latent space</strong> for high-fidelity video, and introduces <strong>VR-Bench</strong> to evaluate whether inferred intent becomes coherent, semantically aligned content.</p>
+  <p>We propose <strong>Lumos-Nexus</strong>, a training-efficient unified video generation framework that aligns a lightweight generator with the understanding block for reasoning-driven semantic control during training, and applies Unified Progressive Frequency Bridging at inference to progressively hand off to a high-capacity pretrained generator in a shared latent space for coarse-to-fine, high-fidelity video.</p>
 </blockquote>
 
 </td>
@@ -34,9 +34,7 @@ Project Page: https://jiazheng-xing.github.io/nexus-lumos-home/
   <summary><strong>📘 Click to view Abstract</strong></summary>
 
 > Connector-based video unified models have demonstrated strong capability in instruction-grounded video synthesis, but integrating a large high-fidelity generator into the unified training loop is computationally prohibitive, limiting achievable visual quality.
->
 > We therefore propose Lumos-Nexus, a training-efficient unified video generation framework that facilitates the development of strong reasoning-driven generation capabilities while significantly enhancing visual fidelity. Lumos-Nexus adopts a two-stage design: 1) During training, only a lightweight generator is aligned with the understanding block to learn to take in reasoning-driven semantic control. 2) During inference, we introduce Unified Progressive Frequency Bridging (UPFB) to progressively hand off generation to a high-capacity pretrained generator in the shared latent space, enabling coarse-to-fine refinement and producing high-fidelity videos without compromising reasoning quality. To fill the gap in reasoning-driven video generation benchmarks, we introduce VR-Bench, which assesses a model's capability to translate inferred intent into coherent and semantically aligned video content.
->
 > Extensive experiments demonstrate that Lumos-Nexus achieves substantial gains in visual realism and temporal coherence on VBench, while exhibiting strong reasoning-based generative performance on VR-Bench.
 
 </details>
@@ -170,13 +168,24 @@ pip install -r requirements.txt
 
 ## 🔑 Pretrained Model Preparations
 
-This codebase uses **OmniVideo 1** checkpoints. Download the public **OmniVideo11B** bundle from Hugging Face and place it under the repository root as **`model_ckpts/`** .
+This codebase uses **OmniVideo 1** checkpoints and **Wan2.1-T2V-14B** as the high-capacity generator for UPFB inference. Download both from Hugging Face and place them under the repository root as **`model_ckpts/`**.
 
-**Model hub:** [howellyoung1/OmniVideo11B](https://huggingface.co/howellyoung1/OmniVideo11B/tree/main) 
+| Component | Hugging Face repo | Local path |
+|-----------|-------------------|------------|
+| **OmniVideo11B** (connector, adapter, small generator, etc.) | [howellyoung1/OmniVideo11B](https://huggingface.co/howellyoung1/OmniVideo11B) | `model_ckpts/` |
+| **Wan2.1-T2V-14B** (high-fidelity generator) | [Wan-AI/Wan2.1-T2V-14B](https://huggingface.co/Wan-AI/Wan2.1-T2V-14B) | `model_ckpts/Wan2.1-T2V-14B/` |
 
 ```bash
+pip install huggingface_hub
+
+# OmniVideo11B bundle
 huggingface-cli download howellyoung1/OmniVideo11B --local-dir model_ckpts
+
+# Wan2.1-T2V-14B (used by UPFB at inference)
+huggingface-cli download Wan-AI/Wan2.1-T2V-14B --local-dir model_ckpts/Wan2.1-T2V-14B
 ```
+
+After download, `model_ckpts/` should contain the OmniVideo subfolders (e.g. `adapter/`, `wan/`, `ar_model/`, …) and a **`Wan2.1-T2V-14B/`** directory (see [`video_generator.py`](video_generator.py) for expected layout). Set `OMNI_MODELS_DIR` / `MODELS_DIR` in the shell scripts if you use a different root.
 
 ---
 
