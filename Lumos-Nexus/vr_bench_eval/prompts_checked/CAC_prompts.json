@@ -1,0 +1,1681 @@
+{
+  "Concurrent Action Coordination": {
+    "category_description": "Evaluate whether the model can maintain realistic coordination, attention allocation, and physical plausibility when performing multiple actions simultaneously. For example, walking while looking at a phone is realistic, but running while cooking is not.",
+    "prompts": [
+      {
+        "id": "CAC_001",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person walks while looking at a phone and drinking coffee.",
+        "description": "Tests whether the model can generate a realistic multi-action scenario.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning.",
+          "evaluation_description": "Evaluates the temporal synchronization, attention distribution, and physical realism of concurrent multi-action behavior.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person clearly walking forward with consistent leg movement and body balance?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the phone visibly held and being looked at during walking?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the coffee-holding or drinking motion occur naturally while walking?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the hand and arm motions (holding phone and cup) coordinated without collision or unnatural overlap?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the person maintain a realistic gait speed and posture while performing all actions?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q6",
+              "question": "Is gaze direction consistently oriented toward the phone, showing attention allocation?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are there no physical implausibilities (e.g., spilling coffee, tripping) that break realism?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is overall action timing smooth and simultaneous, rather than sequential or disjointed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_002",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A chef flips food in a pan while chopping vegetables on the counter.",
+        "description": "Tests whether the model can represent coordinated bimanual Concurrent Action Coordination.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' concisely with short explanations.",
+          "evaluation_description": "Assesses timing coordination and hand-level motor realism in bimanual cooking actions.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the chef simultaneously holding a pan and using a knife?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are flipping and chopping actions happening concurrently rather than alternately?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is each hand’s motion distinct yet synchronized in rhythm?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are arm trajectories realistic without unnatural overlaps?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Do the hand movements for flipping food and chopping vegetables not cross or interfere with each other unnaturally?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Are food and tool interactions physically plausible (e.g., pan tilt, knife contact)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Are object responses (food motion, cutting sound) consistent with the actions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is timing between flipping and chopping visually smooth and believable?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_003",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person types on a laptop while sipping tea.",
+        "description": "Tests the model’s understanding of natural everyday multitasking behavior.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Judge each question with 'Yes' or 'No' and a short reason.",
+          "evaluation_description": "Examines everyday attention switching and fine-motor realism under concurrent minor actions.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person visibly typing on the keyboard?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is tea being held or sipped while typing continues?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does the person maintain a consistent posture while typing and sipping simultaneously?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Does the person's hand movements remain focused on typing without interruption while sipping tea?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the person keep both hands on the laptop keyboard while sipping tea without switching hands?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are gaze or facial cues showing attention alternation between screen and cup?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the tea movement follow realistic gravity and hand control?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the typing–sipping timing smooth and plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_004",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A musician plays the guitar while singing into a microphone.",
+        "description": "Tests the model’s understanding of sound–action synchronization and coordination.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer each question concisely with Yes/No.",
+          "evaluation_description": "Evaluates rhythmic alignment and cross-modal coherence between vocal and instrumental actions.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the musician clearly strumming or picking the guitar?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is singing performed simultaneously with guitar playing?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Do mouth movements align rhythmically with hand strumming?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is head or torso movement consistent with musical rhythm?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are the microphone and guitar positioned realistically?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Do breathing or pauses align naturally with strumming patterns?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Are both sound sources and physical gestures temporally coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the dual-action timing stable and realistic throughout?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_005",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person jogs while listening to music through headphones.",
+        "description": "Tests whether the model can represent natural concurrent body and auditory actions.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Give Yes/No for each question and explain briefly.",
+          "evaluation_description": "Assesses gait stability and synchronization with secondary auditory focus.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person visibly jogging with rhythmic leg motion?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are headphones or earbuds worn clearly?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Do head or upper-body movements follow jogging rhythm naturally?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is there occasional subtle reaction to music (e.g., head nod, tempo alignment)?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Does the person's facial expression or posture suggest enjoyment or engagement with the music?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the person’s face and head movement remain consistent with the rhythm of the music and running pace?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are there no unrealistic distortions of motion speed or limb sync?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is temporal alignment between jogging and listening consistently natural?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_006",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A painter talks on the phone while mixing colors on a palette.",
+        "description": "Tests the model’s ability to represent attention distribution across simultaneous actions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No with reasoning for each point.",
+          "evaluation_description": "Evaluates coordination between verbal communication and manual artistic activity.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the painter holding a phone while using the other hand to mix paint?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Do speaking gestures or mouth movements occur concurrently with painting?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is body posture adjusted realistically to balance both actions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do gaze or head turns alternate naturally between palette and phone?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are both actions temporally overlapping rather than sequential?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Is paint mixing physically accurate (motion, color blending)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the painter's hand movements accurately reflect the action of mixing paint on the palette?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is overall concurrent action timing smooth and believable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_007",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A student writes notes while watching an online lecture.",
+        "description": "Evaluates whether the model can generate synchronized visual and motor actions.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Judge with Yes/No answers, add short reasoning.",
+          "evaluation_description": "Tests concurrent hand–eye coordination and task realism under dual attention.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the student simultaneously looking at a screen and writing notes?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does gaze alternate naturally between screen and notebook?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is writing motion continuous and aligned with visual focus shifts?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Is pen or hand motion consistent with normal note-taking speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does seated posture remain stable during multitasking?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are screen visuals and writing actions temporally synchronized?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Is body and hand coordination physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is attention switching natural without long idle pauses?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_008",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A driver eats a sandwich while steering a car.",
+        "description": "Tests the model’s recognition of unsafe concurrent behaviors.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer each question briefly with Yes/No.",
+          "evaluation_description": "Assesses causal realism and risk awareness in unsafe dual-task driving scenes.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the driver visibly controlling the steering wheel?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is eating motion performed while one hand remains on or near the wheel?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the driver maintaining proper lane position while eating and steering?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Does eating occur simultaneously with partial vehicle control?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are vehicle motion and driver posture physically stable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the scene reflect realism without exaggerated hazards?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Are cause–effect relations (e.g., steering drift) handled plausibly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is multitasking timing realistic, showing attention division?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_009",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A barista steams milk while preparing coffee grounds.",
+        "description": "Evaluates the model’s handling of professional multitasking scenarios.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No for each question and explain briefly.",
+          "evaluation_description": "Evaluates occupational dual-hand precision and procedural timing under pressure.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the barista managing both milk steaming and coffee preparation simultaneously?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are tool interactions realistic (pitcher, portafilter)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are both hands performing coordinated tasks without conflict?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are the movements of the barista’s hands smooth and natural during both tasks?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does sequence timing mirror real barista multitasking flow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are actions continuous and overlapping rather than isolated?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are body posture and workspace interactions physically consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is action timing natural and plausible for a coffee-making context?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_010",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A teacher writes on the board while explaining to students.",
+        "description": "Tests the model’s expression of synchronized speech and motion.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely for each question.",
+          "evaluation_description": "Assesses audio–visual synchronization and instructional realism under dual tasks.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the teacher actively writing or pointing at the board?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the teacher's hand visibly engaged with the writing on the board?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Do hand motions align with verbal explanation timing?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the teacher's writing on the board correspond appropriately to the current part of the explanation?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is board content logically progressing during explanation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are head and body orientation toward students realistic?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Are the teacher's movements synchronized with the writing and explanations being given?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the teacher's handwriting on the board match the written instructions visually?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_011",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person folds clothes while watching television.",
+        "description": "Tests the model’s ability to generate mild everyday multitasking actions.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No and add short reasoning.",
+          "evaluation_description": "Evaluates dual attention and motion realism in low-stakes multitasking behavior.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person visibly folding clothes with both hands?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is gaze occasionally directed toward the television?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q3",
+              "question": "Do attention shifts occur smoothly between folding and watching?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is folding motion continuous and consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the person seated or standing in a stable position?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Does the person’s folding actions occur simultaneously with their television viewing within the same timeframe?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are Concurrent Action Coordination realistic without unnatural pauses?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is temporal synchronization between watching and folding plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_012",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person cooks while talking to someone on a video call.",
+        "description": "Tests whether the model can coordinate verbal and manual activities.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No for each question and briefly explain.",
+          "evaluation_description": "Evaluates verbal–motor synchronization, attention sharing, and hand–eye coordination during multitasking.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person cooking with visible hand motion on food or utensils?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is a video call screen clearly visible during cooking?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do speech or facial motions occur simultaneously with cooking actions?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are gaze shifts naturally alternating between the cooking area and the video call?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are the hand motions continuous and synchronized with ongoing conversation timing?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Does the person's hand movements for cooking and the lip movements for talking appear synchronized in the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are object interactions (pan, phone) physically realistic without overlap?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is temporal coordination between talking and cooking smooth and concurrent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_013",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A construction worker operates machinery while giving hand signals to a coworker.",
+        "description": "Tests the model’s ability to represent coordinated multi-threaded work behavior.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with short reasoning.",
+          "evaluation_description": "Assesses mechanical control, attention division, and signal–operation synchronization in high-risk tasks.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is machinery operation visible and continuous?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are hand signals clearly directed toward another person?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do both actions overlap in time rather than sequentially?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Are mechanical movements and signaling gestures rhythmically coordinated?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is attention alternation between machine and coworker realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are the hand signals clearly visible and distinguishable in the video?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are machinery physics and worker motions plausible together?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is overall timing consistent with real construction multitasking?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_014",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A parent feeds a baby while stirring soup on the stove.",
+        "description": "Tests the model’s representation of multitasking in household contexts.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely for each question.",
+          "evaluation_description": "Evaluates dual attention and manual control in safe multitasking domestic behavior.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the parent simultaneously feeding the baby and stirring soup?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is feeding motion gentle and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are stirring motions performed concurrently without interruption?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Do head and gaze directions alternate naturally between baby and stove?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Are object interactions (spoon, pot, bowl) physically correct?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is baby reaction consistent with feeding behavior?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are safety-related body positions (distance from stove) realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is timing between feeding and stirring smooth and believable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_015",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person jogs on a treadmill while reading a tablet.",
+        "description": "Evaluates whether the model can maintain balance and cognitive coordination.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No and briefly justify each.",
+          "evaluation_description": "Tests balance maintenance and visual–motor synchronization in concurrent motion–cognitive tasks.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the treadmill motion visible and consistent with jogging speed?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the tablet held and read during jogging?",
+              "weight": 2.0,
+              "importance_score": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Are upper-body and arm motions stable despite leg movement?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Does gaze stay mostly focused on the tablet?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the person maintain a consistent posture while jogging and reading?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the person maintain a consistent posture while jogging and reading simultaneously?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are reading and running rhythms visually coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is multitasking timing natural without abrupt focus loss?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_016",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A photographer adjusts camera settings while tracking a moving subject.",
+        "description": "Tests whether the model can generate dynamic, attention-focused multitasking.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No judgments with concise reasoning.",
+          "evaluation_description": "Evaluates eye–hand coordination, visual tracking, and dynamic realism in professional multitasking.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the camera being adjusted while the subject moves?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the subject motion continuous and visible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the camera follow the subject smoothly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the camera’s exposure settings change appropriately as the lighting conditions vary during tracking?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is focus adjustment synchronized with subject distance changes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the camera's adjustment actions appear smoothly integrated with the subject's movement in the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are the camera movements and focus adjustments synchronized with the subject’s direction and speed in the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Is overall temporal coordination between adjustment and tracking coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_017",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person cooks and cleans the counter at the same time.",
+        "description": "Tests the model’s ability to preserve visual naturalness in simultaneous actions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely with reasoning.",
+          "evaluation_description": "Assesses simultaneous manual actions and spatial realism in multitasking within one environment.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person cooking while wiping or cleaning the counter?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are both actions happening concurrently?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are hand motions spatially separated and physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is cleaning motion fluid without interfering with cooking utensils?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are object interactions (rag, pan, food) accurate?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are both the person’s hands visibly engaged in cooking and cleaning simultaneously without awkward movements?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are no implausible overlaps or collisions visible?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Is timing between cooking and cleaning smooth and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_018",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A runner drinks water while continuing to run.",
+        "description": "Tests the model’s handling of short-term concurrent body actions.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No to each question briefly.",
+          "evaluation_description": "Evaluates motion continuity, limb synchronization, and body stability during active dual actions.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the runner's running posture consistent before and during drinking?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Is drinking motion (bottle to mouth) visible while running continues?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are hand–mouth interactions smooth and natural?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the runner maintain a consistent running posture while drinking water?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the runner's running motion remain steady and unaffected while drinking water?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Does water movement follow physical realism?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is there no unnatural stop or pause in running during drinking?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is dual-action timing continuous and lifelike?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_019",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A scientist records notes while observing a reaction in a lab flask.",
+        "description": "Tests the model’s generation of attention-operation coordination.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Judge with Yes/No and brief reasoning.",
+          "evaluation_description": "Examines dual focus and attention shifting in precision-oriented professional multitasking.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the scientist looking at the reaction and writing alternately?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are both notebook and flask visible in the scene?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are the scientist's hand movements and note-taking actions physically synchronized with the reaction progress?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Do gaze transitions match note-taking timing?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Are hand and eye coordination physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the scientist visibly record notes while observing the reaction in the flask within the same scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the scientist’s hand visibly move to write in the notebook while observing the lab flask in the same scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the scientist's gaze shift between the lab flask and the notes during the observation?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_020",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person drives a car while talking to a passenger and adjusting the radio.",
+        "description": "Tests the model’s depiction of multitasking within safe-driving constraints.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No for each question with short explanations.",
+          "evaluation_description": "Evaluates safe multitasking behavior, attention division, and causal coherence in driving contexts.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the person visibly steering the car?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is conversation directed toward the passenger while driving continues?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does radio adjustment occur concurrently with vehicle control?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are head and eye directions alternating naturally between road, passenger, and console?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the vehicle motion steady without erratic deviations?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Are gestures and speech timing plausible under real driving conditions?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Are physical interactions with steering wheel and radio accurate?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is attention division realistic without overloading visual focus?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_021",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person sweeps the floor while humming a tune.",
+        "description": "Tests the model’s ability to generate light, relaxed Concurrent Action Coordination.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Judge each question with Yes/No and add short reasoning.",
+          "evaluation_description": "Evaluates temporal alignment between rhythmic physical motion and auditory expression.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is sweeping motion visible and repetitive?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the person's sweeping motion continuous and consistent throughout the video?",
+              "importance_score": 0.8,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Do body and head motions align with the humming tempo?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are sweeping directions consistent and physically accurate?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does posture remain stable during both actions?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Does the person's sweeping motion remain consistent with the sound of humming throughout the scene?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are sound and motion cues temporally aligned?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is overall timing smooth and realistic for a casual multitask?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_022",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A waiter serves food while balancing multiple plates.",
+        "description": "Tests the model’s understanding of physical balance and multitask posture.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer each question concisely with Yes/No.",
+          "evaluation_description": "Evaluates balance, coordination, and fine-motor realism under high physical multitasking load.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the waiter carrying multiple plates simultaneously?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is serving motion continuous without interruptions?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are body and arm postures balanced and stable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are hand trajectories precise and collision-free?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the waiter's overall posture remain balanced and stable throughout the action?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are plates held at realistic angles and distances?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are small weight shifts visible to maintain equilibrium?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is overall motion timing smooth and physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_023",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person irons clothes while watching a movie on TV.",
+        "description": "Tests whether the model can generate simultaneous visual attention and motion.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers briefly.",
+          "evaluation_description": "Evaluates distributed visual focus and continuous repetitive motion consistency.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is ironing motion visible and continuous?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the person holding the iron in a consistent and realistic manner?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are gaze shifts between ironing and TV natural?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q4",
+              "question": "Is hand motion synchronized with fabric direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the person's body orientation change appropriately when shifting attention between ironing and watching TV?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is attention alternation between tasks plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are ironing results physically consistent (no artifacts)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the person’s eye movement indicate simultaneous engagement with both tasks?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_024",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A gamer plays a video game while talking to teammates through a headset.",
+        "description": "Tests the model’s understanding of cognitive and linguistic resource allocation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer each question Yes/No with a short justification.",
+          "evaluation_description": "Assesses cognitive–motor coordination and timing consistency in interactive Concurrent Action Coordination.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the gamer actively interacting with game controls?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is speech activity occurring through visible mouth motion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are speech and game actions overlapping naturally?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does gaze remain fixed on the game screen?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is hand–eye coordination consistent with gameplay timing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the gamer’s mouth movements synchronized with the spoken dialogue?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is voice–action synchronization plausible for real gaming?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is overall tempo natural without temporal conflict?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_025",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person walks a dog while eating ice cream.",
+        "description": "Tests the model’s ability to generate relaxed, everyday concurrent behavior.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Judge each question with Yes/No concisely.",
+          "evaluation_description": "Evaluates concurrent locomotion, hand coordination, and environmental realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the dog leash visible and being held?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is walking motion consistent with leash tension changes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is ice cream eating motion smooth and synchronized with steps?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Are both hands used independently yet coordinated?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Does the dog’s motion stay naturally aligned with the person?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the person appear to be holding both the ice cream and the dog leash at the same time throughout the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the person’s hand movements appear natural when transitioning between holding the ice cream and walking the dog?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is concurrent timing between eating and walking believable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_026",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A teacher gestures with one hand while holding a book with the other.",
+        "description": "Tests the model’s capture of coordinated gesture and verbal expression.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No for each question with a short reason.",
+          "evaluation_description": "Assesses manual asymmetry and synchrony between expressive gestures and static holding behavior.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the teacher visibly holding a book?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the teacher's hand that is raised visible in the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is gesture amplitude and rhythm natural?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Is the non-gesturing hand posture stable?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Is the teacher's hand gesture consistent and synchronized with the speech or context?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the teacher's hand gestures align naturally with their facial expressions and body language?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are gestures physically plausible given arm constraints?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the teacher's hand gesture appear natural and fluid during the action?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "CAC_027",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A scientist adjusts a microscope while recording results on a tablet.",
+        "description": "Tests the model’s ability to generate realistic multitasking in experimental settings.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with explanations.",
+          "evaluation_description": "Assesses precision control, timing synchronization, and spatial attention balance in lab multitasking.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is microscope adjustment visible and precise?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is recording motion on tablet concurrent with observation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are head and hand movements aligned with fine control timing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the scientist's hand movements smoothly coordinated when switching between adjusting the microscope and recording on the tablet?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are both tools handled without unnatural overlap?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is lab setup physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are multi-hand tasks temporally overlapping?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is overall timing coherent with real lab multitasking?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      }
+    ]
+  }
+}

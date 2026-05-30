@@ -1,0 +1,1776 @@
+{
+  "Cultural Commonsense Reasoning": {
+    "category_description": "Evaluate whether the model can understand and accurately represent culturally grounded scenes, symbols, rituals, and behaviors — reflecting correct cultural context, attire, and social meaning.",
+    "prompts": [
+      {
+        "id": "CCR_001",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese family decorates their home with red lanterns and fireworks during Lunar New Year.",
+        "description": "Tests whether the model can represent Chinese New Year customs and cultural symbolism.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates accuracy of cultural symbols, attire, festive setting, and contextual meaning of celebration.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question and explain briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are red lanterns clearly visible and hung in a culturally appropriate way?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the family wear festive clothing (e.g., red garments or traditional Chinese outfits)?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q3",
+              "question": "Are fireworks or related celebratory elements shown in a realistic and safe context?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the environment (home décor, furniture) consistent with a Chinese household setting?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Does the scene convey a warm, familial atmosphere typical of Lunar New Year gatherings?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Do the decorations include traditional Lunar New Year symbols like couplets or fish images?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are no culturally incorrect symbols (e.g., Western Christmas items) present?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Are the red lanterns and fireworks visibly hung up and displayed in the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_002",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese tea master performs a tea ceremony on tatami mats with traditional utensils.",
+        "description": "Tests whether the model can depict Japanese ritual accuracy and spatial etiquette.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses ritual precision, posture, utensil use, and respect for spatial harmony in Japanese culture.",
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the ceremony performed on tatami mats with proper kneeling posture?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are traditional utensils like chawan (tea bowl) and chasen (whisk) present and used correctly?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the master’s movement deliberate and slow, reflecting mindfulness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the tea room simple, clean, and consistent with wabi-sabi aesthetics?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Does the scene maintain spatial symmetry and tranquility?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are no non-traditional or modern distractions (e.g., electronics) present?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the tea master display traditional attire appropriate to Japanese tea ceremony customs?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Are the traditional utensils used correctly and handled with proper etiquette during the tea ceremony?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_003",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An Indian family lights oil lamps and exchanges sweets during Diwali.",
+        "description": "Tests whether the model understands Indian festival rituals and visual ambiance.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates depiction of Diwali-specific objects, lighting, attire, and symbolic meaning of celebration.",
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and explain briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are traditional oil lamps (diyas) used with visible flames and realistic glow?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are the oil lamps (diyas) properly positioned and lit in a way that illuminates the surroundings visibly?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are the oil lamps placed visibly on the floor or shelves, emphasizing traditional Diwali decorations?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Is the environment illuminated warmly, symbolizing light over darkness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the family interaction convey joy, respect, and togetherness?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Are the oil lamps lit and glowing brightly in the scene?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are the family members shown wearing traditional Indian clothing during the celebration?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Are the family members actively shown exchanging sweets with smiles during the celebration?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_004",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Muslim family gathers to break fast with dates and tea during Ramadan.",
+        "description": "Tests whether the model reflects accurate religious customs and timing.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses ritual timing, food authenticity, attire, and spiritual tone of iftar gathering.",
+          "overall_instruction": "Respond 'Yes' or 'No' and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the scene occur during evening or sunset lighting?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are dates and tea the first foods shown when breaking fast?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do the family members appear to be sharing a moment of togetherness while eating?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Is prayer or gratitude implied through gestures before eating?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are all family members actively engaged in eating or drinking during the scene?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are the family members dressed in modest clothing appropriate for a religious gathering during Ramadan?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Do the family members display expressions of gratitude or contentment while breaking their fast?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene maintain a peaceful and spiritual atmosphere?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_005",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An American family carves pumpkins and decorates their porch for Halloween.",
+        "description": "Tests whether the model can capture cultural symbols and seasonal atmosphere.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates use of Halloween symbols, activity sequence, and visual consistency of autumn setting.",
+          "overall_instruction": "Answer 'Yes' or 'No' to each question with reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are pumpkins visibly carved with faces or patterns?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the porch decorated with Halloween motifs (e.g., cobwebs, candles)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the time of day appropriate (evening or dusk lighting)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the pumpkins accurately carved with typical Halloween faces or designs?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Is the environment (fallen leaves, orange hues) consistent with autumn?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Are tools or actions for carving depicted realistically?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q7",
+              "question": "Are Halloween-specific decorations used accurately without mixing holidays?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Are the pumpkin carvings shown with typical Halloween designs such as faces or patterns?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_006",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Mexican community builds colorful altars for Día de los Muertos.",
+        "description": "Tests whether the model can represent cultural symbolism of remembrance and color.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Examines depiction of altar elements, color symbolism, and cultural respect for remembrance.",
+          "overall_instruction": "Provide 'Yes' or 'No' responses and short reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the altar constructed with multiple tiers, candles, and marigold flowers?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are photos or offerings (e.g., food, sugar skulls) present on the altar?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Are colors vibrant and symbolic (orange, purple, pink) used correctly?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Are cultural objects placed respectfully, not in a mocking or chaotic manner?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the lighting evoke candle-lit warmth suitable for night rituals?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Are family photographs appropriately included on the altars to honor the deceased?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are traditional symbols (sugar skulls, papel picado) used authentically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene reflect remembrance rather than horror or Halloween themes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_007",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "People in Germany drink beer and wear traditional Bavarian clothing during Oktoberfest.",
+        "description": "Tests whether the model can depict cultural dress and celebratory behavior correctly.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates authenticity of attire, setting, and atmosphere consistent with Oktoberfest traditions.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question and give brief justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are people dressed in traditional Bavarian outfits (lederhosen, dirndl)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are large beer mugs and wooden tables depicted accurately?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the video show people wearing traditional Bavarian clothing while holding beer mugs at Oktoberfest?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Does the video depict people in Germany celebrating Oktoberfest in a festive setting?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the video show people actively engaging in traditional Oktoberfest dances while wearing Bavarian clothing?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are the clothing items worn by people visibly traditional Bavarian outfits like dirndls and lederhosen?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are the images of people holding large steins of beer consistent with Oktoberfest festivities?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the environment reflect authentic German architecture or festival layout?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_008",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Korean family gathers to share rice cakes and bow to elders during Chuseok.",
+        "description": "Tests whether the model captures familial customs and etiquette.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Analyzes depiction of Chuseok traditions, food, bowing etiquette, and generational respect.",
+          "overall_instruction": "Answer 'Yes' or 'No' to each question with reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are rice cakes (songpyeon) accurately shaped and placed in trays?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Do family members wear hanbok or culturally appropriate clothes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the bowing gesture respectful, with proper posture and spacing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the family members wearing traditional clothing appropriate for Chuseok celebrations?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are generational relationships visually emphasized (elders seated centrally)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Do the family members perform a traditional bow to the elders in a respectful manner?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are the family members dressed in traditional Korean clothing appropriate for Chuseok celebrations?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene evoke familial respect and gratitude central to Chuseok?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_009",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Christian family decorates a Christmas tree and exchanges gifts.",
+        "description": "Tests whether the model represents Western holiday traditions correctly.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates whether Christmas symbols, decoration order, and family interactions align with Western cultural practices.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is a Christmas tree decorated with ornaments, lights, and a star or angel on top?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are wrapped gifts placed near the tree in a culturally appropriate way?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do participants wear seasonally appropriate winter clothing or festive colors?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q4",
+              "question": "Is the Christmas tree properly decorated with typical festive ornaments and lights?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Are gestures of joy and gift exchange shown authentically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are the decorations on the Christmas tree consistent with traditional Christian symbols like stars or angels?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the depiction free of non-Christmas elements (e.g., fireworks, pumpkins)?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q8",
+              "question": "Does the overall atmosphere convey warmth, celebration, and familial connection?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_010",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Thai community releases lanterns into the sky during the Yi Peng festival.",
+        "description": "Tests whether the model can express cultural rituals linked to illumination and peace.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses whether the model accurately represents lantern design, communal atmosphere, and the symbolic act of releasing light for peace.",
+          "overall_instruction": "Respond 'Yes' or 'No' and provide a short reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are floating sky lanterns (khom loi) clearly visible and rising uniformly?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are participants dressed in Thai attire or festival-appropriate clothing?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q3",
+              "question": "Is the night sky illuminated with soft warm light from lanterns?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the lanterns shown floating steadily and visibly ascending into the sky?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Is the surrounding environment (temple, riverbank, open field) culturally authentic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Do lanterns move naturally with wind, showing realistic flight paths?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is the symbolism of release and prayer visually conveyed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Do the lanterns ascend smoothly and appear buoyant as they rise into the sky?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_011",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese couple wears traditional wedding kimonos at a Shinto shrine.",
+        "description": "Tests whether the model can depict clothing and ceremonial gestures correctly.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates the accuracy of traditional Shinto wedding attire, ritual gestures, and environmental details.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question with justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are the bride and groom wearing appropriate wedding kimonos (shiromuku, montsuki haori)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the ceremony located within a Shinto shrine setting (torii gates, wooden altar)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are the traditional wedding kimonos worn by the couple accurately representative of formal attire for a Shinto ceremony?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Is the priest or officiant dressed in correct Shinto robes?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Are the traditional wedding kimonos correctly aligned and properly worn by the couple, reflecting formal dressing standards?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the shrine architecture (wooden pillars, white drapes) culturally faithful?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are colors (white, red, gold) used with cultural appropriateness?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q8",
+              "question": "Does the mood convey solemnity, harmony, and spiritual dignity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_012",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese elder practices calligraphy with brush and ink in a courtyard.",
+        "description": "Tests whether the model captures cultural aesthetics and body posture accuracy.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses physical posture, brush technique, and environment reflecting Chinese calligraphic culture.",
+          "overall_instruction": "Answer 'Yes' or 'No' to each question with short justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the elder seated or standing with proper posture for calligraphy?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are traditional tools like inkstone, brush, and rice paper shown correctly?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is brush handling delicate and consistent with real calligraphy movements?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Does the elder's posture and grip on the brush align with traditional calligraphy techniques?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are calligraphy strokes visible and culturally accurate (Chinese characters)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does lighting or background emphasize calm focus and artistry?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Are there no anachronistic elements (pens, modern tables, screens)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the video accurately depict traditional Chinese calligraphy tools and posture without modern substitutions?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_013",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A French café scene with people drinking espresso and reading newspapers.",
+        "description": "Tests whether the model can depict authentic cultural ambiance and behavior.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates the model’s ability to capture European café culture, posture, and ambiance realism.",
+          "overall_instruction": "Respond 'Yes' or 'No' to each question and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the café outdoor with small round tables and chairs typical of France?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q2",
+              "question": "Are people drinking espresso or similar small coffee cups, not mugs?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the body posture relaxed, suggesting conversation or solitude?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q4",
+              "question": "Are the people dressed in typical Parisian café attire, such as scarves or berets?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are newspapers, croissants, or baguettes visible as cultural cues?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Are the people in the scene appear to be engaged in typical café activities like drinking coffee and reading newspapers simultaneously?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Do the people in the scene appear to be enjoying their drinks and reading the newspapers in a relaxed manner consistent with a typical café setting?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Do the people in the scene appear to be interacting with their newspapers or drinks in a manner consistent with typical café behavior?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_014",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Scottish musician plays bagpipes while wearing a kilt during a parade.",
+        "description": "Tests whether the model can represent national attire and performance rituals.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses attire authenticity, musical performance realism, and cultural symbolism of Scottish heritage.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question with reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the musician wearing a tartan kilt, sporran, and matching accessories?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the bagpipe held and played correctly with visible airflow motion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are parade participants aligned and moving rhythmically?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Is the environment (street, spectators, flags) consistent with a public event?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are color tones (green, red, black) culturally accurate for attire?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Is sound implied visually through breathing and finger movement?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the video show the musician's fingers actively pressing the bagpipe holes as they play?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene convey national pride and coordination?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_015",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An African tribe performs a traditional dance with drums around a fire.",
+        "description": "Tests whether the model can portray cultural rhythm, costume, and setting.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates authenticity of motion, costume, and collective energy characteristic of African cultural performances.",
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and brief justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are participants dressed in tribal attire with beads, feathers, or body paint?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are drums and rhythmic instruments accurately modeled and played?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is group dancing synchronized and physically expressive?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the fire placed centrally, illuminating the participants naturally?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are movements energetic but culturally appropriate (not exaggerated)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are cultural symbols (masks, patterns) represented respectfully?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Is sound rhythm visually conveyed through body motion and vibration cues?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q8",
+              "question": "Does the atmosphere evoke cultural vitality and community spirit?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_016",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Buddhist monk meditates in a temple with candles and chanting.",
+        "description": "Tests whether the model represents spiritual atmosphere and composure.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses calmness, lighting, attire, and symbolic coherence of Buddhist meditation rituals.",
+          "overall_instruction": "Respond 'Yes' or 'No' and briefly explain your reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the monk wearing proper saffron or maroon robes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is posture upright, stable, and appropriate for meditation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are temple interiors shown with statues, candles, or incense?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Is lighting dim and warm, evoking serenity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are ambient cues (chanting, bells) visually implied or synchronized?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the monk’s facial expression composed and peaceful?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are cultural elements consistent with Buddhist architecture and décor?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the overall tone express tranquility and spiritual focus?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_017",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An American family enjoys a turkey dinner for Thanksgiving.",
+        "description": "Tests whether the model can depict family gathering and traditional food.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Examines realism of Thanksgiving food, table arrangement, and emotional tone of gratitude.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question and explain briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is a roasted turkey clearly placed at the center of the table?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are side dishes (mashed potatoes, gravy, vegetables) represented authentically?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q3",
+              "question": "Are family members seated together with visible interaction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the family members holding eating utensils and actively serving or eating the food?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Are the family members actively passing food or serving dishes to each other during the meal?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are all family members shown sitting together around the table during the meal?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the emotional tone calm, grateful, and familial?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene avoid mixing unrelated holidays or foods?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_018",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Hindu priest performs a river offering ritual with flowers and lamps.",
+        "description": "Tests whether the model can generate detailed religious actions and context.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Assesses correctness of ritual actions, river setting, and sacred symbols in a Hindu offering scene.",
+          "overall_instruction": "Respond 'Yes' or 'No' to each question and provide reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the priest dressed in traditional dhoti or saffron robes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are floating lamps (diyas) and flower offerings visible on the water?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the priest depicted wearing traditional attire appropriate for the ritual?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Are gestures (offering, chanting, or hand-raising) depicted reverently?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q5",
+              "question": "Are symbolic items (incense, conch, brass vessels) used authentically?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Are the flowers and lamps arranged in a manner consistent with traditional Hindu ritual practices?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is water movement realistic and reflective, emphasizing spiritual context?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene evoke spiritual calm and ritual sanctity?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_019",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Brazilian carnival parade with dancers wearing feathered costumes.",
+        "description": "Tests whether the model captures movement, energy, and festive clothing.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates the depiction of Brazilian carnival aesthetics, color harmony, dance rhythm, and joyfulness.",
+          "overall_instruction": "Answer 'Yes' or 'No' and briefly explain your answer.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are dancers wearing colorful feathered costumes typical of carnival?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are the dancers' costumes predominantly decorated with feathers?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are dance movements energetic and synchronized with implied rhythm?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is lighting bright, emphasizing day or early evening carnival settings?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Are facial expressions and body language lively and joyous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are cultural symbols (Brazilian flags, samba drums) used authentically?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q7",
+              "question": "Is camera perspective dynamic, showing parade motion and crowd energy?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Do the dancers' feathered costumes reflect traditional Brazilian carnival attire accurately?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_020",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese dragon dance takes place in a crowded festival street.",
+        "description": "Tests whether the model reflects rhythm, coordination, and festive context.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Assesses how accurately the model captures coordinated group motion, props, and visual rhythm typical of Chinese dragon dances.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the dragon costume long, articulated, and moved by multiple performers?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Do the performers hold poles and move rhythmically beneath the dragon body?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the environment filled with lanterns, banners, and crowd spectators?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Is the dragon’s head expressive and animated in sync with drum rhythms?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are accompanying musicians (drums, cymbals, gongs) visible or implied?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are the dragon costumes detailed and authentic to traditional designs?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are colors red and gold emphasized to reflect prosperity symbolism?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the entire scene evoke coordinated celebration and cultural pride?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_021",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese school sports day with children running and cheering.",
+        "description": "Tests whether the model can represent modern cultural events and social behaviors.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates realism of school uniforms, sports day organization, and social context reflecting Japanese school life.",
+          "overall_instruction": "Answer 'Yes' or 'No' and provide concise justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are children wearing gym uniforms (white T-shirts, red/white caps)?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the event held outdoors with visible track lines or schoolyard setup?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q3",
+              "question": "Are group activities like relay races or tug-of-war depicted accurately?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are teachers or parents seen supervising or cheering from sidelines?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Are the children wearing traditional Japanese sports uniforms as described?",
+              "importance_score": 0.7,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is lighting consistent with a bright daytime outdoor event?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are body movements energetic yet childlike and natural?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene convey team spirit and youthful enthusiasm?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_022",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An Arab wedding with traditional music, henna, and group dancing.",
+        "description": "Tests whether the model can reproduce cultural celebration with authenticity.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Analyzes accuracy of attire, music instruments, and symbolic rituals in a traditional Arab wedding celebration.",
+          "overall_instruction": "Answer 'Yes' or 'No' and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are participants dressed in traditional or formal Middle Eastern attire?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is henna art visible on hands or part of pre-wedding customs?",
+              "weight": 2.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Is live music shown using instruments such as darbuka or oud?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are group dances (dabke or similar) performed in rhythmic unison?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Do multiple participants wear traditional Arab clothing, such as kaftans or thobes, during the dance?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are the traditional dance movements accurately represented and synchronized among the performers?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are the traditional clothing and accessories accurately depicted in the scene?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the mood reflect joy, community, and cultural respect?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_023",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A group of children in India fly colorful kites during Makar Sankranti.",
+        "description": "Tests whether the model captures festival atmosphere and sky interaction.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses visual vibrancy, kite realism, and collective enthusiasm of an Indian kite festival.",
+          "overall_instruction": "Provide 'Yes' or 'No' answers and short explanations.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are children holding or flying bright kites of various shapes?",
+              "weight": 2.0,
+              "importance_score": 1.0
+            },
+            {
+              "id": "q2",
+              "question": "Is the sky filled with multiple colorful kites, showing depth and height?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are rooftops or open grounds depicted realistically as flying areas?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the children shown actively flying and controlling their kites appropriately?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is the time of day bright and sunny, matching the festival timing?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Are string reels (manja) or kite threads represented accurately?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are cultural cues like sweets or rooftop gatherings visible?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q8",
+              "question": "Does the atmosphere convey playfulness, freedom, and festivity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_024",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Western wedding ceremony with a bride in white and groom in a tuxedo.",
+        "description": "Tests whether the model follows modern Western wedding customs accurately.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates depiction of Western-style marriage attire, venue, and ceremonial actions.",
+          "overall_instruction": "Answer 'Yes' or 'No' to each question with justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the bride wearing a white dress and veil, and the groom in a tuxedo?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the bride's attire include a white wedding gown and a veil, and the groom's attire include a tuxedo?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are participants positioned facing an officiant or altar?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Are symbolic acts (ring exchange, vows) depicted authentically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are guests dressed formally and seated in orderly arrangement?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Is floral décor and lighting consistent with wedding aesthetics?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Are no inappropriate or unrelated symbols (religious mismatch) present?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the overall tone convey love, commitment, and solemnity?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_025",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese calligrapher and a painter collaborate during a cultural exhibition.",
+        "description": "Tests whether the model can represent multi-art cultural performance coherence.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses interaction between traditional Chinese arts, tool accuracy, and compositional harmony.",
+          "overall_instruction": "Answer 'Yes' or 'No' for each question and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are both calligraphy and painting tools (brushes, inkstone, scrolls) visible?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are the artists shown cooperating or sequentially performing their crafts?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the setting consistent with a gallery or cultural hall environment?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are artworks featuring traditional motifs (mountains, bamboo, characters)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is lighting bright but soft, emphasizing artistic detail?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Do the artists wear attire suitable for formal exhibition or cultural display?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Are audience members shown observing respectfully?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene express cross-disciplinary harmony of traditional arts?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_026",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An indigenous elder tells stories by a fire to children wearing traditional clothes.",
+        "description": "Tests whether the model conveys cultural heritage transmission naturally.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates intergenerational storytelling, attire, and atmosphere reflecting oral cultural transmission.",
+          "overall_instruction": "Respond 'Yes' or 'No' for each and provide brief reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the elder seated by a fire in a natural or village setting?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are children listening attentively and dressed in traditional garments?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q3",
+              "question": "Is firelight used effectively to highlight facial expressions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the elder's facial expressions clearly visible and expressive during storytelling?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Are the children’s reactions and engagement clearly observable during the storytelling?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are the children's facial expressions showing engagement and attentiveness to the storyteller?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the environment calm, dark, and intimate, suited for storytelling?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene evoke continuity of wisdom and oral tradition?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_027",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Greek family dances in a circle during a village festival.",
+        "description": "Tests whether the model captures traditional movement patterns and attire.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses authenticity of Greek festival dance, attire, and communal energy.",
+          "overall_instruction": "Answer 'Yes' or 'No' and provide short reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are participants holding hands and moving rhythmically in a circle?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are traditional Greek costumes (white shirts, sashes, skirts) visible?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the dance pace steady and synchronized among participants?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the participants holding hands closely as they dance in a circle?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are musicians playing instruments like bouzouki or drum?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are traditional Greek clothing items visibly worn by the dancers?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are joyous expressions and laughter present among dancers?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene convey cultural unity and celebration?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_028",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese Mid-Autumn Festival scene with people eating mooncakes under lanterns.",
+        "description": "Tests whether the model can represent symbolic food and cultural atmosphere.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Examines lighting, food depiction, and festive calm consistent with Mid-Autumn traditions.",
+          "overall_instruction": "Answer 'Yes' or 'No' and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are mooncakes shown clearly and shared among participants?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are lanterns hanging or floating with warm glow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are the lanterns decorated with traditional Chinese patterns?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Is the setting outdoors (balcony, garden, or courtyard)?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Are family or friends gathered in a relaxed posture?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Are symbolic colors (red, gold) or motifs (rabbits, moon) present?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Do the people in the scene exhibit traditional Mid-Autumn Festival attire?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene express reunion and reflection under the full moon?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            }
+          ]
+        }
+      },
+      {
+        "id": "CCR_029",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese cherry blossom picnic with people sitting on blankets under blooming trees.",
+        "description": "Tests whether the model can express seasonal cultural appreciation scenes.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates whether hanami scenes are rendered naturally, emphasizing beauty, relaxation, and social harmony.",
+          "overall_instruction": "Respond 'Yes' or 'No' to each question and briefly explain.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are cherry blossom trees in full bloom and visually detailed?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are people seated on picnic blankets or mats beneath the trees?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Do the people in the video appear to be relaxed and enjoying the outdoor setting?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Are foods like bento boxes or snacks present on the mat?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Are petals shown gently falling, reflecting seasonal atmosphere?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Do the people in the video appear to be enjoying the picnic and engaging in social interactions?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are the cherry blossom trees in full bloom and visibly vibrant in the video?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the overall mood express appreciation for nature and togetherness?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

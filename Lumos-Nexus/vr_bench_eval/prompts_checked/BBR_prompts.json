@@ -1,0 +1,1655 @@
+{
+  "Biological Behavior Reasoning": {
+    "category_description": "Evaluate whether the model can generate biologically and ecologically consistent behaviors — ensuring that animal motion, species traits, and environmental interactions follow natural laws.",
+    "evaluation_principle": "Assess biomechanical realism, species-specific traits, and environment–organism feedback. Motions should respect kinematics, energy use, and causal interactions with the habitat.",
+    "prompts": [
+      {
+        "id": "BBR_001",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A cat jumps onto a table to catch a butterfly.",
+        "description": "Tests whether the model can represent realistic animal motion and balance.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Checks feline jump kinematics, balance recovery, prey tracking, and object-contact effects.",
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the cat crouch and load its hind legs before takeoff (pre-jump preparation)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the takeoff trajectory continuous with visible hind-leg extension and center-of-mass lift?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does paw placement on landing show balance recovery without sliding unrealistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the butterfly’s evasive motion cause the cat’s gaze or head to track it appropriately?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the cat demonstrate appropriate body posture and positioning as it prepares to leap onto the table?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the cat's body posture accurately reflect the motion of jumping onto the table?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the timing from crouch to landing free of skips or frame discontinuities?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the cat's motion during the jump smooth and consistent, accurately depicting a natural jumping action?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_002",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A fish swims smoothly through clear water, its fins and tail moving naturally.",
+        "description": "Tests whether the model can reproduce aquatic locomotion consistent with hydrodynamics.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates fin–tail coordination, body undulation, fluid resistance, and wake effects.",
+          "overall_instruction": "Respond 'Yes' or 'No' to each item with a brief reason.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is there lateral body undulation traveling from head to tail (or tail-driven propulsion) rather than rigid motion?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Do pectoral fins stabilize during slow swimming and adjust during turns?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the tail beat frequency and amplitude consistent with forward speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do turns show coordinated fin changes and body bending without sudden teleportation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are tiny vortices/ripples or refractive cues visible around moving fins (subtle fluid feedback)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does buoyancy look correct (no sinking/rising without fin or body adjustments)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is the fish’s head relatively stable with undulation propagating backward?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the fish’s body maintain a consistent orientation without excessive wobbling during swimming?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_003",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird flaps its wings to take off from a branch, scattering nearby leaves.",
+        "description": "Tests whether the model captures aerodynamic motion and environmental feedback.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses takeoff sequence, wingbeat mechanics, support reaction, and foliage response.",
+          "overall_instruction": "Answer 'Yes' or 'No' with a short justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is there a pre-takeoff body dip and push from the feet against the branch?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Do initial wingbeats have larger amplitude and slower frequency than cruise flapping?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the bird's wing movement produce an upward lift consistent with realistic bird flight mechanics?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Is wing flexion/extension synchronized with vertical acceleration and forward thrust?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the body pitch adjust realistically as lift builds (no instant altitude jump)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are feathers/wingtips showing slight lag or flex consistent with airflow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are the bird's wing movements accurately synchronized with the motion of its body during takeoff?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Are the bird's wing articulation points moving smoothly and realistically during takeoff?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_004",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A horse gallops across a field, with dust rising under its hooves.",
+        "description": "Evaluates whether motion rhythm and ground reaction appear biomechanically realistic.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Checks gallop gait sequence, stride timing, impulse on ground, and particulate feedback.",
+          "overall_instruction": "Mark 'Yes' or 'No' and add a short note.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the gallop four-beat sequence apparent (lead leg pattern) rather than a uniform trot?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are suspension phases (all hooves off ground) visible between strides?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Do hooves compress soil and raise dust puffs on impact?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does mane and tail show inertial lag consistent with speed?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q5",
+              "question": "Is stride length consistent with body size and speed (no sliding hooves)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is trunk/neck oscillation synchronized with hoof-beat rhythm?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are the horse’s leg movements consistent with a natural galloping gait at this speed?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does dust settle or trail with believable persistence and airflow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_005",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A frog jumps from a rock into a pond, creating ripples on the water.",
+        "description": "Tests whether the model links body motion to correct fluid response.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates takeoff mechanics, ballistic arc, water entry, and ripple propagation.",
+          "overall_instruction": "Answer 'Yes' or 'No' and explain briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the frog compress legs before a rapid extension at takeoff?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the jump arc parabolic with realistic gravity influence?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Do ripples originate at the entry point and expand outward smoothly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is splash size consistent with the frog’s speed and mass?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are the ripples shown on the water surface spreading symmetrically from the point of impact?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the frog's body posture change realistically during the jump and upon landing?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the timing continuous with no mid-air velocity jumps?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the frog land with a realistic body posture immediately after jumping?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_006",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A lion roars loudly, and nearby grass and birds react to the sound.",
+        "description": "Tests whether the model can express biological action triggering ecological reactions.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates vocalization posture, chest expansion, and multi-agent environmental response.",
+          "overall_instruction": "Use 'Yes' or 'No' per item with a concise note.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the lion adopt a roaring posture (open jaw, neck tension, chest expansion)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is there visible timing alignment between roar onset and environmental reactions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do nearby grasses/foliage show subtle vibration or movement consistent with sound/airflow?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Do birds startle or take flight with realistic delay and direction away from the lion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the lion’s thorax/abdomen motion synchronized with sustained vocalization?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Do the animals’ reactions to the roar differ in intensity and direction based on their proximity and type?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are other animals’ reactions varied but coherent (not identical clones)?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q8",
+              "question": "Do the grass and birds' reactions align with the proximity and type of the animals making the sound?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_007",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A butterfly flutters around flowers, reacting to wind gusts.",
+        "description": "Evaluates aerodynamic stability and environmental responsiveness.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses unsteady flapping, low-mass wind coupling, and floral interaction timing.",
+          "overall_instruction": "Provide 'Yes' or 'No' and a short justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is wingbeat irregularity present (micro-adjustments) typical of butterfly flight?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q2",
+              "question": "Do wind gusts cause brief drift/tilt followed by corrective flapping?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is approach to flowers cautious with reduced speed and hovering attempts?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Do flower stems/petals sway subtly in wind and near-wake from the butterfly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the butterfly's wing movement appear smooth and consistent throughout the flight?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the butterfly's wing movement appear natural and consistent with real butterfly flight?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is motion free of abrupt speed spikes or path teleportation?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the butterfly's body maintain a realistic orientation and balance as it moves in response to wind gusts?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_008",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A deer drinks from a stream, causing small ripples in the water.",
+        "description": "Tests whether fine-scale ecological interaction is represented naturally.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates head/neck posture, tongue motion hints, water surface ripple causality, and vigilance behavior.",
+          "overall_instruction": "Answer 'Yes' or 'No' with brief reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the deer lower its head with a controlled neck motion before contacting water?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are ripples centered around the snout/tongue contact point and expanding outward?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is ripple size/frequency consistent with gentle lapping rather than heavy splashing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the ripple patterns localized around the deer’s drinking position without excessive spreading across the stream?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Are the ripples growing outward naturally from the deer’s drinking point without abrupt disruptions?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the foreleg stance widened slightly for balance near the bank?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Is timing continuous from approach to drinking without unnatural jumps?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the movement of the deer's head appear smooth and natural while drinking?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_009",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird builds a nest using twigs and grass.",
+        "description": "Tests whether manipulation actions follow plausible beak and body coordination.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Assesses grasping precision, sequential placement, and biomechanical coordination between beak, head, and body.",
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the bird pick up materials using its beak with accurate orientation rather than vague hovering?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is there visible repositioning or adjustment before inserting the twig into the nest structure?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the body sway or use wing micro-movements for balance during manipulation?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q4",
+              "question": "Is the sequence of picking and placing continuous and logically ordered?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the nest base deform or shift slightly with new material insertion?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q6",
+              "question": "Is there coordinated head–neck–beak articulation consistent with avian kinematics?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the bird demonstrate appropriate grasping behavior with its beak while handling twigs and grass?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the bird exhibit appropriate wing and body movements to position twigs and grass accurately within the nest structure?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_010",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A penguin slides on ice and comes to a slow stop.",
+        "description": "Tests frictional dynamics and realistic body-ground interaction.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates kinetic friction, posture stability, and energy dissipation in low-resistance motion.",
+          "overall_instruction": "Respond 'Yes' or 'No' and explain briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the penguin push off with visible leg movement or body tilt to start sliding?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is sliding speed gradually decreasing instead of abrupt stops?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does belly and flipper contact remain consistent with the surface?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Does the penguin’s body maintain a low, horizontal posture throughout the slide?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Do flippers adjust slightly to maintain balance during motion?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Is snow or ice displaced subtly beneath or behind the body?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Does the penguin's body tilt backward or forward as it slides to a stop?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the penguin's body maintain a consistent posture without wobbling excessively as it slows down?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_011",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bee collects nectar from a flower, causing petals to move slightly.",
+        "description": "Tests micro-interactions between organism and environment.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Examines flight stabilization, limb–petal contact, and deformation response during pollination.",
+          "overall_instruction": "Answer 'Yes' or 'No' with a short justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the video show the bee's body moving as it approaches and collects nectar from the flower?",
+              "importance_score": 0.8,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the bee's wings appear to be in motion during the nectar collection process?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Do petals bend subtly on contact rather than staying rigid?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the proboscis or head directed into the flower center?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Do body and wing motion slow slightly during nectar collection?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the bee's movement accurately reflect the act of collecting nectar without appearing overly aggressive or hesitant?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the bee's wing movement appear natural and consistent with the activity of nectar collection?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Are the petals' slight movements caused by the bee's interaction consistent and localized around the nectar collection area?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_012",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A turtle crawls slowly on the beach toward the ocean.",
+        "description": "Tests whether movement rhythm and limb coordination match species behavior.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Assesses rhythmic forelimb alternation, frictional ground resistance, and body drag realism.",
+          "overall_instruction": "Answer 'Yes' or 'No' and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are front flippers alternating with slight lag between strokes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the turtle's movement appear steady and consistent throughout the crawl?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Does the turtle's limbs and shell appear stable and correctly aligned as it moves across the sand?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Does the turtle's body and limbs display natural and consistent movement as it crawls over the sand?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Do shell and limbs cast stable shadows on uneven sand?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Are small trailing marks continuous along the path?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the turtle's movement appear smooth and continuous without sudden jerks?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the turtle's movement consistently show gradual acceleration or deceleration as it approaches the water?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_013",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird dives into water to catch a fish, creating splashes and waves.",
+        "description": "Tests whether impact and hydrodynamic reactions are consistent.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates high-speed motion continuity, splash realism, and prey–predator interaction timing.",
+          "overall_instruction": "Provide 'Yes' or 'No' answers with short reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the bird's water entry produce a visible splash consistent with its speed and angle of entry?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Is entry angle consistent with gravity and momentum direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do water splashes expand outward with energy matching the bird’s speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the fish visible or displaced right after impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Do ripples propagate circularly and fade naturally?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Does the video accurately depict the bird's body movements as it pecks and claws into the water during the dive?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is temporal flow continuous (no frame jumps between air and water phases)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Are the splashes and waves created by the bird’s dive realistically synchronized with its downward motion and contact with the water?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_014",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A spider weaves a web between branches.",
+        "description": "Tests whether delicate limb motion follows biomechanical precision.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Analyzes fine leg coordination, silk extrusion, and spatial patterning consistency.",
+          "overall_instruction": "Mark 'Yes' or 'No' per question and provide reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are leg movements alternating in a precise, rhythmic pattern typical of web spinning?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the abdomen slightly raised during silk extrusion?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q3",
+              "question": "Do silk threads attach and tension visibly between contact points?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the spider's leg movements synchronize smoothly with the web-building process?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Do forelegs adjust tension or pull strands realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is motion speed appropriately slow and deliberate?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the spider's weaving motion show continuous and precise silk placement?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the spider demonstrate the correct posture and limb positioning typical for web weaving?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_015",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A dog runs through tall grass, bending the blades along its path.",
+        "description": "Tests whether body-environment contact produces continuous feedback.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates body–vegetation interaction, motion continuity, and energy feedback through the medium.",
+          "overall_instruction": "Answer 'Yes' or 'No' concisely for each question.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Do grass blades bend progressively as the dog pushes through?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are the bends and rebounds delayed according to plant stiffness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does fur and tail movement correspond to grass contact and resistance?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Are the dog's gait and stride consistent with running speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the dog’s body posture remain balanced and stable while running through the grass?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the grass deformation continuous, not disappearing abruptly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the grass exhibit varying degrees of bending along the dog's trajectory, indicating localized deformation?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Are the bent blades of grass returning to their original position after the dog passes, indicating they are flexible and elastic?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_016",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A dolphin leaps above the water surface and re-enters smoothly.",
+        "description": "Tests continuity of motion across air-water boundary.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Examines fluid transition continuity, momentum conservation, and splash realism.",
+          "overall_instruction": "Answer 'Yes' or 'No' and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the dolphin's water entry occur with minimal splash and a smooth transition back into the water?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Is the leap trajectory smooth and consistent with exit velocity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do water droplets trail off the dolphin during airborne phase?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q4",
+              "question": "Is entry accompanied by realistic splash and surface disturbance?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the dolphin’s body posture change naturally mid-air (arching)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are ripples and bubbles visible upon re-entry and fade gradually?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Is continuity between underwater and air phases seamless in lighting and speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the dolphin’s leap smooth and fluid without abrupt movements during the transition from air to water?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_017",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A squirrel jumps between two trees and lands on a branch.",
+        "description": "Tests whether body rotation and landing posture are physically plausible.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Analyzes aerial dynamics, landing damping, and balance recovery on narrow support.",
+          "overall_instruction": "Provide 'Yes' or 'No' answers and explanations.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the squirrel push off with hind legs and extend forelimbs mid-jump?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the squirrel's body bend forward during the jump?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Does the tail adjust for balance during flight and landing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does branch deflection occur on impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are claws or feet grasping motion synchronized with landing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the squirrel stabilize posture immediately after landing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is timing realistic between jump initiation, flight, and landing?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the squirrel accurately reflect natural movement and muscular effort during the jump and landing?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_018",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird perches on a thin branch that bends under its weight.",
+        "description": "Tests whether environmental deformation corresponds to body weight.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses balance, weight distribution, and structural response of environment to load.",
+          "overall_instruction": "Respond 'Yes' or 'No' and explain briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the branch deflect gradually when the bird lands?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the downward bend proportional to the bird’s mass and branch thickness?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does the branch visibly bend downward under the bird's weight before stabilizing?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Are oscillations visible before the branch returns to equilibrium?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the branch visibly return to its original position after the bird leaves?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the bird’s center of mass align over the contact point after settling?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is transition from landing to resting continuous and smooth?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the bird maintain its balance without excessive wobbling after perching?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_019",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A crab walks sideways across wet sand, leaving footprints.",
+        "description": "Tests whether species-specific locomotion and trace consistency are correct.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates sideways gait rhythm, claw motion balance, and footprint trace formation.",
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and justify briefly.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are the crab’s legs moving in alternating patterns characteristic of lateral gait?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the crab's body oriented sideways relative to its direction of movement?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are the crab's legs consistently positioned relative to the footprints throughout the walk?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Are footprints visible and sequentially aligned in the direction of travel?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does wet sand deform slightly under each leg and retain a trace?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is leg motion synchronized without unrealistic limb crossing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is the motion speed consistent with crab scale and terrain friction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the crab's walking pattern show smooth and natural leg movement without sudden or unrealistic shifts?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_020",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A butterfly emerges from a cocoon and flaps its wings to dry.",
+        "description": "Tests whether the model represents gradual biological adaptation after emergence.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Examines metamorphosis realism, wing expansion sequence, and post-emergence motion timing.",
+          "overall_instruction": "Respond with 'Yes' or 'No' for each question and give brief reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the butterfly first appear partially inside the cocoon before fully emerging?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the butterfly's body become fully visible outside the cocoon before it starts flapping its wings?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Does the butterfly exhibit wing fluttering or movements consistent with drying post-emergence?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Is there visible stabilization behavior such as body shaking or wing stretching?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Does the butterfly's wing movements appear smooth and controlled, indicating effective drying behavior?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the butterfly's wing movement appear coordinated and natural during the wing-drying process?",
+              "importance_score": 0.7,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is temporal continuity smooth from emergence to first flight?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Are the butterfly's wing movements fluid and consistent throughout the drying process?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_021",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A rabbit digs a small hole in the ground and hides inside.",
+        "description": "Tests environmental modification caused by biological actions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses digging kinematics, soil displacement, and behavioral realism in hiding response.",
+          "overall_instruction": "Answer 'Yes' or 'No' concisely for each question.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the rabbit use forepaws alternately to dig rather than pushing symmetrically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the rabbit's front paws exhibit a digging motion consistent with soil displacement?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Does the hole deepen progressively in a consistent area?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the rabbit's position and movements inside the hole appear natural and physically plausible?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are shadows and lighting inside the hole consistent with depth?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Does the rabbit's movement into the hole appear natural and consistent with its size and behavior?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is entry into the hole continuous, without unrealistic clipping?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the rabbit's posture and movement while entering the hole match natural rabbit behavior?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_022",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A cat grooms itself, licking its fur repeatedly.",
+        "description": "Tests whether repetitive motion and body flexibility appear natural.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Analyzes rhythmic grooming motion, joint flexibility, and fur deformation.",
+          "overall_instruction": "Answer 'Yes' or 'No' with short reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the cat’s tongue motion correlate with licking rhythm?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are forelimbs or head repositioned periodically for coverage?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q3",
+              "question": "Does the cat use its tongue to lick different parts of its fur in a continuous and methodical manner?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Is the cat's tongue movement smooth and consistent throughout the grooming process?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the cat pause intermittently as in natural grooming cycles?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q6",
+              "question": "Does the cat's licking motion appear smooth and continuous without abrupt movements?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the cat's tongue movement consistently target the same fur area during grooming?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Is overall timing calm and repetitive, avoiding jerky motion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_023",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A flock of birds changes direction in synchronized flight.",
+        "description": "Tests collective behavioral coherence and aerodynamic coordination.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates group motion smoothness, local coordination, and avoidance behavior.",
+          "overall_instruction": "Respond 'Yes' or 'No' concisely for each question.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Do all birds maintain coherent spacing without collisions?",
+              "weight": 2.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q2",
+              "question": "Is turning initiated by a subset and followed by the rest gradually?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do wingbeats synchronize partially during group maneuver?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the overall formation preserved while direction changes?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Do the birds maintain consistent spacing and alignment during the direction change?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Are turning arcs continuous without teleportation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Do the birds maintain consistent spacing and formation during the direction change?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the airflow implication visible via subtle particle or cloud movement?",
+              "weight": 1.0,
+              "importance_score": 0.65
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_024",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bear catches a fish from a river and water splashes upward.",
+        "description": "Tests coordinated limb motion and fluid interaction.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Analyzes timing of strike, grip mechanics, and fluid feedback realism.",
+          "overall_instruction": "Answer 'Yes' or 'No' and briefly explain.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the bear’s paw motion show anticipation before striking?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is fish movement reactive, changing direction upon contact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Do water splashes correspond to impact speed and direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the water splash pattern consistent with the fish's movement and the bear's impact point?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the water splash height and dispersion match the bear's impact force and the fish's movement?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the bear’s fur wet and darker after immersion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the water splash shown in the video match the size and shape of the fish that the bear is catching?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the water splash appropriately aligned with the bear’s action of catching the fish?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_025",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A kangaroo hops across open ground, maintaining rhythmic balance.",
+        "description": "Tests elastic motion and consistent gravitational response.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates hopping sequence, center-of-mass oscillation, and landing elasticity.",
+          "overall_instruction": "Provide 'Yes' or 'No' with brief justification.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are hops evenly spaced and rhythmically timed?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the tail used for stabilization and propulsion support?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does the kangaroo's tail help in maintaining its balance during the hop?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Is landing compression visible with proper joint bending?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the kangaroo's movement exhibit a consistent hopping rhythm throughout the video?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is vertical motion smooth without jerky transitions?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the kangaroo's hop show consistent stride length and rhythm throughout its movement?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the kangaroo's hopping exhibit a consistent, natural joint movement pattern that supports rhythmic balance?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_026",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "An owl turns its head to follow a moving prey on the ground.",
+        "description": "Tests species-specific head motion and visual tracking behavior.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses neck rotation limit, gaze tracking precision, and response timing.",
+          "overall_instruction": "Answer 'Yes' or 'No' to each question with reasoning.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the owl rotate its head smoothly within realistic 270° range?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is body posture mostly stable during head rotation?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q3",
+              "question": "Do eyes remain locked on moving prey throughout?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is prey motion continuous and coherent with owl’s reactions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the owl slightly tilt or adjust neck pitch while tracking?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the owl's head visibly rotate smoothly and continuously to track the prey's movement?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the owl maintain a stable and focused gaze on the prey as it turns its head?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the owl's head orientation accurately correspond to the movement direction of the prey throughout the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "BBR_027",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A cow grazes in a field, moving its jaw and tail naturally.",
+        "description": "Tests subtle motor coordination and idle ecological realism.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Evaluates chewing rhythm, small body adjustments, and background environmental coherence.",
+          "overall_instruction": "Answer 'Yes' or 'No' and briefly justify.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is jaw motion cyclic and slow, consistent with ruminant chewing?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the cow occasionally shift stance or step slightly?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q3",
+              "question": "Is tail swinging rhythmic and independent from chewing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the cow's jaw exhibit consistent chewing cycles without irregular pauses?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does grass height decrease subtly after bites?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the cow's jaw move actively in a chewing motion consistent with grazing behavior?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the cow's tail exhibit natural twitching or swishing movements associated with grazing?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the cow's tongue move to grasp and peel grass during grazing?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

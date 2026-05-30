@@ -1,0 +1,1560 @@
+{
+  "Conceptional Action Reasoning": {
+    "category_description": "Evaluate whether the model can understand abstract behavioral concepts (such as playing, helping, competing) and generate logically coherent videos that capture the evolution of relationships — shifting from static recognition to dynamic relational reasoning.",
+    "prompts": [
+      {
+        "id": "CAR_001",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A dog and a person are playing together in a park, throwing and chasing a ball.",
+        "description": "Tests whether the model can generate dynamic interactions representing the concept of 'play'.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_002",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two children build a sandcastle together and celebrate when it’s complete.",
+        "description": "Tests whether the model can generate a cooperative task completion process.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_003",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two athletes compete in a friendly race, one gradually overtaking the other.",
+        "description": "Tests the model’s understanding of the abstract concept of 'competition'.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_004",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A teacher helps a student solve a problem on the blackboard.",
+        "description": "Tests whether the model can generate the dynamic relationship of 'helping'.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_005",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two friends argue over a toy but eventually share it peacefully.",
+        "description": "Tests whether the model can represent the evolution from conflict to reconciliation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_006",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A rescue worker pulls a trapped person to safety after a minor accident.",
+        "description": "Tests whether the model can generate semantically coherent 'rescue' behavior.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAR_007",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two artists collaborate to paint a mural on a wall.",
+        "description": "Tests whether the model can represent the dynamic relationship of 'collaboration'.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_008",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A person comforts a crying friend by offering a hug.",
+        "description": "Tests whether the model can capture emotional actions and semantic reasoning.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_009",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two children compete to finish building a tower faster.",
+        "description": "Tests the model’s understanding of competition and goal-oriented relationships.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_010",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A firefighter rescues a kitten from a tree and returns it to a child.",
+        "description": "Tests whether the model can express the semantics of 'helping and caring' coherently.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAR_011",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two people shake hands after resolving a disagreement.",
+        "description": "Tests whether the model can represent the transition from conflict to harmony.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_012",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A person trains a dog to fetch a stick and rewards it with a treat.",
+        "description": "Tests whether the model can generate a clear cause-and-effect 'teaching' process.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_013",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two coworkers brainstorm ideas on a whiteboard and finalize a plan.",
+        "description": "Tests whether the model can express the abstract behavior of 'collaborative thinking'.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_014",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A child feeds a bird and watches it fly away.",
+        "description": "Tests the model’s understanding of an 'interaction-ending' structure.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_015",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two players cooperate to carry a heavy box up the stairs.",
+        "description": "Tests whether the model can represent physical cooperation and coordination.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_016",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A scientist observes a chemical reaction and adjusts the experiment.",
+        "description": "Tests the model’s abstract understanding of the 'observation-adjustment' logic.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAR_017",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two dancers perform a duet with synchronized movements and emotional connection.",
+        "description": "Tests whether the model can generate coordination and rhythmic interaction.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAR_018",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A person teaches another how to play guitar, demonstrating the chords.",
+        "description": "Tests whether the model can generate a clear 'teaching' relationship.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_019",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two people wave goodbye before walking in opposite directions.",
+        "description": "Tests whether the model can represent relationship termination and transition.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_020",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A child helps an elderly person cross the street.",
+        "description": "Tests whether the model can capture the semantic meaning of 'helping'.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_021",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two friends take turns holding a heavy bag during a long walk.",
+        "description": "Tests whether the model can represent the dynamic logic of mutual assistance.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_022",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two kids fight briefly over a toy and then start laughing together.",
+        "description": "Tests whether the model can represent emotional transition from conflict to reconciliation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_023",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A worker teaches a new colleague how to operate a machine.",
+        "description": "Tests whether the model can represent the logic of 'knowledge transfer'.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_024",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A person apologizes to another after bumping into them on the street.",
+        "description": "Tests whether the model can represent polite social interactions and norms.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_025",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two teammates celebrate together after winning a game.",
+        "description": "Tests the model’s coherence in representing shared achievement.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAR_026",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "A person tries to calm down an angry friend by talking softly.",
+        "description": "Tests the model’s understanding of emotion-regulating interactions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAR_027",
+        "category": "Conceptional Action Reasoning",
+        "prompt_en": "Two people work together to fix a broken bicycle.",
+        "description": "Tests whether the model can represent a continuous cooperation process.",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "Concurrent Action Coordination": {
+    "category_description": "Evaluate whether the model can maintain realistic coordination, attention allocation, and physical plausibility when performing multiple actions simultaneously. For example, walking while looking at a phone is realistic, but running while cooking is not.",
+    "prompts": [
+      {
+        "id": "CAC_001",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person walks while looking at a phone and drinking coffee.",
+        "description": "Tests whether the model can generate a realistic multi-action scenario.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_002",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A chef flips food in a pan while chopping vegetables on the counter.",
+        "description": "Tests whether the model can represent coordinated bimanual concurrent actions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_003",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person types on a laptop while sipping tea.",
+        "description": "Tests the model’s understanding of natural everyday multitasking behavior.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_004",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A musician plays the guitar while singing into a microphone.",
+        "description": "Tests the model’s understanding of sound–action synchronization and coordination.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_005",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person jogs while listening to music through headphones.",
+        "description": "Tests whether the model can represent natural concurrent body and auditory actions.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_006",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A painter talks on the phone while mixing colors on a palette.",
+        "description": "Tests the model’s ability to represent attention distribution across simultaneous actions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_007",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A student writes notes while watching an online lecture.",
+        "description": "Evaluates whether the model can generate synchronized visual and motor actions.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_008",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A driver eats a sandwich while steering a car.",
+        "description": "Tests the model’s recognition of unsafe concurrent behaviors.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAC_009",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A barista steams milk while preparing coffee grounds.",
+        "description": "Evaluates the model’s handling of professional multitasking scenarios.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_010",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A teacher writes on the board while explaining to students.",
+        "description": "Tests the model’s expression of synchronized speech and motion.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_011",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person folds clothes while watching television.",
+        "description": "Tests the model’s ability to generate mild everyday multitasking actions.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_012",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person cooks while talking to someone on a video call.",
+        "description": "Tests whether the model can coordinate verbal and manual activities.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_013",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A construction worker operates machinery while giving hand signals to a coworker.",
+        "description": "Tests the model’s ability to represent coordinated multi-threaded work behavior.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAC_014",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A parent feeds a baby while stirring soup on the stove.",
+        "description": "Tests the model’s representation of multitasking in household contexts.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_015",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person jogs on a treadmill while reading a tablet.",
+        "description": "Evaluates whether the model can maintain balance and cognitive coordination.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_016",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A photographer adjusts camera settings while tracking a moving subject.",
+        "description": "Tests whether the model can generate dynamic, attention-focused multitasking.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAC_017",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person cooks and cleans the counter at the same time.",
+        "description": "Tests the model’s ability to preserve visual naturalness in simultaneous actions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_018",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A runner drinks water while continuing to run.",
+        "description": "Tests the model’s handling of short-term concurrent body actions.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_019",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A scientist records notes while observing a reaction in a lab flask.",
+        "description": "Tests the model’s generation of attention-operation coordination.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_020",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person drives a car while talking to a passenger and adjusting the radio.",
+        "description": "Tests the model’s depiction of multitasking within safe-driving constraints.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAC_021",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person sweeps the floor while humming a tune.",
+        "description": "Tests the model’s ability to generate light, relaxed concurrent actions.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_022",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A waiter serves food while balancing multiple plates.",
+        "description": "Tests the model’s understanding of physical balance and multitask posture.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CAC_023",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person irons clothes while watching a movie on TV.",
+        "description": "Tests whether the model can generate simultaneous visual attention and motion.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_024",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A gamer plays a video game while talking to teammates through a headset.",
+        "description": "Tests the model’s understanding of cognitive and linguistic resource allocation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_025",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A person walks a dog while eating ice cream.",
+        "description": "Tests the model’s ability to generate relaxed, everyday concurrent behavior.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CAC_026",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A teacher gestures with one hand while holding a book with the other.",
+        "description": "Tests the model’s capture of coordinated gesture and verbal expression.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CAC_027",
+        "category": "Concurrent Action Coordination",
+        "prompt_en": "A scientist adjusts a microscope while recording results on a tablet.",
+        "description": "Tests the model’s ability to generate realistic multitasking in experimental settings.",
+        "difficulty": "medium"
+      }
+    ]
+  },
+
+  "Preventive Causal Reasoning": {
+    "category_description": "Evaluate whether the model can generate preventive causal reasoning, showing actions that proactively stop potential outcomes. The video should visually imply the risk being prevented—such as a falling object, approaching storm, or incoming insect—and demonstrate clear causal timing.",
+    "prompts": [
+      {
+        "id": "PCR_001",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person quickly closes the window to stop rain from coming in.",
+        "description": "Tests whether the model can depict preemptive action against an environmental event.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_002",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A man catches a falling vase before it hits the ground.",
+        "description": "Tests whether the model can represent an imminent event being visually prevented.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_003",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A woman quickly grabs a cup tipping on the edge of the table.",
+        "description": "Tests whether the model can capture critical pre-failure states and anticipatory reactions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_004",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person shuts the door to prevent mosquitoes from entering the room.",
+        "description": "Tests the model’s understanding of preventive action against small threats.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_005",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A child moves a toy away from a puddle before it gets wet.",
+        "description": "Tests whether the model can depict foresight and preventive relocation.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_006",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A driver slows down to avoid hitting an animal crossing the road.",
+        "description": "Evaluates the model’s understanding of anticipatory reactions in accident prevention.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_007",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person uses an umbrella before stepping out into the rain.",
+        "description": "Tests the model’s ability to depict preventive preparation behavior.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_008",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A man moves a chair to stop it from blocking the door.",
+        "description": "Tests whether the model can represent anticipatory removal of potential obstacles.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_009",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A cook turns off the stove to prevent the soup from boiling over.",
+        "description": "Evaluates understanding of overheat prevention and causal timing in dynamic contexts.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_010",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A hiker secures a tent before the wind picks up.",
+        "description": "Tests the model’s ability to depict anticipatory preparation for environmental change.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_011",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person catches a rolling bottle before it falls off the counter.",
+        "description": "Tests the model’s handling of small, imminent motion-based hazards.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_012",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A cyclist puts on a helmet before riding.",
+        "description": "Evaluates the model’s representation of safety-oriented preparation.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_013",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A parent moves a cup of hot tea away from a child’s reach.",
+        "description": "Tests whether the model can depict preventive safety logic in domestic settings.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_014",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person closes the fridge door to stop cold air from escaping.",
+        "description": "Evaluates the model’s understanding of subtle, non-obvious causal relationships.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_015",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A gardener waters plants before a hot afternoon to prevent wilting.",
+        "description": "Tests the model’s understanding of delayed preventive actions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_016",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A worker wears gloves before handling sharp metal parts.",
+        "description": "Tests the model’s representation of safety preparation and hazard avoidance.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_017",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person installs a safety gate to stop a baby from climbing stairs.",
+        "description": "Evaluates the model’s understanding of long-term preventive reasoning for child safety.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_018",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A hiker ties shoelaces tightly before walking on rough terrain.",
+        "description": "Tests the model’s depiction of preventive adjustment before risk exposure.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_019",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person turns off lights to prevent overheating of bulbs.",
+        "description": "Tests whether the model can visualize an abstract preventive cause-effect relationship.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_020",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A man puts a rock under a wheel to stop a car from rolling downhill.",
+        "description": "Tests understanding of physical preventive reasoning under gravity-based risk.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "PCR_021",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A cyclist avoids a pothole by steering away.",
+        "description": "Evaluates dynamic prevention in continuous motion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_022",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person places coasters under cups to avoid water rings on the table.",
+        "description": "Tests fine-grained causal anticipation in static daily scenarios.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "PCR_023",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A driver closes the fuel cap tightly to prevent leakage.",
+        "description": "Evaluates physical correctness and understanding of safety sealing actions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_024",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person quickly grabs a candle before it falls from the table edge.",
+        "description": "Tests the model’s ability to depict rapid prevention of potential hazard.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_025",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person puts a lid on a boiling pot to prevent splashing.",
+        "description": "Evaluates logical anticipation and motion realism in heat-related prevention.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "PCR_026",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A shopkeeper pulls down a shutter to protect goods from the approaching storm.",
+        "description": "Tests the model’s ability to represent macro-level preventive reasoning and environmental foresight.",
+        "difficulty": "hard"
+      }
+    ]
+  },
+
+"Material Memory Consistency": {
+    "category_description": "Evaluate whether the model can maintain reasonable material memory characteristics after an object undergoes deformation. For example, a rubber band should rebound, paper should retain creases, and fabric should develop wrinkles.",
+    "prompts": [
+      {
+        "id": "MMC_001",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A sheet of paper is folded and then unfolded, showing visible creases.",
+        "description": "Test whether the model can reflect the permanent crease characteristics of paper.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "MMC_002",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of clay is pressed into a shape and then slowly regains part of its form.",
+        "description": "Test the model's understanding of the partial recovery characteristics of plastic materials.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_003",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A metal spoon is bent and keeps its bent shape.",
+        "description": "Test whether the model can represent the permanent deformation of plastic metals.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "MMC_004",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A plastic bottle is crushed and partially regains its shape when released.",
+        "description": "Test whether the model can reflect semi-elastic recovery characteristics.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_005",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of fabric is wrinkled and retains soft folds afterward.",
+        "description": "Test whether the model can represent the wrinkle memory of fabric.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_006",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A wax candle bends slightly under heat and keeps its deformed shape.",
+        "description": "Test the model's performance on physical consistency of temperature-induced deformation.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "MMC_007",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A balloon expands and then deflates back to a wrinkled surface.",
+        "description": "Test whether the model can capture the material traces after gas release.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_008",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A soft pillow is pressed and slowly fluffs back into shape.",
+        "description": "Test whether the model can represent the delayed recovery characteristics of flexible materials.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "MMC_009",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of glass bends slightly before cracking permanently.",
+        "description": "Test whether the model can represent the irreversible characteristics of brittle materials.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "MMC_010",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of leather bends and shows a crease where it was folded.",
+        "description": "Test whether the model can represent the permanent creases of natural materials.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_011",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A spring is compressed and bounces back to its original height.",
+        "description": "Test the model's capture of highly elastic physical behavior.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "MMC_012",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of fabric ironed after wrinkling becomes smooth again.",
+        "description": "Test the model's performance on the recovery effect of external energy intervention.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_013",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A tire deforms slightly as it hits a bump and returns immediately.",
+        "description": "Test whether the model can represent instantaneous elastic deformation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_014",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A plastic bag stretches when filled and stays stretched.",
+        "description": "Test whether the model can reflect the residual deformation of plastic.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_015",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of aluminum foil is crumpled and retains wrinkles.",
+        "description": "Test whether the model can generate detailed wrinkle textures.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_016",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A wooden stick bends slightly under pressure and returns halfway.",
+        "description": "Test whether the model can represent semi-elastic recovery characteristics.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_017",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A snowball is squeezed and partially breaks apart.",
+        "description": "Test whether the model can reflect nonlinear material behavior.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "MMC_018",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A metal rod bends slightly under heat and stays curved.",
+        "description": "Test whether the model can represent thermally induced permanent deformation.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "MMC_019",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A towel is twisted, then unfolds leaving light wrinkles.",
+        "description": "Test the model's ability to express micro-deformations in textiles.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_020",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A candle wax drip hardens after cooling on a table.",
+        "description": "Test whether the model can capture the memory traces of state changes.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "MMC_021",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A tennis ball deforms when hitting the ground and bounces back.",
+        "description": "Test whether the model can represent dynamic elastic deformation.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "MMC_022",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A snowman's body sags slightly as it melts in the sun.",
+        "description": "Test whether the model can represent the gradual softening and deformation of materials.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "MMC_023",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A balloon expands under air pressure and shrinks after release.",
+        "description": "Test whether the model can represent cyclic deformation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "MMC_024",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of cardboard bends under weight and stays slightly curved.",
+        "description": "Test whether the model can represent limited recovery characteristics.",
+        "difficulty": "medium"
+      }
+    ]
+  },
+
+  "Energy Transfer Visualization": {
+    "category_description": "Evaluate whether the model can generate visual scenes that demonstrate energy flow and transfer, such as collisions, rebounds, chain reactions, or light wave propagation, focusing on the continuity and physical plausibility of energy transmission paths.",
+    "prompts": [
+      {
+        "id": "ETV_001",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A cue ball hits another ball, transferring motion in a straight line.",
+        "description": "Test whether the model can represent directional consistency in momentum transfer.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "ETV_002",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A row of dominoes falls one by one in sequence.",
+        "description": "Test whether the model can generate coherent energy transfer chains.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "ETV_003",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person pushes a ball that rolls and knocks over a bottle.",
+        "description": "Test whether the model can represent continuous energy flow.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_004",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A falling hammer drives a nail into a piece of wood.",
+        "description": "Test whether the model can reflect energy transfer and physical impact effects.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_005",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A line of toy cars crashes into each other, transferring motion down the row.",
+        "description": "Test whether the model can represent chain collision energy flow.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_006",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A stone is dropped into a pond, creating expanding ripples.",
+        "description": "Test whether the model can represent wave energy propagation.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "ETV_007",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A candle flame lights another nearby candle.",
+        "description": "Test whether the model can represent the visualization process of heat transfer.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_008",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A man kicks a soccer ball that hits a wall and bounces back.",
+        "description": "Test whether the model can reflect energy reflection and directional consistency.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "ETV_009",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A swinging pendulum hits another, transferring motion to it.",
+        "description": "Test whether the model can capture the rhythm and amplitude changes in energy transfer.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_010",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A spark ignites a line of fireworks in sequence.",
+        "description": "Test whether the model can represent the temporal coherence of flame propagation.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_011",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person drops a ball that bounces several times before stopping.",
+        "description": "Test whether the model can represent the gradual energy dissipation process.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_012",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A moving train pushes air, causing nearby flags to wave.",
+        "description": "Test whether the model can represent indirect energy transfer.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_013",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A child rolls a marble into a spiral track that triggers a lever.",
+        "description": "Test the model's grasp of chain mechanical energy transfer.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_014",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A gust of wind knocks down a stack of paper sheets.",
+        "description": "Test whether the model can represent the instantaneous transfer effect of wind energy.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_015",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A lightning strike lights up a tree, then fades.",
+        "description": "Test whether the model can represent instantaneous energy transfer and attenuation.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_016",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A ball rolls down a slope and pushes another ball forward.",
+        "description": "Test the model's understanding of gravitational to kinetic energy conversion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_017",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A spark travels along a fuse toward an explosive.",
+        "description": "Test whether the model can represent the directionality and speed of energy flow.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_018",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A swinging bat hits a baseball, sending it flying.",
+        "description": "Test whether the model can capture the effect of instantaneous energy transfer.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_019",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A bowling ball hits pins, scattering them in different directions.",
+        "description": "Test the model's performance on multi-target energy distribution.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_020",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A wave of light moves through a fiber optic cable.",
+        "description": "Test the model's ability to visualize light energy transmission.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_021",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A row of bells rings one after another after being struck by a moving rod.",
+        "description": "Test whether the model can generate the temporal rhythm of sound propagation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_022",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A falling object triggers a lever that launches another item upward.",
+        "description": "Test whether the model can represent the logic of mechanical energy conversion.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_023",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A bouncing basketball gradually loses height with each bounce.",
+        "description": "Test whether the model can represent the law of energy dissipation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_024",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A spark travels along metal wires to light up a bulb.",
+        "description": "Test whether the model can represent the continuity of electrical energy transmission.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_025",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A toy car moves after being hit by a rolling marble.",
+        "description": "Test whether the model can represent small-scale kinetic energy transfer.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_026",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person knocks over a candle, causing wax to spill and flame to spread.",
+        "description": "Test the model's grasp of multi-stage energy propagation.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "ETV_027",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A chain of gears turns after the first gear starts rotating.",
+        "description": "Test whether the model can generate chain conduction of mechanical energy.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "ETV_028",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person blows a balloon until it bursts, releasing air suddenly.",
+        "description": "Test whether the model can represent energy accumulation and explosion.",
+        "difficulty": "medium"
+      }
+    ]
+  },
+
+  "Dynamic Reference Frame": {
+    "category_description": "Evaluate whether the model can correctly represent the coordination between relative and absolute motion in moving reference frames — for example, observing surrounding objects from a moving vehicle or a rotating platform.",
+    "prompts": [
+      {
+        "id": "DRF_001",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person looks out from a moving train at trees passing by in the opposite direction.",
+        "description": "Tests whether the model can represent relative motion between the observer and the external world.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_002",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "Children ride on a rotating carousel while the background moves in circles.",
+        "description": "Tests whether the model can generate relative motion within a rotating frame.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_003",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone flies forward while filming a car driving in the same direction.",
+        "description": "Tests whether the model can capture relative velocity differences in parallel motion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_004",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera pans across a moving river from a stationary bridge.",
+        "description": "Tests how the model represents moving objects from a static observation point.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_005",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person spins around holding a camera while a fixed object appears to rotate around them.",
+        "description": "Tests whether the model can generate apparent relative motion caused by camera rotation.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_006",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A passenger looks out of a moving airplane window at stationary clouds below.",
+        "description": "Tests how the model handles static backgrounds in a high-speed moving reference frame.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_007",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person runs on a treadmill while the background remains still.",
+        "description": "Tests whether the model understands motion as a relative-frame concept.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_008",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone circles around a statue, making the background appear to move.",
+        "description": "Tests whether the model can distinguish between camera motion and object motion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_009",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A car drives past streetlights that seem to move backward rapidly.",
+        "description": "Tests the model’s understanding of linear speed perception and parallax.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_010",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rotates slowly in a chair while the room appears to spin around them.",
+        "description": "Tests whether the model can generate visual consistency in a rotating frame.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_011",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A cyclist films while riding, showing stationary buildings moving backward.",
+        "description": "Tests whether the model can capture dynamic background motion from a moving observer’s perspective.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_012",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person stands still as a moving walkway carries them forward.",
+        "description": "Tests whether the model can represent passive motion frames logically.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_013",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera mounted on a spinning fan captures the rotating view of a room.",
+        "description": "Tests how the model handles motion blur in fast rotational frames.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "DRF_014",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A skateboarder films while moving downhill, passing trees and people.",
+        "description": "Tests whether the model captures continuous parallax changes during acceleration.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_015",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera follows a runner while the background shifts smoothly.",
+        "description": "Tests the model’s ability to generate relative stillness with synchronized camera motion.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_016",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone hovers while filming a moving ship passing below.",
+        "description": "Tests whether the model understands vertical-layer motion relationships.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_017",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person records from a rotating Ferris wheel cabin as the city moves below.",
+        "description": "Tests whether the model can represent compound motion reference frames.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "DRF_018",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rides an escalator while watching a descending escalator nearby.",
+        "description": "Tests whether the model can distinguish opposite-direction reference frame motions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_019",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera fixed on a spinning plate captures a rotating background pattern.",
+        "description": "Tests whether the model can represent synchronized rotational motion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_020",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rows a boat across a calm lake as the shoreline moves slowly.",
+        "description": "Tests the model’s balance between water and observer motion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_021",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A spinning top is filmed from a camera rotating at the same speed.",
+        "description": "Tests whether the model can generate a relatively static dynamic system.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "DRF_022",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person films from a merry-go-round as another person watches from outside.",
+        "description": "Tests whether the model can represent visual differences between multiple reference frames.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "DRF_023",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone flies above a moving train, following it from above.",
+        "description": "Tests whether the model can represent multi-layer relative motion.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_024",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A spinning record is filmed from above, showing the grooves moving in circles.",
+        "description": "Tests whether the model can generate coherent rotational surface motion.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_025",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person walks on a moving walkway while filming stationary people beside it.",
+        "description": "Tests whether the model can express reference frame speed differences.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "DRF_026",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rides a bicycle past parked cars, with the road appearing to move beneath.",
+        "description": "Tests whether the model can represent linear motion and parallax perception.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_027",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera rotates 360 degrees in a stationary room to show all walls.",
+        "description": "Tests the model’s ability to maintain spatial stability during rotation.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "DRF_028",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A car chase scene where both vehicles move rapidly but maintain constant distance.",
+        "description": "Tests whether the model can depict relative stability under matched velocities.",
+        "difficulty": "hard"
+      }
+    ]
+  },  
+
+  "Biological Behavior Reasoning": {
+    "category_description": "Evaluate whether the model can generate biologically and ecologically consistent behaviors — ensuring that animal motion, species traits, and environmental interactions follow natural laws.",
+    "prompts": [
+      {
+        "id": "BBR_001",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A cat jumps onto a table to catch a butterfly.",
+        "description": "Tests whether the model can represent realistic animal motion and balance.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "BBR_002",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A fish swims smoothly through clear water, its fins and tail moving naturally.",
+        "description": "Tests whether the model can reproduce aquatic locomotion consistent with hydrodynamics.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "BBR_003",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird flaps its wings to take off from a branch, scattering nearby leaves.",
+        "description": "Tests whether the model captures aerodynamic motion and environmental feedback.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_004",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A horse gallops across a field, with dust rising under its hooves.",
+        "description": "Evaluates whether motion rhythm and ground reaction appear biomechanically realistic.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_005",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A frog jumps from a rock into a pond, creating ripples on the water.",
+        "description": "Tests whether the model links body motion to correct fluid response.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_006",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A lion roars loudly, and nearby grass and birds react to the sound.",
+        "description": "Tests whether the model can express biological action triggering ecological reactions.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_007",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A butterfly flutters around flowers, reacting to wind gusts.",
+        "description": "Evaluates aerodynamic stability and environmental responsiveness.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_008",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A deer drinks from a stream, causing small ripples in the water.",
+        "description": "Tests whether fine-scale ecological interaction is represented naturally.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "BBR_009",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird builds a nest using twigs and grass.",
+        "description": "Tests whether manipulation actions follow plausible beak and body coordination.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_010",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A penguin slides on ice and comes to a slow stop.",
+        "description": "Tests frictional dynamics and realistic body-ground interaction.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_011",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bee collects nectar from a flower, causing petals to move slightly.",
+        "description": "Tests micro-interactions between organism and environment.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_012",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A turtle crawls slowly on the beach toward the ocean.",
+        "description": "Tests whether movement rhythm and limb coordination match species behavior.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "BBR_013",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird dives into water to catch a fish, creating splashes and waves.",
+        "description": "Tests whether impact and hydrodynamic reactions are consistent.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_014",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A spider weaves a web between branches.",
+        "description": "Tests whether delicate limb motion follows biomechanical precision.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_015",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A dog runs through tall grass, bending the blades along its path.",
+        "description": "Tests whether body-environment contact produces continuous feedback.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_016",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A dolphin leaps above the water surface and re-enters smoothly.",
+        "description": "Tests continuity of motion across air-water boundary.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_017",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A squirrel jumps between two trees and lands on a branch.",
+        "description": "Tests whether body rotation and landing posture are physically plausible.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_018",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bird perches on a thin branch that bends under its weight.",
+        "description": "Tests whether environmental deformation corresponds to body weight.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_019",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A crab walks sideways across wet sand, leaving footprints.",
+        "description": "Tests whether species-specific locomotion and trace consistency are correct.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_020",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A butterfly emerges from a cocoon and flaps its wings to dry.",
+        "description": "Tests whether the model represents gradual biological adaptation after emergence.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_021",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A rabbit digs a small hole in the ground and hides inside.",
+        "description": "Tests environmental modification caused by biological actions.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_022",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A cat grooms itself, licking its fur repeatedly.",
+        "description": "Tests whether repetitive motion and body flexibility appear natural.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "BBR_023",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A flock of birds changes direction in synchronized flight.",
+        "description": "Tests collective behavioral coherence and aerodynamic coordination.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_024",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A bear catches a fish from a river and water splashes upward.",
+        "description": "Tests coordinated limb motion and fluid interaction.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "BBR_025",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A kangaroo hops across open ground, maintaining rhythmic balance.",
+        "description": "Tests elastic motion and consistent gravitational response.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_026",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "An owl turns its head to follow a moving prey on the ground.",
+        "description": "Tests species-specific head motion and visual tracking behavior.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "BBR_027",
+        "category": "Biological Behavior Reasoning",
+        "prompt_en": "A cow grazes in a field, moving its jaw and tail naturally.",
+        "description": "Tests subtle motor coordination and idle ecological realism.",
+        "difficulty": "easy"
+      }
+    ]
+  },
+
+  "Cultural Commonsense Reasoning": {
+    "category_description": "Evaluate whether the model can understand and accurately represent culturally grounded scenes, symbols, rituals, and behaviors — reflecting correct cultural context, attire, and social meaning.",
+    "prompts": [
+      {
+        "id": "CCR_001",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese family decorates their home with red lanterns and fireworks during Lunar New Year.",
+        "description": "Tests whether the model can represent Chinese New Year customs and cultural symbolism.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_002",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese tea master performs a tea ceremony on tatami mats with traditional utensils.",
+        "description": "Tests whether the model can depict Japanese ritual accuracy and spatial etiquette.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_003",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An Indian family lights oil lamps and exchanges sweets during Diwali.",
+        "description": "Tests whether the model understands Indian festival rituals and visual ambiance.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_004",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Muslim family gathers to break fast with dates and tea during Ramadan.",
+        "description": "Tests whether the model reflects accurate religious customs and timing.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_005",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An American family carves pumpkins and decorates their porch for Halloween.",
+        "description": "Tests whether the model can capture cultural symbols and seasonal atmosphere.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_006",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Mexican community builds colorful altars for Día de los Muertos.",
+        "description": "Tests whether the model can represent cultural symbolism of remembrance and color.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_007",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "People in Germany drink beer and wear traditional Bavarian clothing during Oktoberfest.",
+        "description": "Tests whether the model can depict cultural dress and celebratory behavior correctly.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_008",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Korean family gathers to share rice cakes and bow to elders during Chuseok.",
+        "description": "Tests whether the model captures familial customs and etiquette.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_009",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Christian family decorates a Christmas tree and exchanges gifts.",
+        "description": "Tests whether the model represents Western holiday traditions correctly.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_010",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Thai community releases lanterns into the sky during the Yi Peng festival.",
+        "description": "Tests whether the model can express cultural rituals linked to illumination and peace.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_011",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese couple wears traditional wedding kimonos at a Shinto shrine.",
+        "description": "Tests whether the model can depict clothing and ceremonial gestures correctly.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CCR_012",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese elder practices calligraphy with brush and ink in a courtyard.",
+        "description": "Tests whether the model captures cultural aesthetics and body posture accuracy.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_013",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A French café scene with people drinking espresso and reading newspapers.",
+        "description": "Tests whether the model can depict authentic cultural ambiance and behavior.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_014",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Scottish musician plays bagpipes while wearing a kilt during a parade.",
+        "description": "Tests whether the model can represent national attire and performance rituals.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_015",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An African tribe performs a traditional dance with drums around a fire.",
+        "description": "Tests whether the model can portray cultural rhythm, costume, and setting.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_016",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Buddhist monk meditates in a temple with candles and chanting.",
+        "description": "Tests whether the model represents spiritual atmosphere and composure.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_017",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An American family enjoys a turkey dinner for Thanksgiving.",
+        "description": "Tests whether the model can depict family gathering and traditional food.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_018",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Hindu priest performs a river offering ritual with flowers and lamps.",
+        "description": "Tests whether the model can generate detailed religious actions and context.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CCR_019",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Brazilian carnival parade with dancers wearing feathered costumes.",
+        "description": "Tests whether the model captures movement, energy, and festive clothing.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_020",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese dragon dance takes place in a crowded festival street.",
+        "description": "Tests whether the model reflects rhythm, coordination, and festive context.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CCR_021",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese school sports day with children running and cheering.",
+        "description": "Tests whether the model can represent modern cultural events and social behaviors.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_022",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An Arab wedding with traditional music, henna, and group dancing.",
+        "description": "Tests whether the model can reproduce cultural celebration with authenticity.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "CCR_023",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A group of children in India fly colorful kites during Makar Sankranti.",
+        "description": "Tests whether the model captures festival atmosphere and sky interaction.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_024",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Western wedding ceremony with a bride in white and groom in a tuxedo.",
+        "description": "Tests whether the model follows modern Western wedding customs accurately.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_025",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese calligrapher and a painter collaborate during a cultural exhibition.",
+        "description": "Tests whether the model can represent multi-art cultural performance coherence.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_026",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "An indigenous elder tells stories by a fire to children wearing traditional clothes.",
+        "description": "Tests whether the model conveys cultural heritage transmission naturally.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_027",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Greek family dances in a circle during a village festival.",
+        "description": "Tests whether the model captures traditional movement patterns and attire.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "CCR_028",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Chinese Mid-Autumn Festival scene with people eating mooncakes under lanterns.",
+        "description": "Tests whether the model can represent symbolic food and cultural atmosphere.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "CCR_029",
+        "category": "Cultural Commonsense Reasoning",
+        "prompt_en": "A Japanese cherry blossom picnic with people sitting on blankets under blooming trees.",
+        "description": "Tests whether the model can express seasonal cultural appreciation scenes.",
+        "difficulty": "easy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1495 @@
+{
+  "Material Memory Consistency": {
+    "category_description": "Evaluate whether the model can maintain material memory characteristics after deformation. Objects should deform according to their physical properties and retain appropriate traces or recovery behaviors.",
+    "prompts": [
+      {
+        "id": "MMC_001",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A sheet of paper is folded and then unfolded, showing visible creases.",
+        "description": "Tests whether the model can represent irreversible surface memory after deformation.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely with reasoning.",
+          "evaluation_description": "Evaluates fold realism, timing, and crease permanence.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are the visible creases on the paper consistent with the folding and unfolding actions shown in the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Are the creases in the unfolded paper aligned with the folds made earlier in the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are creases visible after unfolding?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do the creases appear at correct folded locations?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are crease depths consistent with paper stiffness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the texture preserved except for folds?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are the creases accurately aligned and proportional to a typical folding pattern?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Are crease details physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_002",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of clay is pressed into a shape and then slowly regains part of its form.",
+        "description": "Tests the model's ability to express partial recovery and plastic deformation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with reasoning.",
+          "evaluation_description": "Evaluates deformation realism, recovery timing, and residual memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the clay visibly deformed by pressure?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the contact region physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the clay show gradual partial recovery?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is recovery slower than elastic materials?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does residual deformation remain visible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the recovered shape maintain the overall structural integrity of the pressed form?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is recovery visually consistent with clay’s viscosity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the motion suggest material memory retention?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_003",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A metal spoon is bent and keeps its bent shape.",
+        "description": "Tests whether the model can represent permanent deformation of metals.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No for each question with short reasoning.",
+          "evaluation_description": "Evaluates plastic deformation, rigidity, and visual trace permanence.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the video show the metal spoon maintaining its bent shape without straightening or reverting?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the video show the metal spoon retaining its bent shape throughout the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is the bend gradual and localized?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Does the spoon retain its bent shape afterward?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the metal spoon maintain its bent shape throughout the video without returning to its original form?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is no rebound observed after bending?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the metal appear rigid with lasting deformation?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the final geometry physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_004",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A plastic bottle is crushed and partially regains its shape when released.",
+        "description": "Tests whether the model can express semi-elastic recovery.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates deformation extent, recovery degree, and residual trace realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is crushing deformation physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does bottle volume visibly shrink?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does partial recovery occur after release?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does residual dent remain visible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the bottle's shape partially stabilize after being released?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is motion consistent with thin plastic response?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is deformation–release causality clear?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does final shape plausibly reflect semi-elastic memory?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_005",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of fabric is wrinkled and retains soft folds afterward.",
+        "description": "Tests whether the model can represent soft material memory and wrinkles.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer briefly Yes/No with reasoning.",
+          "evaluation_description": "Evaluates flexibility, wrinkle realism, and residual texture memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the fabric visibly manipulated or squeezed?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q2",
+              "question": "Do folds form naturally according to fabric flow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are wrinkles softly curved, not sharp?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do folds persist after release?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are the fabric’s folds smooth and naturally flowing, without abrupt or jagged edges?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are the soft folds in the fabric appearing naturally and consistent with previous deformation patterns?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is fabric thickness consistent with deformation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does residual shape imply fabric memory?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_006",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A wax candle bends slightly under heat and keeps its deformed shape.",
+        "description": "Tests thermally induced deformation and plastic memory.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No with reasoning.",
+          "evaluation_description": "Evaluates temperature deformation realism and residual shape plausibility.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the wax candle show a deformed shape after heat exposure?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does bending occur gradually over time?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is deformation localized in the heated region?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the candle remain bent afterward?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are melting or softening effects plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is no rebound observed post deformation?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the wax candle maintain its deformed shape without immediate reversion after heating stops?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is temporal evolution of bending realistic?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_007",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A balloon expands and then deflates back to a wrinkled surface.",
+        "description": "Tests whether the model can capture deformation traces after air release.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely with reasoning.",
+          "evaluation_description": "Evaluates inflation realism, deflation timing, and residual surface memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the balloon expand uniformly when inflated?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q2",
+              "question": "Is internal air pressure visually implied by shape?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does deflation occur gradually and realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are wrinkles or sagging surfaces visible after deflation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the deflated balloon maintain a realistic level of surface wrinkles consistent with material behavior?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the texture continuity maintained through the process?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the balloon’s final surface convey realistic memory?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is timing between inflation and deflation physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_008",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A soft pillow is pressed and slowly fluffs back into shape.",
+        "description": "Tests whether the model can represent delayed recovery of soft materials.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates compression realism, rebound delay, and surface continuity.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the pillow deform smoothly when pressed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the pressure applied locally and realistically?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does recovery occur gradually rather than instantly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is rebound motion symmetric and natural?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the pillow fully regain its volume?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the pillow's surface recover smoothly and uniformly as it returns to its shape?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the pillow reliably return to its original shape without visible distortions after deformation?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the motion imply realistic viscoelastic memory?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_009",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of glass bends slightly before cracking permanently.",
+        "description": "Tests whether the model can represent brittle material failure and irreversibility.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with reasoning.",
+          "evaluation_description": "Evaluates deformation limit realism, fracture plausibility, and visual memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the glass show subtle bending before cracking?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is fracture timing consistent with brittleness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are cracks sharp and physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the fracture appear irreversible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is the glass shown maintaining its shape without unintended deformations before cracking?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the glass returning to its original shape after being bent?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the video show the glass maintaining its deformed shape after bending before cracking?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the video show the glass exhibit a slight bend that is visibly distinct from a permanent deformation before cracking?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_010",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of leather bends and shows a crease where it was folded.",
+        "description": "Tests whether the model can represent permanent creases of natural materials.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No with reasoning.",
+          "evaluation_description": "Evaluates flexibility, surface texture, and crease permanence.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the bending motion physically accurate for leather?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q2",
+              "question": "Does the crease on the leather appear natural and consistent with its bending in the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is a crease formed where the fold occurs?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the crease persist after straightening?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is crease depth realistic relative to leather stiffness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the crease caused by bending persist visibly after the leather is relaxed or straightened?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the final surface retain deformation trace?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is memory behavior consistent with natural leather?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_011",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A spring is compressed and bounces back to its original height.",
+        "description": "Tests the model’s depiction of strong elastic behavior.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates compression timing, elasticity, and rebound accuracy.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is compression motion visually continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the spring visibly return to its original position after bouncing?",
+              "importance_score": 0.5,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Does the spring rebound promptly upon release?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Does the spring's oscillation return to the same amplitude as initially observed?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the spring return exactly to initial height?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the spring return to its original shape without visible deformation after bouncing?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is elasticity timing physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does motion show realistic energy transfer?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_012",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of fabric ironed after wrinkling becomes smooth again.",
+        "description": "Tests the model’s performance on recovery with external energy.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates heat-induced recovery, wrinkle smoothing, and continuity.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are wrinkles visible before ironing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the fabric appear uniformly smooth after ironing?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Do wrinkles gradually disappear with heat?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the smoothing transition physically plausible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the final surface appear flat and natural?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the fabric visually show a change from wrinkled to smooth in the video?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does motion suggest thermally driven recovery?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the fabric's texture and surface appearance reflect a return to its original smoothness after ironing?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_013",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A tire deforms slightly as it hits a bump and returns immediately.",
+        "description": "Tests whether the model can represent instantaneous elastic deformation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates real-time elasticity, motion timing, and recovery behavior.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is tire deformation visible on impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is deformation localized to the contact area?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does recovery occur instantly after the bump?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the bounce physically realistic?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the tire maintain consistent deformation and recovery behavior across multiple bumps?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the tire tread unchanged after rebound?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Is elasticity behavior coherent with rubber?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does motion timing convey realistic material memory?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_014",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A plastic bag stretches when filled and stays stretched.",
+        "description": "Tests whether the model can reflect residual deformation of plastic.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No reasoning.",
+          "evaluation_description": "Evaluates stretch realism, deformation extent, and residual shape consistency.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the bag stretch due to internal load?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the plastic bag appear visibly deformed after being filled?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is stretching proportional to applied pressure?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the bag remain elongated after emptying?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the plastic bag maintain its stretched shape after being filled and then emptied?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does motion reflect plastic’s low elasticity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is no rapid rebound observed after unloading?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the plastic bag maintain its stretched shape without sagging or shrinking over time?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_015",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of aluminum foil is crumpled and retains wrinkles.",
+        "description": "Tests whether the model can generate realistic surface texture memory.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates crumpling motion, texture fidelity, and residual surface detail.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the crumpled aluminum foil in the video visibly exhibit multiple distinct wrinkles throughout?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Are the wrinkles on the crumpled aluminum foil consistently visible and well-defined throughout the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are wrinkles sharp and small-scale realistic?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Does foil remain wrinkled afterward?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are the wrinkles consistently distributed across the aluminum foil surface?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the crumpled aluminum foil surface display a consistent pattern of wrinkles indicative of material memory?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does deformation appear irreversible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the final surface capture physical material memory?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_016",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A wooden stick bends slightly under pressure and returns halfway.",
+        "description": "Tests whether the model can represent semi-elastic recovery characteristics.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No with reasoning.",
+          "evaluation_description": "Evaluates limited recovery, stiffness realism, and partial deformation memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is bending direction consistent with applied force?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is deflection magnitude realistic for wood stiffness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does recovery occur partially after release?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Is final shape slightly curved as expected?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the wooden stick exhibit the correct amount of elastic deformation during bending?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is no full rebound observed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does motion suggest semi-elastic response?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the wooden stick show a partial rebound immediately after pressure is released?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_017",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A snowball is squeezed and partially breaks apart.",
+        "description": "Tests nonlinear behavior of weakly cohesive materials.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates cohesion loss, deformation irregularity, and breakage realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does squeezing visibly compress the snowball?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Do small fragments detach realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is partial breakup spatially consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the remaining shape deform naturally?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the broken surface of the snowball show realistic texture changes consistent with cracking?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the moisture level visually plausible?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the snowball’s fragmented pieces maintain consistent shapes with the original snowball’s texture and structure?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is breakup sequence physically timed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_018",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A metal rod bends slightly under heat and stays curved.",
+        "description": "Tests thermal deformation and permanent curvature realism.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates thermally induced deformation and plastic memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the metal rod maintain its curved shape after cooling down?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does bending occur gradually with heating?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Is curvature localized around heated zone?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Does the rod remain curved afterward?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the curvature of the rod stay consistent over time after heating?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the final shape of the metal rod accurately reflect the effects of sustained heat without reverting?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does motion suggest thermal softening?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is final curvature consistent with material limits?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_019",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A towel is twisted, then unfolds leaving light wrinkles.",
+        "description": "Tests expression of micro-deformation in textiles.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers.",
+          "evaluation_description": "Evaluates twisting realism, wrinkle formation, and residual texture memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is twisting motion applied realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Do folds and curves form along twist lines?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are the light wrinkles evenly distributed across the towel surface?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Do light wrinkles remain after unfolding?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are wrinkle intensity and direction consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are the light wrinkles on the towel consistent with the fabric's folded and twisted history?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the towel thickness behave naturally?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Do wrinkles imply realistic textile memory?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_020",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A candle wax drip hardens after cooling on a table.",
+        "description": "Tests whether the model can capture the memory traces of state changes.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates fluid-to-solid transition, cooling dynamics, and residual form memory.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the hardened wax drip maintain its shape and not flow or deform when the scene is viewed from different angles?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the hardened wax drip appear solid and intact without showing signs of melting or dripping further?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is cooling process visually gradual?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Does hardened wax retain final shape?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the hardened wax show visible surface texture indicative of solidification?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the hardened wax retain the shape and surface texture consistent with cooling and solidification?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the process convey solidification memory?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is transition speed physically realistic?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_021",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A tennis ball deforms when hitting the ground and bounces back.",
+        "description": "Tests whether the model can represent dynamic elastic deformation.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates impact deformation, rebound motion, and elasticity realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the moment of contact clearly shown?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does deformation occur only on impact side?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is rebound height consistent with impact speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is deformation duration short and realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the tennis ball restore its original shape quickly after deformation?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the deformation of the tennis ball match the expected shape during impact?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is elasticity physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does timing imply energy retention memory?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_022",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A snowman's body sags slightly as it melts in the sun.",
+        "description": "Tests gradual softening and deformation under thermal change.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with reasoning.",
+          "evaluation_description": "Evaluates temporal melting, gravity sag, and residual deformation.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is sunlight clearly causing gradual melting?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does shape deformation increase over time?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is sag localized to lower regions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does material loss occur gradually?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q5",
+              "question": "Is dripping or softening motion realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the melting snowman show a gradual change in shape consistent with melting over time?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is timing physically coherent with heat exposure?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does deformation imply soft memory behavior?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_023",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A balloon expands under air pressure and shrinks after release.",
+        "description": "Tests the model’s understanding of cyclic deformation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates expansion dynamics, cyclic behavior, and surface consistency.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is inflation smooth and pressure-driven?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does deflation occur naturally afterward?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is expansion-to-shrinkage cycle complete?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the balloon's size during expansion and contraction match the expected changes in air pressure?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Is timing coherent between both phases?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the balloon's surface maintain smooth and consistent deformation without unnatural distortions during expansion and contraction?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Does deformation memory persist across cycles?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is physical realism maintained throughout motion?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "MMC_024",
+        "category": "Material Memory Consistency",
+        "prompt_en": "A piece of cardboard bends under weight and stays slightly curved.",
+        "description": "Tests limited recovery and realistic bending memory.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers.",
+          "evaluation_description": "Evaluates stiffness realism, partial recovery, and residual curvature.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is downward bending visible under load?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is deformation magnitude physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Does the board remain partially bent afterward?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are material layers consistent during bending?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the cardboard exhibit a consistent curvature without irregularities after bending?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the curved cardboard maintain its shape without excessive oscillation or bouncing after the weight is applied?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the curved cardboard exhibit consistent deformation across its surface without irregular bumps or dents?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is final curvature stable and realistic?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      }
+    ]
+  }
+}

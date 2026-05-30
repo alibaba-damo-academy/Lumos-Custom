@@ -1,0 +1,1743 @@
+{
+  "Dynamic Reference Frame": {
+    "category_description": "Evaluate whether the model can correctly represent the coordination between relative and absolute motion in moving reference frames — for example, observing surrounding objects from a moving vehicle or a rotating platform.",
+    "prompts": [
+      {
+        "id": "DRF_001",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person looks out from a moving train at trees passing by in the opposite direction.",
+        "description": "Tests whether the model can represent relative motion between the observer and the external world.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (moving train interior)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the camera perspective remain consistent with a view from within a moving train?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (opposite-direction background motion)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (opposite-direction background motion)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (opposite-direction background motion)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the perspective of the passing trees shift appropriately as the train moves, maintaining a coherent view of their relative position over time?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (smooth, continuous realism)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the background scenery of trees remain proportionally scaled and correctly oriented relative to the viewer's motion throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_002",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "Children ride on a rotating carousel while the background moves in circles.",
+        "description": "Tests whether the model can generate relative motion within a rotating frame.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (rotating carousel)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q2",
+              "question": "Is the external background visible and contrasting with the reference frame (rotating carousel)?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (circular background rotation)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (circular background rotation)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (circular background rotation)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the internal frame remain stable relative to itself (rotational motion realism)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (rotational motion realism)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Do the children’s positions and orientations remain consistent relative to the rotating carousel throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_003",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone flies forward while filming a car driving in the same direction.",
+        "description": "Tests whether the model can capture relative velocity differences in parallel motion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (drone flight view)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the camera perspective reflect motion consistent with a drone’s movement, such as slight upward or downward tilt during flight?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (parallel motion dynamics)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (parallel motion dynamics)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (parallel motion dynamics)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the drone maintain a consistent forward motion without unexpected changes in speed or direction during the scene?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (velocity realism)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the drone's camera angle consistently aligned with its forward movement, avoiding sudden shifts or tilts that contradict the drone's flight direction?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_004",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera pans across a moving river from a stationary bridge.",
+        "description": "Tests how the model represents moving objects from a static observation point.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (stationary bridge)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the camera maintain a consistent perspective relative to the stationary bridge throughout the pan?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (unidirectional river flow)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (unidirectional river flow)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (unidirectional river flow)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the river appear to flow smoothly in the direction consistent with the camera's pan movement throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (static camera realism)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Do lighting and reflections stay coherent with the direction of motion (static camera realism)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_005",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person spins around holding a camera while a fixed object appears to rotate around them.",
+        "description": "Tests whether the model can generate apparent relative motion caused by camera rotation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (spinning observer)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the camera's point of view change in a way that reflects the person spinning around, indicating a moving reference frame?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (rotating background)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (rotating background)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (rotating background)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the internal frame remain stable relative to itself (camera rotation realism)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (camera rotation realism)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the apparent rotation of the fixed object accurately reflect the camera’s relative movement without unnatural lag or jitter?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_006",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A passenger looks out of a moving airplane window at stationary clouds below.",
+        "description": "Tests how the model handles static backgrounds in a high-speed moving reference frame.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (airplane interior)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the camera perspective maintain a consistent viewpoint from inside the airplane during the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (high-speed motion)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (high-speed motion)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (high-speed motion)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the internal frame remain stable relative to itself (aerial realism)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (aerial realism)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the perspective of the clouds below remain consistent with the motion of the airplane throughout the video?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_007",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person runs on a treadmill while the background remains still.",
+        "description": "Tests whether the model understands motion as a relative-frame concept.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (treadmill setup)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the video show the treadmill belt moving under the person's feet as they run?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (self-motion vs static background)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (self-motion vs static background)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (self-motion vs static background)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the internal frame remain stable relative to itself (stationary background realism)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the treadmill's position and movement stay consistent relative to the person throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the treadmill's surface appear flat and level throughout the video, maintaining a consistent orientation relative to the person?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_008",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone circles around a statue, making the background appear to move.",
+        "description": "Tests whether the model can distinguish between camera motion and object motion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (orbiting drone)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the video show the background shifting relative to the drone's position as it circles?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (background parallax shift)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (background parallax shift)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (background parallax shift)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the internal frame remain stable relative to itself (circular path realism)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (circular path realism)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the drone maintain a consistent relative distance from the statue throughout the circling motion?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_009",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A car drives past streetlights that seem to move backward rapidly.",
+        "description": "Tests the model’s understanding of linear speed perception and parallax.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (moving car interior)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the video show the streetlights' movement relative to the car in a way that indicates the car is moving forward?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (backward parallax motion)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (backward parallax motion)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (backward parallax motion)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Do the streetlights appear to move consistently backward relative to the moving car throughout the scene?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (forward velocity realism)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Do the streetlights' positions and sizes maintain consistent spatial relationships to each other as they move in the scene?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_010",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rotates slowly in a chair while the room appears to spin around them.",
+        "description": "Tests whether the model can generate visual consistency in a rotating frame.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly identifiable as being inside or associated with a moving system (rotating chair)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the camera perspective stay consistent relative to the person's movements, indicating a stable viewpoint inside the rotating system?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Are relative motion directions between observer and background correct (room rotation around axis)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion speed and direction physically plausible (room rotation around axis)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax or motion depth correctly represented (room rotation around axis)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the room's spinning movement maintain a consistent direction and speed throughout the video?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are motions temporally consistent and smooth without abrupt reversals (slow rotation realism)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the person’s rotation appear natural and consistent with a slow, steady movement without jitteriness or abrupt changes?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_011",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A cyclist films while riding, showing stationary buildings moving backward.",
+        "description": "Tests whether the model can capture dynamic background motion from a moving observer’s perspective.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint identifiable as being attached to a moving observer (cyclist-mounted camera)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the stationary environment clearly visible as the relative background?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are background objects moving in the opposite direction of travel (backward parallax)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the backward motion speed physically plausible given the cyclist’s velocity?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does parallax depth vary correctly between near and far buildings?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Is the camera vibration or viewpoint motion smooth and consistent with cycling?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are motion transitions continuous without abrupt jumps or reversals?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the video maintain a consistent vertical orientation of the camera throughout the ride?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_012",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person stands still as a moving walkway carries them forward.",
+        "description": "Tests whether the model can represent passive motion frames logically.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is it clear that the person remains stationary relative to the walkway surface?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the environment moving backward relative to the person as the walkway moves?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the motion of the surroundings consistent with the walkway’s speed and direction?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are objects outside the walkway frame showing correct parallax or displacement?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the relative motion between the walkway and environment appear smooth?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the walkway’s mechanical motion remain visually consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is temporal continuity maintained without jumps or resets?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the person's relative position within the scene stay consistent with the moving walkway's motion throughout the video?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_013",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera mounted on a spinning fan captures the rotating view of a room.",
+        "description": "Tests how the model handles motion blur in fast rotational frames.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly attached to a fast rotating object (spinning fan)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the background recognizable despite rotational motion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the direction of background rotation consistent with physical spinning?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the rotation speed appear physically reasonable for a fan?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is motion blur applied correctly around the periphery of rotation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the motion cyclic and periodic without abrupt resets?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are temporal intervals between frames consistent with constant rotation speed?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the rotation of the room appear smooth and continuous without jitter or sudden reversals?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_014",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A skateboarder films while moving downhill, passing trees and people.",
+        "description": "Tests whether the model captures continuous parallax changes during acceleration.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint identifiable as being attached to a moving observer (skateboarder)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are background elements like trees and people visible as relative references?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does background motion accelerate smoothly with downhill speed increase?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the skateboarder's motion appear consistent with the forward movement of the scene, without unnatural jumps or reversals?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is motion direction stable without oscillations or reversals?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are vibrations or shaking consistent with skateboarding movement?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is frame-to-frame motion continuous without gaps or discontinuities?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the perspective change appropriately as the skateboarder moves downhill, maintaining a coherent viewpoint?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_015",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera follows a runner while the background shifts smoothly.",
+        "description": "Tests the model’s ability to generate relative stillness with synchronized camera motion.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint following the runner in a synchronized reference frame?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the runner relatively still compared to a moving background?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is background motion direction consistent with the runner’s path?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the background move smoothly without shaking or distortions?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q5",
+              "question": "Is parallax consistent with forward motion speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the camera motion stabilized relative to the runner?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are temporal changes smooth and realistic between frames?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the camera maintain a consistent following distance from the runner throughout the scene?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_016",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone hovers while filming a moving ship passing below.",
+        "description": "Tests whether the model understands vertical-layer motion relationships.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint correctly fixed at a hovering altitude?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the moving ship clearly visible in motion below?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the ship’s horizontal motion consistent with physical realism?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Is parallax between drone, ship, and sea correctly represented?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is relative motion between drone and ship visually coherent?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Is the hovering viewpoint stable without drifting?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Are temporal transitions smooth without abrupt shifts?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the drone maintain a consistent relative position to the passing ship throughout the video?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_017",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person records from a rotating Ferris wheel cabin as the city moves below.",
+        "description": "Tests whether the model can represent compound motion reference frames.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint identifiable as part of a rotating cabin?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the external environment visible and moving below?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is rotation speed consistent with a Ferris wheel’s movement?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is parallax between nearby structures and distant cityscapes realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the composite motion (rotation + translation) physically coherent?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Is cabin motion stable without oscillation?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the rotation of the cabin maintain consistent angular velocity throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Do lighting and perspective evolve naturally through rotation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_018",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rides an escalator while watching a descending escalator nearby.",
+        "description": "Tests whether the model can distinguish opposite-direction reference frame motions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the observer’s escalator motion direction clearly identified?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the opposite escalator’s motion visible and opposite in direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is motion contrast between both escalators physically accurate?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are people on both escalators moving coherently with their belts?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is spatial depth between the two frames correctly represented?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the escalator motion continuous without stutters?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are opposing motions temporally synchronized?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the person's orientation and position relative to both escalators remain consistent with their observed motion?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_019",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera fixed on a spinning plate captures a rotating background pattern.",
+        "description": "Tests whether the model can represent synchronized rotational motion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint clearly fixed on a spinning platform?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the rotating background pattern visible and centered?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the background rotation direction and speed physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Is symmetry or periodic motion maintained throughout rotation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is motion blur or parallax represented consistently during rotation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are rotation cycles temporally continuous without breaks?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are frame transitions smooth and consistent with angular velocity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the background pattern maintain consistent rotation direction throughout the video?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_020",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rows a boat across a calm lake as the shoreline moves slowly.",
+        "description": "Tests the model’s balance between water and observer motion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the camera viewpoint fixed relative to the rowing boat?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the stationary shoreline visible as a distant reference?",
+              "weight": 1.0,
+              "importance_score": 0.65
+            },
+            {
+              "id": "q3",
+              "question": "Is the relative motion between boat and shoreline correct in direction and speed?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is water surface motion consistent with rowing activity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the parallax between near waves and far shore behave realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the boat’s motion stable and continuous without jitter?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are reflections and ripples temporally coherent?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q8",
+              "question": "Does the shoreline move smoothly relative to the boat’s motion without sudden shifts or inconsistencies?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_021",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A spinning top is filmed from a camera rotating at the same speed.",
+        "description": "Tests whether the model can generate a relatively static dynamic system.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint synchronized with the spinning top’s rotation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the spinning top appearing visually stationary due to matched speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the background rotating correctly in the opposite direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is rotation speed and stabilization physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does motion blur appear consistent with angular velocity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the spinning top maintain a consistent orientation relative to the rotating camera throughout the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are temporal transitions cyclic and synchronized?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the spinning top appear stationary or move coherently from the camera's rotating perspective?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_022",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person films from a merry-go-round as another person watches from outside.",
+        "description": "Tests whether the model can represent visual differences between multiple reference frames.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the rotating reference frame (merry-go-round) clearly established?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the stationary observer outside visible and contrasting?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Are rotational and stationary frames visually synchronized?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is parallax between rotating and static objects correct?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the perspective switch match physical rotation behavior?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is rotational motion cyclic without jitter or inconsistencies?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are temporal transitions smooth between rotating viewpoints?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the video maintain a consistent perspective of the merry-go-round's rotation without sudden shifts?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_023",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A drone flies above a moving train, following it from above.",
+        "description": "Tests whether the model can represent multi-layer relative motion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the drone viewpoint clearly above the moving train?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the train’s forward motion direction consistent with drone tracking?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is relative velocity between drone and train correctly represented?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is parallax between ground, train, and sky coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are altitude and motion scales physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is drone tracking smooth without vertical oscillation?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Are frame transitions continuous during forward tracking?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the drone maintain a consistent relative position above the moving train throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_024",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A spinning record is filmed from above, showing the grooves moving in circles.",
+        "description": "Tests whether the model can generate coherent rotational surface motion.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint fixed directly above the spinning record?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the circular groove pattern visible and consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the rotational motion direction consistent with physical spin?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is rotation speed realistic and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does radial parallax behave correctly around the record center?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are temporal cycles uniform without jitter?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Is frame consistency maintained across multiple rotations?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the direction of the grooves consistently follow the rotation direction throughout the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_025",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person walks on a moving walkway while filming stationary people beside it.",
+        "description": "Tests whether the model can express reference frame speed differences.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the camera viewpoint fixed to the moving walkway?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Are stationary bystanders visible as static references?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is motion difference between walkway and surroundings consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is parallax variation realistic between moving and static objects?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the scene maintain coherent depth layering between elements?",
+              "weight": 2.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q6",
+              "question": "Is walkway motion visually steady and linear?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are temporal transitions smooth during movement?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the person's walking speed appear consistent relative to the moving walkway throughout the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_026",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A person rides a bicycle past parked cars, with the road appearing to move beneath.",
+        "description": "Tests whether the model can represent linear motion and parallax perception.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the viewpoint attached to the bicycle or rider?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are stationary parked cars visible as background?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is forward road motion consistent with bicycle speed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does parallax change smoothly with motion distance?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are background shifts coherent with near-field motion?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the road surface appear to move beneath the cyclist in a consistent direction throughout the video?",
+              "importance_score": 0.85,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Are frames temporally aligned with motion flow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the movement of parked cars appear consistent with the bicycle's forward motion throughout the video?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_027",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A camera rotates 360 degrees in a stationary room to show all walls.",
+        "description": "Tests the model’s ability to maintain spatial stability during rotation.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the camera maintain a clear view of all wall surfaces throughout the rotation?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Are room walls and structures clearly visible during rotation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the rotation speed consistent and smooth throughout?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Is perspective transition between walls physically correct?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does spatial stability persist without distortion or drift?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the camera rotation maintain consistent perspective without distortion or skewing of objects on the walls?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are rotational frames aligned without visual jumps?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Do lighting and reflections shift naturally with rotation?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            }
+          ]
+        }
+      },
+      {
+        "id": "DRF_028",
+        "category": "Dynamic Reference Frame",
+        "prompt_en": "A car chase scene where both vehicles move rapidly but maintain constant distance.",
+        "description": "Tests whether the model can depict relative stability under matched velocities.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly explain your reasoning for each.",
+          "evaluation_description": "Three reasoning layers are assessed: (1) Scene & viewpoint consistency (q1–q2). (2) Relative motion coherence (q3–q5). (3) Physical & temporal realism (q6–q8).",
+          "scoring_method": "weighted_average",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are both vehicles visible and aligned in a consistent direction of travel?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the constant distance between cars visually stable?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are relative velocities matched to maintain apparent stillness?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the lateral movements of both vehicles synchronized to maintain their relative positions from the camera's perspective?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does parallax depth behave correctly between vehicles and scenery?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are motion trajectories smooth and synchronized?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Do both vehicles appear to move with consistent speed relative to each other throughout the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Are both vehicles consistently oriented relative to each other, maintaining the same angle throughout the chase?",
+              "importance_score": 0.75,
+              "weight": 1.0
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

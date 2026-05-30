@@ -1,0 +1,1619 @@
+{
+  "Preventive Causal Reasoning": {
+    "category_description": "Evaluate whether the model can generate preventive causal reasoning, showing actions that proactively stop potential outcomes. The video should visually imply the risk being prevented—such as a falling object, approaching storm, or incoming insect—and demonstrate clear causal timing.",
+    "prompts": [
+      {
+        "id": "PCR_001",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person quickly closes the window to stop rain from coming in.",
+        "description": "Tests whether the model can depict preemptive action against an environmental event.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer 'Yes' or 'No' to each question concisely with reasoning.",
+          "evaluation_description": "Evaluates anticipation of external cause (rain), timing of prevention, and physical plausibility of the window-closing action.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is rain or storm visually implied before the window is closed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the person move toward the window before rain enters?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the window-closing motion smooth and completed before rain impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the video show the person initiating the window closure before the rain begins to enter?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Is causal timing correct—the prevention occurs before the effect?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the scene visually convey understanding of 'keeping rain out'?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Are physical interactions (window, hands, rain) realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the preventive cause-effect relationship visually clear and coherent?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_002",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A man catches a falling vase before it hits the ground.",
+        "description": "Tests whether the model can represent an imminent event being visually prevented.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates anticipation, rapid response timing, and causal consistency between the falling object and the interception.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the man initiate the catching motion before the vase hits the ground?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the man’s reaction occur before impact?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is hand trajectory consistent with intercepting motion?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the vase stop moving before it would logically hit the floor?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are motion cues (speed, direction) physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the man's action of catching the vase occur immediately after it begins to fall?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is causal order preserved: fall → reaction → prevention?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the scene clearly convey a 'prevented accident' outcome?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_003",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A woman quickly grabs a cup tipping on the edge of the table.",
+        "description": "Tests whether the model can capture critical pre-failure states and anticipatory reactions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No briefly for each question.",
+          "evaluation_description": "Evaluates perception of imminent instability and precision in timing before an accident occurs.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the cup visibly leaning or moving toward the edge?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the hand move toward the cup before it falls?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the timing of the grab early enough to prevent a fall?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are hand and cup motion trajectories realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the cup’s balance change visually convincing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the body posture reflect quick reaction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is the cause-effect chain (tilt → grab → stabilize) clearly shown?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is physical interaction coherent and artifact-free?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_004",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person shuts the door to prevent mosquitoes from entering the room.",
+        "description": "Tests the model’s understanding of preventive action against small threats.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with reasoning.",
+          "evaluation_description": "Evaluates environmental awareness, causal foresight, and timing of closure.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the door remain closed after the person shuts it?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the door close before mosquitoes enter?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does the person’s hand correctly align with the door handle when shutting the door?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Does the person ensure the door is fully closed to effectively prevent mosquitoes from entering?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Is timing between threat appearance and closure realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is the preventive intent clearly understandable from visuals alone?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Are physics and motion interactions plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the prevention visually completed (no insect enters)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_005",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A child moves a toy away from a puddle before it gets wet.",
+        "description": "Tests whether the model can depict foresight and preventive relocation.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely with reasoning.",
+          "evaluation_description": "Evaluates understanding of potential damage, correct timing, and child-like intentionality.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the puddle and risk of wetness visually clear?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the child notice the risk before moving the toy?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Is the toy moved before the water reaches it?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the video show the child actively making the move before the puddle reaches the toy?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the video depict the child choosing to move the toy away specifically because of the approaching puddle?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the toy being moved to a dry area to avoid the puddle?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the video depict the child actively preventing the toy from coming into contact with the puddle?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the video show the child intentionally guiding the toy away from the puddle before it gets wet?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_006",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A driver slows down to avoid hitting an animal crossing the road.",
+        "description": "Evaluates the model’s understanding of anticipatory reactions in accident prevention.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely with short reasoning.",
+          "evaluation_description": "Evaluates detection of potential collision, braking timing, and motion consistency.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the animal visible or implied before crossing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the driver react before contact occurs?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is vehicle deceleration visually evident?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the distance between car and animal physically realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is braking motion smooth and anticipatory rather than sudden?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the vehicle's speed reduction directly correspond to the animal crossing the road in the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the sequence (approach → slow → safe pass) logically consistent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is preventive causality visually clear from the scene?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_007",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person uses an umbrella before stepping out into the rain.",
+        "description": "Tests the model’s ability to depict preventive preparation behavior.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers briefly.",
+          "evaluation_description": "Evaluates anticipation of external conditions and timing of protective preparation.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is rain or dark sky implied before the person steps outside?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q2",
+              "question": "Does the umbrella open before exposure to rain?",
+              "weight": 2.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Is the umbrella-opening motion realistic and complete?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are weather cues consistent with rain onset?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q5",
+              "question": "Is causal timing appropriate (preparation precedes need)?",
+              "weight": 2.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q6",
+              "question": "Is physical realism of hand and umbrella interaction correct?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the action visually convey intention to prevent being wet?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the final state (protected from rain) visually confirmed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_008",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A man moves a chair to stop it from blocking the door.",
+        "description": "Tests whether the model can represent anticipatory removal of potential obstacles.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer each question with Yes/No and brief justification.",
+          "evaluation_description": "Evaluates spatial awareness, preventive adjustment, and causal clarity between obstacle and correction.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the chair visibly near or obstructing the door at first?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the chair appear to be in contact with the door initially?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is the chair moved away before someone tries to open the door?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are hand and chair motions smooth and plausible?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q5",
+              "question": "Does the door open freely afterward, confirming prevention?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are motion sequences logically ordered (notice → move → clear)?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q7",
+              "question": "Does the man’s movement clearly indicate an intentional effort to prevent the door from being blocked?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the preventive intent visually unambiguous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_009",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A cook turns off the stove to prevent the soup from boiling over.",
+        "description": "Evaluates understanding of overheat prevention and causal timing in dynamic contexts.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No judgments with reasoning.",
+          "evaluation_description": "Assesses causal anticipation, proper timing, and realistic interaction with the stove.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the soup visibly close to boiling over before the action?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q2",
+              "question": "Does the cook react before overflow happens?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Is the hand motion correctly aimed at turning off the stove?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do visual cues (steam intensity) change after the action?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is causal order consistent (boiling → action → prevention)?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the cook actively removing the pot from the heat source after turning off the stove?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the prevention visually confirmed (soup stops rising)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the stove visibly turned off in the video after the cook acts?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_010",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A hiker secures a tent before the wind picks up.",
+        "description": "Tests the model’s ability to depict anticipatory preparation for environmental change.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No for each question concisely.",
+          "evaluation_description": "Evaluates recognition of environmental cues and preemptive physical response.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is wind or storm visually implied before the action?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q2",
+              "question": "Does the hiker tighten ropes or stakes visibly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the tent movement stabilize after securing?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are wind cues (grass, fabric) coherent with cause?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the prevention completed before strong wind begins?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Is body interaction with the tent physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the visual imply predictive reasoning about weather?",
+              "weight": 2.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Is temporal coherence between wind rise and action correct?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_011",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person catches a rolling bottle before it falls off the counter.",
+        "description": "Tests the model’s handling of small, imminent motion-based hazards.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers briefly.",
+          "evaluation_description": "Evaluates anticipatory timing, smooth interception, and consistent physical realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the bottle rolling toward the edge?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q2",
+              "question": "Does the person react before it falls?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is interception motion smooth and correctly aimed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the person react in time to catch the rolling bottle before it reaches the edge?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the rolling stop before the edge logically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are hand and bottle contact points plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Is cause-effect sequence visually continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the motion of the person’s hand accurately follow through to intercept the moving bottle in a natural, continuous trajectory?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_012",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A cyclist puts on a helmet before riding.",
+        "description": "Evaluates the model’s representation of safety-oriented preparation.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No and justify briefly.",
+          "evaluation_description": "Assesses readiness action before potential risk exposure.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the cyclist have the helmet on securely before starting to ride?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the person put on the helmet before riding starts?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is helmet placement motion physically correct?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Does the action end with visible secure fit?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the helmet appear properly aligned with the cyclist's head during placement?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is causal logic (prepare → ride) clearly visible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the video show the cyclist securely fastening the helmet strap before riding?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is physical realism consistent with everyday behavior?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_013",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A parent moves a cup of hot tea away from a child’s reach.",
+        "description": "Tests whether the model can depict preventive safety logic in domestic settings.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No responses with reasoning.",
+          "evaluation_description": "Evaluates understanding of safety anticipation, cause-effect prevention, and spatial realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the child near the cup or reaching for it?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q2",
+              "question": "Does the parent act before contact occurs?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is cup movement direction away from the child?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Does the parent’s action prevent the child from reaching the hot tea?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the child’s reaction (stopping reach) confirm prevention?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the parent intentionally preventing the child from reaching the hot tea?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is causal order (risk → reaction → prevention) preserved?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the video consistently show the parent’s action of moving the cup as a deliberate attempt to prevent the child from accessing the hot tea?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_014",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person closes the fridge door to stop cold air from escaping.",
+        "description": "Evaluates the model’s understanding of subtle, non-obvious causal relationships.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Assesses representation of invisible causal reasoning through context cues.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the fridge door visibly open before the action?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the person notice and close it deliberately?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does the video show the person firmly closing the fridge door without leaving it ajar?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q4",
+              "question": "Does the video show the person fully closing the fridge door until it latches shut?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the video show the fridge door appearing completely closed and sealed after being shut?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the fridge door fully closing after the person pushes it?",
+              "importance_score": 0.5,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the video clearly depict the person making a conscious effort to close the fridge door fully?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the cause–effect visually coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_015",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A gardener waters plants before a hot afternoon to prevent wilting.",
+        "description": "Tests the model’s understanding of delayed preventive actions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No and reasoning.",
+          "evaluation_description": "Assesses prediction of future environmental conditions and preemptive action.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the video show the gardener watering the plants before the hot afternoon begins?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the video depict the gardener actively applying water to the plants?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Does watering occur before visible stress on plants?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are water and soil interactions physically accurate?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is intention (prevention of wilting) inferable visually?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the gardener actively watering the plants before the hot part of the day begins?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is temporal causality (before heat) logically consistent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the outcome (healthy plants) visually maintained?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_016",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A worker wears gloves before handling sharp metal parts.",
+        "description": "Tests the model’s representation of safety preparation and hazard avoidance.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No with reasoning.",
+          "evaluation_description": "Evaluates safety awareness, timing of preparation, and physical plausibility of hand-object interaction.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are the sharp metal parts visible before the worker acts?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the worker put on gloves before touching the objects?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the glove-wearing motion physically accurate and complete?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Does the worker correctly put on gloves before approaching the sharp metal parts to prevent injury?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is causal order (hazard → preparation → safe handling) correct?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Are visual cues of metal sharpness or danger clear?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the prevention occur clearly before contact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the video show the worker's gloves positioned correctly over the hands before handling the sharp metal parts?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_017",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person installs a safety gate to stop a baby from climbing stairs.",
+        "description": "Evaluates the model’s understanding of long-term preventive reasoning for child safety.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely with reasoning.",
+          "evaluation_description": "Assesses anticipation of potential danger and correct physical placement of safety barriers.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the safety gate appear to be securely installed before the baby attempts to climb the stairs?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the person install the gate before the baby approaches?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q3",
+              "question": "Is gate placement and locking motion plausible?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Is the safety gate shown properly aligned with the stairs to prevent gaps?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the baby remain safely behind the gate?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does the safety gate physically prevent the baby from climbing the stairs in the video?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is visual causality (setup → restriction → safety) clear?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q8",
+              "question": "Does the safety gate clearly appear positioned at the top of the stairs to block the baby’s access?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_018",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A hiker ties shoelaces tightly before walking on rough terrain.",
+        "description": "Tests the model’s depiction of preventive adjustment before risk exposure.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No briefly for each question.",
+          "evaluation_description": "Evaluates anticipatory preparation, temporal order, and motor accuracy.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the hiker shown securing the shoelaces tightly with a knot before starting to walk?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the person tighten shoelaces before walking?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is tying motion physically coherent and complete?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the walking start only after tying?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is the hiker's motion of tying shoelaces physically plausible and consistent with typical human action?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the terrain clearly uneven or risky?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the video show the hiker's shoelaces being tied securely enough for stability?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Does the video show the hiker checking that the shoelaces are snug and secure before starting to walk?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_019",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person turns off lights to prevent overheating of bulbs.",
+        "description": "Tests whether the model can visualize an abstract preventive cause-effect relationship.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No answers with reasoning.",
+          "evaluation_description": "Evaluates subtle causal understanding without visible danger.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the light source visibly on before the action?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q2",
+              "question": "Does the person act deliberately to turn it off?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the switch interaction realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does brightness decrease after the action?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the prevention goal visually inferable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show that turning off the lights directly leads to a decrease in bulb temperature or overheating risk?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is causal order (light → off → cooling) coherent?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the video depict that turning off the lights results in a noticeable reduction in bulb temperature or overheating risk?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_020",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A man puts a rock under a wheel to stop a car from rolling downhill.",
+        "description": "Tests understanding of physical preventive reasoning under gravity-based risk.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates understanding of slope-based physics, timing, and causal correctness.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the slope or potential motion of the car visually clear?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the person act before the car starts moving?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is rock placement physically accurate under a wheel?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the car’s movement stop afterward?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is motion trajectory consistent with gravity direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the video correctly depict the man placing the rock directly in the path of the wheel to prevent movement?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is causal order (risk → block → stability) logical?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is environmental realism (ground, car physics) coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_021",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A cyclist avoids a pothole by steering away.",
+        "description": "Evaluates dynamic prevention in continuous motion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No briefly.",
+          "evaluation_description": "Evaluates perception, motion correction, and temporal accuracy in avoidance.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the pothole visible before steering?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the steering occur before reaching the pothole?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the direction of turn physically consistent?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the trajectory smooth and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the cyclist's steering movement correctly correspond to avoiding the pothole without abrupt changes?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is causal timing (see → react → avoid) coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the cyclist's steering movement directly result in the pothole being avoided?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is preventive effect (avoidance success) visible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_022",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person places coasters under cups to avoid water rings on the table.",
+        "description": "Tests fine-grained causal anticipation in static daily scenarios.",
+        "difficulty": "easy",
+        "evaluation": {
+          "overall_instruction": "Provide Yes/No for each question.",
+          "evaluation_description": "Assesses preventive reasoning for subtle environmental consequences.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Are the coasters correctly placed under the cups to prevent water rings?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q2",
+              "question": "Are the coasters positioned directly beneath the cups to prevent water from reaching the table?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is hand motion and object placement plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are the coasters positioned correctly under the cups to prevent water rings?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are the coasters securely placed under the cups to prevent slipping or displacement?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is visual reasoning (protect table) inferable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the video show the person correctly positioning the coasters to prevent water rings?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the physical setup realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_023",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A driver closes the fuel cap tightly to prevent leakage.",
+        "description": "Evaluates physical correctness and understanding of safety sealing actions.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Assesses causal correctness and hand–object realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the fuel cap appear securely fastened in the video?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the driver tighten the cap before driving away?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the fuel cap securely fastened without gaps?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Does the cap close completely?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the driver ensure the fuel cap is properly threaded onto the opening?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the video show the fuel cap being securely tightened and properly sealed?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the video clearly show the driver applying force to tighten the fuel cap fully?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is visual intention of safety visible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_024",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person quickly grabs a candle before it falls from the table edge.",
+        "description": "Tests the model’s ability to depict rapid prevention of potential hazard.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No with reasoning.",
+          "evaluation_description": "Evaluates reflex timing, gravity coherence, and motion accuracy.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the candle visibly unstable before action?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the person react before it falls?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is grab motion timed to intercept mid-fall?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Are hand and candle motions physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the person's hand accurately reach the candle's position in a physically plausible manner?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is outcome (no fall) visually confirmed?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Is cause-effect (instability → reaction → safety) coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is physical realism maintained throughout?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_025",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A person puts a lid on a boiling pot to prevent splashing.",
+        "description": "Evaluates logical anticipation and motion realism in heat-related prevention.",
+        "difficulty": "medium",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Assesses causal timing, thermal context, and fluid interaction realism.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the person place the lid on the boiling pot correctly to cover it?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the person cover the pot before overflow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the lid appear securely placed on the pot, preventing steam from escaping visibly around the edges?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Are steam and splash effects physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the lid stay in place and not slide off as the pot boils?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Are interactions between hand, lid, and pot plausible?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Is causal logic (boil → cover → calm) clearly visualized?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the prevention result (stable pot) shown?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      },
+      {
+        "id": "PCR_026",
+        "category": "Preventive Causal Reasoning",
+        "prompt_en": "A shopkeeper pulls down a shutter to protect goods from the approaching storm.",
+        "description": "Tests the model’s ability to represent macro-level preventive reasoning and environmental foresight.",
+        "difficulty": "hard",
+        "evaluation": {
+          "overall_instruction": "Answer Yes/No concisely.",
+          "evaluation_description": "Evaluates environmental anticipation, large-scale causality, and timing of protective closure.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the storm visually implied (wind, clouds, dust)?",
+              "weight": 2.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the shopkeeper act before rain or wind intensifies?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is shutter motion physically smooth and complete?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are environment cues (signs, fabric movement) coherent with wind?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is timing logically preventive rather than reactive?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are body motions consistent with pulling effort?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is visual causality (storm → close → safe) clear?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the final state (store secured) visible and consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "scoring_method": "weighted_average"
+        }
+      }
+    ]
+  }
+}

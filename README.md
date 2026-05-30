@@ -6,7 +6,7 @@
 
 <p align="center">✧ · ꕤ · ✧</p>
 
-This repository collects open-source research from **DAMO Academy, Alibaba Group** in customized video generation, currently including works to **customize identities/attributes and lighting for videos**. Code is organized into self-contained subprojects for separate setup and reproduction.
+This repository collects open-source research from **DAMO Academy, Alibaba Group** in customized video generation, currently including works to **customize identities/attributes and lighting for videos**, and **reasoning-driven unified video generation**. Code is organized into self-contained subprojects for separate setup and reproduction.
 
 ## 🔗 📜 News
 
@@ -22,6 +22,12 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 **[2026/3/21]** Code is available now!
 
+### Lumos-Nexus
+
+**[2026/6/1]** Paper released on [arXiv](https://arxiv.org/abs/2603.20192) (preprint; not yet peer-reviewed).
+
+**[2026/5/31]** Code is available now!
+
 **If you are interested in our foundational video generation research, please refer to the [Lumos](https://github.com/alibaba-damo-academy/Lumos) project.**
 
 ---
@@ -30,8 +36,82 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 | Project | Venue | In one sentence | Code & docs |
 |--------|-------|-----------------|-------------|
+| **Lumos-Nexus** | **arXiv preprint** | **Lumos-Nexus** advances reasoning-driven unified video generation through lightweight connector training and Unified Progressive Frequency Bridging at inference. | [`Lumos-Nexus/`](Lumos-Nexus/) · [README](Lumos-Nexus/README.md) |
 | **LumosX** | **ICLR 2026** | **LumosX** advances personalized multi-subject video generation through relational data design and relational attention modeling. | [`LumosX/`](LumosX/) · [README](LumosX/README.md) |
 | **UniLumos** | **NeurIPS 2025** | **UniLumos** advances unified image and video relighting through RGB-space geometry feedback on a flow-matching backbone. | [`UniLumos/`](UniLumos/) · [README](UniLumos/README.md) |
+---
+## ◆ Lumos-Nexus ◆
+
+<p align="center"><span style="font-size: 1.2em;">✦ arXiv preprint ✦</span></p>
+
+**Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models**
+
+[![arXiv](https://img.shields.io/badge/arXiv-2603.20192-b31b1b.svg)](https://arxiv.org/abs/2603.20192)
+[![GitHub](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
+[![Project Page](https://img.shields.io/badge/Project-Page-purple)](https://jiazheng-xing.github.io/nexus-lumos-home/)
+
+### Showcase ✧ animated
+
+<p align="center"><i>Reasoning-driven video generation · VR-Bench tasks</i></p>
+
+<p align="center"><b style="font-size: 1.15em;">✧ High-level physical world reasoning (ETV)</b></p>
+
+<table width="100%">
+  <tr>
+    <td align="center" valign="middle" width="70%">
+      <b>Task prompt</b><br/>
+      <img src="Lumos-Nexus/asserts/readme_png/etv_task.png" alt="ETV task prompt" width="100%" style="max-width: 560px;"/>
+    </td>
+    <td align="center" valign="middle" width="30%">
+      <b>Lumos-Nexus</b><br/>
+      <img src="Lumos-Nexus/asserts/readme_gif/etv_lumos.gif" alt="ETV Lumos-Nexus result" width="100%" style="max-width: 210px;"/>
+    </td>
+  </tr>
+</table>
+
+---
+
+<p align="center"><b style="font-size: 1.15em;">✧ High-level commonsense reasoning (CCR)</b></p>
+
+<table width="100%">
+  <tr>
+    <td align="center" valign="middle" width="70%">
+      <b>Task prompt</b><br/>
+      <img src="Lumos-Nexus/asserts/readme_png/ccr_task.png" alt="CCR task prompt" width="100%" style="max-width: 560px;"/>
+    </td>
+    <td align="center" valign="middle" width="30%">
+      <b>Lumos-Nexus</b><br/>
+      <img src="Lumos-Nexus/asserts/readme_gif/ccr_lumos.gif" alt="CCR Lumos-Nexus result" width="100%" style="max-width: 210px;"/>
+    </td>
+  </tr>
+</table>
+
+---
+
+<p align="center"><b style="font-size: 1.15em;">✧ Embodied physical reasoning (BBR)</b></p>
+
+<table width="100%">
+  <tr>
+    <td align="center" valign="middle" width="70%">
+      <b>Task prompt</b><br/>
+      <img src="Lumos-Nexus/asserts/readme_png/bbr_task.png" alt="BBR task prompt" width="100%" style="max-width: 560px;"/>
+    </td>
+    <td align="center" valign="middle" width="30%">
+      <b>Lumos-Nexus</b><br/>
+      <img src="Lumos-Nexus/asserts/readme_gif/bbr_lumos.gif" alt="BBR Lumos-Nexus result" width="100%" style="max-width: 210px;"/>
+    </td>
+  </tr>
+</table>
+
+<sub>➜ Task prompts: <code>Lumos-Nexus/asserts/readme_png/</code> · Result GIFs: <code>Lumos-Nexus/asserts/readme_gif/</code> · more in <a href="Lumos-Nexus/README.md">Lumos-Nexus/README.md</a></sub>
+
+- **Venue:** **arXiv preprint** ([2603.20192](https://arxiv.org/abs/2603.20192); not yet peer-reviewed)
+- **Summary:** We propose **Lumos-Nexus**, a training-efficient unified video generation framework. A lightweight generator is aligned with the understanding block during training; at inference, **Unified Progressive Frequency Bridging (UPFB)** hands off to a high-capacity pretrained generator in a shared latent space for high-fidelity output. Companion evaluation is provided by **VR-Bench** (see **`Lumos-Nexus/vr_bench_eval/`**).
+
+**Quick links**
+
+- **Paper:** [arXiv](https://arxiv.org/abs/2603.20192) · [Project page](https://jiazheng-xing.github.io/nexus-lumos-home/)
+- **Documentation:** [Lumos-Nexus/README.md](Lumos-Nexus/README.md) — installation, OmniVideo checkpoints, batch inference, and VR-Bench evaluation
 
 ---
 
@@ -138,9 +218,12 @@ Lumos-Custom/
 ├── README.md                 # This file: umbrella overview
 ├── LumosX/                   # ICLR 2026 · personalized multi-subject video generation
 │   └── README.md
-└── UniLumos/                 # NeurIPS 2025 · unified relighting + LumosBench/
+├── UniLumos/                 # NeurIPS 2025 · unified relighting + LumosBench/
+│   ├── README.md
+│   └── LumosBench/
+└── Lumos-Nexus/              # arXiv preprint · reasoning-driven unified video generation + VR-Bench
     ├── README.md
-    └── LumosBench/
+    └── vr_bench_eval/
 ```
 
 ---
@@ -158,13 +241,17 @@ cd LumosX
 # or UniLumos
 cd ../UniLumos
 # Follow UniLumos/README.md
+
+# or Lumos-Nexus
+cd ../Lumos-Nexus
+# Follow Lumos-Nexus/README.md
 ```
 
 ---
 
 ## ✶ Citation ✶
 
-If you use either project, please cite the corresponding paper. BibTeX entries are in the **Citation** section of each subproject `README.md`.
+If you use any project, please cite the corresponding paper. BibTeX entries are in the **Citation** section of each subproject `README.md`.
 ```bibtex
 @inproceedings{UniLumos,
   title={UniLumos: Fast and Unified Image and Video Relighting with Physics-Plausible Feedback},
@@ -176,6 +263,13 @@ If you use either project, please cite the corresponding paper. BibTeX entries a
   title={LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation},
   author={Xing, Jiazheng and Du, Fei and Yuan, Hangjie and Liu, Pengwei and Xu, Hongbin and Ci, Hai and Niu, Ruigang and Chen, Weihua and Wang, Fan and Liu, Yong},
   booktitle={The Fourteenth International Conference on Learning Representations}
+}
+
+@article{xing2026lumosnexus,
+  title={Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models},
+  author={Xing, Jiazheng and Yuan, Hangjie and Cai, Lingling and Liu, Xinyu and Wei, Yujie and Du, Fei and Ci, Hai and Feng, Tao and Tang, Jiasheng and Chen, Weihua and Wang, Fan and Liu, Yong},
+  journal={arXiv preprint arXiv:2603.20192},
+  year={2026}
 }
 ```
 

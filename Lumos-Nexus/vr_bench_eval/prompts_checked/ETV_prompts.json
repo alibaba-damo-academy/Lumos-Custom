@@ -1,0 +1,1716 @@
+{
+  "Energy Transfer Visualization": {
+    "category_description": "Evaluate whether the model can generate visual scenes that demonstrate energy flow and transfer, focusing on continuity, directionality, and physical plausibility of energy propagation in dynamic interactions.",
+    "evaluation_principle": "Assess if the generated video depicts realistic, coherent energy transmission within physical systems. Energy flow should be visually traceable, causally connected, and physically consistent.",
+    "prompts": [
+      {
+        "id": "ETV_001",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A cue ball hits another ball, transferring motion in a straight line.",
+        "description": "Tests whether the model can represent directional consistency in momentum transfer.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "This scenario examines direct kinetic energy transfer through elastic collision and motion continuity.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the initial impact between the cue ball and target ball clearly visible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the target ball move immediately after the collision, maintaining causal timing?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the direction of motion consistent with the collision vector?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the energy transferred smoothly without unrealistic pauses or reversals?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the cue ball slow down after impact, reflecting realistic momentum conservation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are visual cues (e.g., ball spin or deformation) consistent with real energy transfer?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the motion remain physically plausible throughout the sequence?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Does the second ball's motion directly follow the direction and speed consistent with the cue ball's impact?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            }
+          ],
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and briefly explain reasoning."
+        }
+      },
+      {
+        "id": "ETV_002",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A row of dominoes falls one by one in sequence.",
+        "description": "Tests whether the model can generate coherent energy transfer chains.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "This test checks if energy transfer occurs sequentially and continuously across multiple objects.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the first domino fall due to a clear initiating cause?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Is the falling motion of dominoes continuous without missing steps?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Are time intervals between falls consistent across the sequence?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does each domino transfer energy to the next in a causally correct order?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are there no unrealistic reversals or energy loss violations?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q6",
+              "question": "Are motion paths straight and physically stable during transfer?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the chain reaction end naturally when energy dissipates?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the overall temporal rhythm realistic and physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "overall_instruction": "Respond 'Yes' or 'No' for each question, with short reasoning."
+        }
+      },
+      {
+        "id": "ETV_003",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person pushes a ball that rolls and knocks over a bottle.",
+        "description": "Tests whether the model can represent continuous energy flow.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluate if kinetic energy is transmitted smoothly through sequential interactions between human, object, and target.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the hand contact with the ball clearly shown as the initiating source of motion?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the ball accelerate realistically after being pushed?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the rolling trajectory straight and stable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the bottle react immediately upon collision?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is the magnitude of bottle motion consistent with the ball's momentum?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are there visible cues of kinetic energy flow (e.g., rolling speed reduction)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the sequence maintain temporal and spatial continuity?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is overall energy conservation visually coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Answer with 'Yes' or 'No' and provide reasoning for each."
+        }
+      },
+      {
+        "id": "ETV_004",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A falling hammer drives a nail into a piece of wood.",
+        "description": "Tests whether the model can reflect energy transfer and physical impact effects.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "This scenario evaluates the depiction of energy transformation from gravitational to kinetic and mechanical work.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the hammer's descent trajectory natural and gravity-driven?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the moment of impact produce realistic object reactions?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Does the nail move downward in sync with impact timing?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q4",
+              "question": "Is the motion energy visibly absorbed by the nail and wood?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are post-impact vibrations or recoil visually consistent?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Does the hammer slow down appropriately after impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is energy directionality correctly shown (from hammer to nail)?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the sequence physically plausible without discontinuity?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Provide 'Yes' or 'No' for each question, with short justification."
+        }
+      },
+      {
+        "id": "ETV_005",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A line of toy cars crashes into each other, transferring motion down the row.",
+        "description": "Tests whether the model can represent chain collision energy flow.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates multi-object kinetic energy propagation and the coherence of sequential momentum transfer.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the first car’s movement clear and well-initiated?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q2",
+              "question": "Does each subsequent car react immediately after being hit?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the motion of each car consistent with momentum conservation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the energy flow uniformly across the chain without time gaps?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are collision responses physically realistic (e.g., no backward movement)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the energy gradually dissipate toward the end of the chain?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is there visible directionality in motion propagation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Does the final stop of motion align with realistic energy loss?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Evaluate each question as 'Yes' or 'No' with reasoning."
+        }
+      },
+      {
+        "id": "ETV_006",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A stone is dropped into a pond, creating expanding ripples.",
+        "description": "Tests whether the model can represent wave energy propagation.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Examines how energy disperses radially through a fluid medium after an impact event.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the stone’s entry point and impact moment clearly shown?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Do ripples originate accurately from the impact center?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the outward motion of waves smooth and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q4",
+              "question": "Are wave amplitudes decreasing progressively as distance increases?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the energy propagation maintain circular symmetry?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Do the ripple patterns accurately reflect the initial impact and energy distribution from the stone's fall?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the water surface return to calm naturally?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is overall energy dissipation consistent with realistic damping behavior?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer each question with 'Yes' or 'No' and explain briefly."
+        }
+      },
+      {
+        "id": "ETV_007",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A candle flame lights another nearby candle.",
+        "description": "Tests whether the model can represent the visualization process of heat transfer.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates if thermal energy transmission and ignition sequence are visually coherent.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the proximity between the two flames accurately depicted?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the flame from the first candle appear to be visually igniting or touching the second candle's flame?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q3",
+              "question": "Is heat transfer direction clear (from lit to unlit)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the flame of the second candle accurately reflect the initial lighting action without false starts or inconsistencies?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Are both flames stable and independent after ignition?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q6",
+              "question": "Is the brightness or flickering behavior physically reasonable?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the interaction respect conservation of thermal energy?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the scene’s lighting consistent with energy flow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer with 'Yes' or 'No' for each question and justify briefly."
+        }
+      },
+      {
+        "id": "ETV_008",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A man kicks a soccer ball that hits a wall and bounces back.",
+        "description": "Tests whether the model can reflect energy reflection and directional consistency.",
+        "difficulty": "easy",
+        "evaluation": {
+          "evaluation_description": "Focuses on energy transformation from kinetic motion to elastic rebound.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the kicking action clearly the source of motion?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the ball’s speed correspond to the kicking strength?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the impact point on the wall spatially accurate?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the rebound direction follow physical reflection laws?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q5",
+              "question": "Is energy loss upon rebound realistically represented?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the player’s motion slow after the kick?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Are deformation and sound cues consistent with collision?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the overall rebound physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Answer 'Yes' or 'No' and briefly justify."
+        }
+      },
+      {
+        "id": "ETV_009",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A swinging pendulum hits another, transferring motion to it.",
+        "description": "Tests whether the model can capture rhythm and amplitude changes in energy transfer.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates conservation and transfer of momentum in a cyclic system.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the first pendulum’s swing motion natural and gravity-driven?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does impact timing align between the two pendulums?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is energy transfer visible through the second pendulum’s movement?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is amplitude exchange realistic and consistent?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q5",
+              "question": "Does the first pendulum slow down after collision?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the second pendulum begin moving immediately after the first pendulum's collision, indicating effective energy transfer?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q7",
+              "question": "Is overall motion periodic and energy-conserving?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is there no visible energy discontinuity or gain?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer with 'Yes' or 'No' and concise reasoning."
+        }
+      },
+      {
+        "id": "ETV_010",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A spark ignites a line of fireworks in sequence.",
+        "description": "Tests whether the model can represent the temporal coherence of flame propagation.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Focuses on sequential energy transfer across spatially distributed elements with heat and light emission.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does ignition start from a single visible spark source?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            },
+            {
+              "id": "q2",
+              "question": "Do fireworks ignite one by one in correct order?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is timing between ignitions smooth and consistent?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q4",
+              "question": "Does each explosion propagate visible light or smoke realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are secondary reactions spatially and temporally plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Is brightness attenuation visible after each ignition?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does overall motion show coherent flame propagation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Are visual cues synchronized with heat transfer logic?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "overall_instruction": "Provide 'Yes' or 'No' answers with reasoning."
+        }
+      },
+      {
+        "id": "ETV_011",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person drops a ball that bounces several times before stopping.",
+        "description": "Tests whether the model can represent the gradual energy dissipation process.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Checks whether kinetic energy loss is visually represented through diminishing bounce height and timing.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the drop height and initial velocity realistic?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Are bounce intervals decreasing progressively?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the bounce height reduced after each contact?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the contact reaction show consistent elasticity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is there visible energy dissipation until rest?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Are timing and motion continuity smooth across bounces?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is the ground interaction physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the final stop visually natural?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer 'Yes' or 'No' for each and explain briefly."
+        }
+      },
+      {
+        "id": "ETV_012",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A moving train pushes air, causing nearby flags to wave.",
+        "description": "Tests whether the model can represent indirect energy transfer.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates aerodynamic energy propagation and secondary motion effects caused by moving air.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the train’s motion direction and speed realistic?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is there visible airflow or flag response after the train passes?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the delay between motion and flag response physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do flags oscillate consistently with air current direction?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Do the flags' waving patterns accurately reflect the changes in the train's speed and direction?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Is the flag deformation smooth and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the air motion correspond with physical wind behavior?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the entire scene dynamically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer concisely with 'Yes' or 'No' reasoning."
+        }
+      },
+      {
+        "id": "ETV_013",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A child rolls a marble into a spiral track that triggers a lever.",
+        "description": "Tests the model's grasp of chain mechanical energy transfer.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates complex sequential energy conversion from potential to kinetic and mechanical motion.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the marble’s initial motion caused by gravity or push?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the marble follow the spiral track continuously?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is the lever activation synchronized with marble contact?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Is the energy transmission clearly visible through each step?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the marble's motion visibly transfer energy to the lever after reaching the spiral track?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Are time intervals physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the sequence exhibit causally consistent chain reaction?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the overall mechanical system stable and plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer 'Yes' or 'No' and briefly justify."
+        }
+      },
+      {
+        "id": "ETV_014",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A gust of wind knocks down a stack of paper sheets.",
+        "description": "Tests whether the model can represent the instantaneous transfer effect of wind energy.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates if air motion is realistically visualized as a transient energy source influencing lightweight objects.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the wind direction visually clear before object motion begins?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q2",
+              "question": "Do paper sheets react collectively in the correct direction of airflow?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is there a realistic delay between wind onset and object movement?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Do the paper sheets fall over in a natural and believable manner after the wind knocks them down?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is air disturbance depicted naturally after impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Do lighter sheets move farther than heavier ones?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the sequence correctly depict the papers fluttering and falling in a realistic manner following the wind gust?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the entire sequence physically plausible with no abrupt motion breaks?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "overall_instruction": "Answer 'Yes' or 'No' to each question and briefly justify."
+        }
+      },
+      {
+        "id": "ETV_015",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A lightning strike lights up a tree, then fades.",
+        "description": "Tests whether the model can represent instantaneous energy transfer and attenuation.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Assesses depiction of extremely fast energy influx and gradual dissipation through heat and light.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the lightning discharge instantaneous and directional?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the tree illumination occur immediately after strike?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is brightness proportional to the energy intensity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the light fade naturally over time?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the brightness of the lightning accurately reflect the energy transfer in the scene?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Is energy flow path from sky to tree continuous and visible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Does the environment react correctly (e.g., lighting of surroundings)?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is energy attenuation smooth without visual discontinuity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Provide 'Yes' or 'No' for each question and explain concisely."
+        }
+      },
+      {
+        "id": "ETV_016",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A ball rolls down a slope and pushes another ball forward.",
+        "description": "Tests the model's understanding of gravitational to kinetic energy conversion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates continuous energy conversion and causal consistency between gravity-induced motion and collision outcomes.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the slope angle and ball acceleration physically plausible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the rolling speed increase smoothly due to gravity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the collision between balls accurately timed?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the stationary ball move immediately after impact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Is energy loss during transfer represented realistically?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are post-collision motions directionally consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Does the first ball slow down proportionally after impact?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the full energy transfer sequence continuous and coherent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Judge each question 'Yes' or 'No' with brief reasoning."
+        }
+      },
+      {
+        "id": "ETV_017",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A spark travels along a fuse toward an explosive.",
+        "description": "Tests whether the model can represent the directionality and speed of energy flow.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Examines linear propagation of thermal energy through a medium culminating in a rapid discharge.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the spark ignition origin clearly visible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does the spark advance smoothly along the fuse?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is propagation speed consistent and physically plausible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does the spark visually appear to follow the fuse accurately and continuously without abrupt jumps?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Does the spark's trail remain visibly connected to the fuse throughout its movement, indicating continuous contact?",
+              "importance_score": 0.8,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Does the video accurately depict the timing of the spark reaching the explosive relative to the fuse's appearance?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the energy transfer visually traceable across the entire fuse?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is conservation of energy visually consistent across the process?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Evaluate all questions with 'Yes' or 'No' answers and short justification."
+        }
+      },
+      {
+        "id": "ETV_018",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A swinging bat hits a baseball, sending it flying.",
+        "description": "Tests whether the model can capture the effect of instantaneous energy transfer.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Tests if kinetic energy is transmitted realistically from bat to ball during collision.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the bat’s motion continuous and properly accelerated?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Is the impact moment visually synchronized with contact?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Does the ball’s launch direction align with swing trajectory?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is the ball’s speed and arc physically consistent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the bat decelerate after contact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Are secondary effects (sound, deformation) plausible?",
+              "weight": 1.0,
+              "importance_score": 0.6
+            },
+            {
+              "id": "q7",
+              "question": "Does the flight show continuous energy dissipation?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is overall energy flow realistic and smooth?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "overall_instruction": "Answer each 'Yes' or 'No' and provide short reasoning."
+        }
+      },
+      {
+        "id": "ETV_019",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A bowling ball hits pins, scattering them in different directions.",
+        "description": "Tests the model's performance on multi-target energy distribution.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Analyzes energy distribution across multiple contact points during a single high-momentum impact.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the bowling ball’s motion trajectory realistic and steady?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Do pins react immediately upon collision?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is scattering direction consistent with impact vector?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are pins’ velocities varied according to contact distance?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Are the distances between scattering pins proportional to the force of impact?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q6",
+              "question": "Are the scattering directions of the pins visually consistent with the impact point of the bowling ball?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Does the overall scene preserve energy conservation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is multi-directional motion visually coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Provide 'Yes' or 'No' and reasoning for each question."
+        }
+      },
+      {
+        "id": "ETV_020",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A wave of light moves through a fiber optic cable.",
+        "description": "Tests the model's ability to visualize light energy transmission.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates continuous propagation of electromagnetic energy within a guided medium.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the source of light emission clearly visible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does light travel smoothly through the cable path?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is propagation speed visually consistent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Are reflections or refractions correctly represented inside the fiber?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the energy exit point glow realistically?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Is attenuation of light intensity over distance natural?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q7",
+              "question": "Does the scene preserve directionality of photon flow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the entire propagation visually coherent and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Judge each item as 'Yes' or 'No' with reasoning."
+        }
+      },
+      {
+        "id": "ETV_022",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A row of bells rings one after another after being struck by a moving rod.",
+        "description": "Tests whether the model can generate the temporal rhythm of sound propagation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Examines time-ordered energy propagation via vibration and acoustic emission.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the moving rod’s direction and contact sequence clear?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does each bell ring only upon contact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the delay between rings consistent and natural?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Are vibration amplitudes decreasing progressively?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does sound or motion decay realistically?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Is energy propagation direction consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q7",
+              "question": "Is the rhythm continuous with no skipped events?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q8",
+              "question": "Is the full event physically coherent and plausible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Provide 'Yes' or 'No' responses with brief explanation."
+        }
+      },
+      {
+        "id": "ETV_022",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A falling object triggers a lever that launches another item upward.",
+        "description": "Tests whether the model can represent the logic of mechanical energy conversion.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Assesses multi-stage energy conversion between potential, kinetic, and mechanical forms.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the lever visibly respond and move as a result of the falling object’s contact?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the lever react immediately upon contact?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is upward motion synchronized with lever action?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does energy appear conserved through conversion?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are timing and trajectories physically plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the object slow down after losing energy to the lever?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the launched item follow a realistic trajectory consistent with the initial energy transfer?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is overall motion causally coherent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Answer all with 'Yes' or 'No' and concise justification."
+        }
+      },
+      {
+        "id": "ETV_023",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A bouncing basketball gradually loses height with each bounce.",
+        "description": "Tests whether the model can represent the law of energy dissipation.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates accurate depiction of gradual kinetic-to-thermal energy loss in repetitive impacts.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the height of each bounce decrease compared to the previous one?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Do successive bounces decrease progressively?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is ground contact timing consistent?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the ball's upward movement speed decrease consistently after each bounce?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q5",
+              "question": "Is energy loss visually smooth and continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does each bounce show a decreasing height consistent with energy loss due to damping effects?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Is the final stop natural and physically valid?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is conservation of energy represented correctly over time?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Judge 'Yes' or 'No' for each with brief reasoning."
+        }
+      },
+      {
+        "id": "ETV_024",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A spark travels along metal wires to light up a bulb.",
+        "description": "Tests whether the model can represent the continuity of electrical energy transmission.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates depiction of electric energy continuity through conductive pathways.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the electrical source or spark origin clearly identifiable?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Does current flow direction follow wire orientation?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is light propagation speed visually continuous?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the bulb light up immediately upon energy arrival?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Is brightness level consistent with current intensity?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q6",
+              "question": "Does the visualization accurately depict the spark traveling along the wire path without unnatural jumps or interruptions?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Are secondary effects (glow, reflection) physically coherent?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q8",
+              "question": "Is overall electrical flow visually plausible?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            }
+          ],
+          "overall_instruction": "Provide 'Yes' or 'No' responses with short explanations."
+        }
+      },
+      {
+        "id": "ETV_025",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A toy car moves after being hit by a rolling marble.",
+        "description": "Tests whether the model can represent small-scale kinetic energy transfer.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Assesses low-energy mechanical transfer accuracy and timing at micro-interaction level.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the toy car change its position after being hit by the marble?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does the toy car start moving immediately after collision?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q3",
+              "question": "Is movement direction consistent with contact point?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Does the car’s speed reflect proportional energy input?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Does the toy car begin to move immediately after being hit by the marble?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q6",
+              "question": "Do both objects slow down naturally over time?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q7",
+              "question": "Does the toy car exhibit a change in speed that reflects the energy transferred from the marble?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is overall energy exchange physically consistent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Answer 'Yes' or 'No' and justify briefly."
+        }
+      },
+      {
+        "id": "ETV_026",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person knocks over a candle, causing wax to spill and flame to spread.",
+        "description": "Tests the model's grasp of multi-stage energy propagation.",
+        "difficulty": "hard",
+        "evaluation": {
+          "evaluation_description": "Evaluates multi-phase propagation involving mechanical, thermal, and chemical energy transfer.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the candle’s fall initiated by visible contact or push?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q2",
+              "question": "Does the flame spread only after wax contact?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is timing between fall and ignition realistic?",
+              "weight": 2.0,
+              "importance_score": 1.0
+            },
+            {
+              "id": "q4",
+              "question": "Is heat transfer visually suggested through glow or melt effects?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does wax behave fluidly with plausible viscosity?",
+              "weight": 1.0,
+              "importance_score": 0.7
+            },
+            {
+              "id": "q6",
+              "question": "Does flame propagation follow wax flow direction?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q7",
+              "question": "Are secondary lighting changes coherent with spread?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q8",
+              "question": "Is full causal sequence smooth and energy-consistent?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Evaluate all with 'Yes' or 'No' and concise reasoning."
+        }
+      },
+      {
+        "id": "ETV_027",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A chain of gears turns after the first gear starts rotating.",
+        "description": "Tests whether the model can generate chain conduction of mechanical energy.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Examines rotational energy transmission accuracy and synchronized motion between mechanical parts.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Is the first gear’s motion clearly visible and consistent?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q2",
+              "question": "Do adjacent gears rotate in opposite directions correctly?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is rotation speed consistent with gear size ratios?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q4",
+              "question": "Is contact between teeth accurately aligned?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q5",
+              "question": "Does the motion propagate continuously through all gears?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Are the gears rotating in a manner consistent with direct mechanical contact without any unintended slipping?",
+              "importance_score": 0.85,
+              "weight": 1.0
+            },
+            {
+              "id": "q7",
+              "question": "Do the gears' rotations accurately reflect the correct gear ratio and direction of rotation based on their sizes and connections?",
+              "importance_score": 0.9,
+              "weight": 1.0
+            },
+            {
+              "id": "q8",
+              "question": "Is the entire motion physically plausible and synchronized?",
+              "weight": 1.0,
+              "importance_score": 0.85
+            }
+          ],
+          "overall_instruction": "Judge 'Yes' or 'No' per question and provide rationale."
+        }
+      },
+      {
+        "id": "ETV_028",
+        "category": "Energy Transfer Visualization",
+        "prompt_en": "A person blows a balloon until it bursts, releasing air suddenly.",
+        "description": "Tests whether the model can represent energy accumulation and explosion.",
+        "difficulty": "medium",
+        "evaluation": {
+          "evaluation_description": "Evaluates pressure buildup, elastic deformation, and energy release dynamics.",
+          "evaluation_questions": [
+            {
+              "id": "q1",
+              "question": "Does the video show the balloon gradually increasing in size before bursting?",
+              "importance_score": 0.9,
+              "weight": 2.0
+            },
+            {
+              "id": "q2",
+              "question": "Does expansion follow continuous energy input from airflow?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q3",
+              "question": "Is the bursting moment visually sharp and plausible?",
+              "weight": 2.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q4",
+              "question": "Does released air flow outward directionally?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q5",
+              "question": "Are fragments’ motions consistent with explosion physics?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            },
+            {
+              "id": "q6",
+              "question": "Does pressure release correlate with motion decay?",
+              "weight": 1.0,
+              "importance_score": 0.75
+            },
+            {
+              "id": "q7",
+              "question": "Is timing between overexpansion and rupture realistic?",
+              "weight": 1.0,
+              "importance_score": 0.8
+            },
+            {
+              "id": "q8",
+              "question": "Is the entire event physically coherent without inconsistencies?",
+              "weight": 1.0,
+              "importance_score": 0.9
+            }
+          ],
+          "overall_instruction": "Answer 'Yes' or 'No' for each and justify briefly."
+        }
+      }
+    ]
+  }
+}
