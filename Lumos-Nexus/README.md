@@ -8,8 +8,7 @@
 </tr>
 </table>
 
-[![Paper (OpenReview)](https://img.shields.io/badge/Paper-OpenReview-darkgreen)](https://openreview.net/forum?id=r5o6PWgzav)
-[![arXiv](https://img.shields.io/badge/arXiv-2603.20192-b31b1b.svg)](https://arxiv.org/abs/2603.20192)
+[![arXiv](https://img.shields.io/badge/arXiv-2605.31603-b31b1b.svg)](https://arxiv.org/abs/2605.31603)
 [![GitHub](https://img.shields.io/badge/GitHub-Code-blue)](https://github.com/alibaba-damo-academy/Lumos-Custom)
 [![Project Page](https://img.shields.io/badge/Project-Page-purple)](https://jiazheng-xing.github.io/nexus-lumos-home/)
 
@@ -250,11 +249,14 @@ Also check comments in [`run_qwen.sh`](vr_bench_eval/run_qwen.sh) for optional `
 If you find this work helpful, please consider citing:
 
 ```bibtex
-@article{xing2026lumosnexus,
-  title   = {{Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models}},
-  author  = {Xing, Jiazheng and Yuan, Hangjie and Cai, Lingling and Liu, Xinyu and Wei, Yujie and Du, Fei and Ci, Hai and Feng, Tao and Tang, Jiasheng and Chen, Weihua and Wang, Fan and Liu, Yong},
-  journal = {arXiv preprint arXiv:2603.20192},
-  year    = {2026}
+@misc{xing2026lumosnexusefficientfrequencybridging,
+      title={Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models}, 
+      author={Jiazheng Xing and Hangjie Yuan and Lingling Cai and Xinyu Liu and Yujie Wei and Fei Du and Hai Ci and Tao Feng and Jiasheng Tang and Weihua Chen and Fan Wang and Yong Liu},
+      year={2026},
+      eprint={2605.31603},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.31603}, 
 }
 ```
 
