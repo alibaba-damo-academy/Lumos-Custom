@@ -24,7 +24,7 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ### Lumos-Nexus
 
-**[2026/6/1]** Paper released on [arXiv](https://arxiv.org/abs/2603.20192) (preprint).
+**[2026/6/1]** Paper released on [arXiv](https://arxiv.org/abs/2605.31603) (preprint).
 
 **[2026/5/31]** Code is available now!
 
