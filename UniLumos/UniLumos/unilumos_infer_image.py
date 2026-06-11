@@ -119,9 +119,16 @@ def main(args):
         for idx, data_i in enumerate(tqdm(dataloader, desc="Inference Progress", disable=not verbose)):
 
             # Extract data from dataloader
-            video_ref = data_i['video'].to(device, dtype)  # Reference image as a single-frame video
+            video_ref = data_i['video'].to(device, dtype)  # Input subject image as a single-frame video (foreground)
+
+            # Feed the input image into the foreground/degradation channel (x_deg) so the model
+            # actually relights the subject. Previously this was zeroed, which dropped the input
+            # image from the conditioning and collapsed inference to text-only generation (issue #6).
+            video_degradation = video_ref.clone()
+
+            # Leave the background empty (pure color) -- the captions + foreground setting (ab mode).
+            # The model then generates a background consistent with the target lighting caption.
             video_background = torch.zeros_like(video_ref)
-            video_degradation = torch.zeros_like(video_ref)
 
             # get prompts
             if 'text' in data_i:
