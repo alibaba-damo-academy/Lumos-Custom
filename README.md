@@ -24,7 +24,7 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 ### Lumos-Nexus
 
-**[2026/6/1]** Accepted by [ECCV 2026](https://arxiv.org/abs/2605.31603).
+**[2026/6/19]** Accepted by [ECCV 2026](https://arxiv.org/abs/2605.31603).
 
 **[2026/5/31]** Code is available now!
 
