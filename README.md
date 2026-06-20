@@ -36,7 +36,7 @@ This repository collects open-source research from **DAMO Academy, Alibaba Group
 
 | Project | Venue | In one sentence | Code & docs |
 |--------|-------|-----------------|-------------|
-| **Lumos-Nexus** | **arXiv preprint** | **Lumos-Nexus** advances reasoning-driven unified video generation through lightweight connector training and Unified Progressive Frequency Bridging at inference. | [`Lumos-Nexus/`](Lumos-Nexus/) · [README](Lumos-Nexus/README.md) |
+| **Lumos-Nexus** | **ECCV 2026** | **Lumos-Nexus** advances reasoning-driven unified video generation through lightweight connector training and Unified Progressive Frequency Bridging at inference. | [`Lumos-Nexus/`](Lumos-Nexus/) · [README](Lumos-Nexus/README.md) |
 | **LumosX** | **ICLR 2026** | **LumosX** advances personalized multi-subject video generation through relational data design and relational attention modeling. | [`LumosX/`](LumosX/) · [README](LumosX/README.md) |
 | **UniLumos** | **NeurIPS 2025** | **UniLumos** advances unified image and video relighting through RGB-space geometry feedback on a flow-matching backbone. | [`UniLumos/`](UniLumos/) · [README](UniLumos/README.md) |
 ---
