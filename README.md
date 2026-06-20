@@ -265,7 +265,7 @@ If you use any project, please cite the corresponding paper. BibTeX entries are 
   booktitle={The Fourteenth International Conference on Learning Representations}
 }
 
-@misc{xing2026lumosnexusefficientfrequencybridging,
+@misc{LumosNexus,
       title={Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models}, 
       author={Jiazheng Xing and Hangjie Yuan and Lingling Cai and Xinyu Liu and Yujie Wei and Fei Du and Hai Ci and Tao Feng and Jiasheng Tang and Weihua Chen and Fan Wang and Yong Liu},
       year={2026},
