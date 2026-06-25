@@ -279,4 +279,4 @@ If you use any project, please cite the corresponding paper. BibTeX entries are 
 
 ## ◈ Related work ◈
 
-- Foundational video generation: **[Lumos](https://github.com/alibaba-damo-academy/Lumos)**.
+- Foundational video generation: **[Lumos-1](https://github.com/alibaba-damo-academy/Lumos)**.
